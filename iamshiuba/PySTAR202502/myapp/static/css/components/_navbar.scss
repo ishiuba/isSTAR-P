@@ -1,0 +1,254 @@
+// Mixins
+@mixin hover-effect {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+@mixin active-shadow {
+    transform: scale(0.8);
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+.dropdown ul.dropdown-menu.show {
+    --dropdown-bg: var(--bg-color);
+    --dropdown-color: var(--text-accent);
+    --dropdown-hover-bg: var(--bg-secondary);
+    --dropdown-hover-color: var(--text-color);
+    --dropdown-active-bg: var(--bg-primary);
+    --dropdown-active-color: var(--text-color);
+
+    background-color: var(--dropdown-bg);
+    color: var(--dropdown-color);
+
+    .dropdown-item {
+        background-color: var(--dropdown-bg);
+        color: var(--dropdown-color);
+
+        @include hover-effect;
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--dropdown-hover-bg);
+        color: var(--dropdown-hover-color);
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background-color: var(--dropdown-active-bg);
+        color: var(--dropdown-active-color);
+        @include active-shadow;
+    }
+
+}
+.dropdown {
+
+    .dropdown-toggle{
+        background-color: transparent;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+}
+
+// Navbar styles
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.7rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .navBrand a {
+        display: flex;
+        align-items: center;
+
+        img.svg-icon {
+
+            filter: invert(13%) sepia(83%) saturate(5797%) hue-rotate(0deg) brightness(97%) contrast(118%);
+            transition: all 0.3s ease;
+
+            &:hover {
+                filter: invert(13%) sepia(83%) saturate(2797%) hue-rotate(0deg) brightness(97%) contrast(118%);
+            }
+        }
+
+        .logo {
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.navToggler {
+    padding-inline-start: .5rem;
+    padding-block-start: .5rem;
+}
+
+#pageURl {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: stretch;
+}
+
+.navbar-collapse {
+    align-items: center;
+    width: stretch;
+}
+
+.nav-underline {
+    .nav-link {
+        color: var(--text-accent);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--bg-primary);
+        }
+
+        &.active {
+            color: var(--bg-primary);
+
+            &:hover {
+                color: var(--text-accent);
+            }
+        }
+    }
+}
+
+.nav-item {
+    display: inline-block;
+
+    .nav-link {
+        font-weight: 600;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &:hover::after,
+        &.active::after {
+            width: 100%;
+        }
+    }
+
+    a {
+        padding: .5rem .51rem;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.nav-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+#lang-container {
+    width: max-content;
+}
+
+#langselect {
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        color: var(--bg-primary);
+    }
+}
+
+.langclp {
+    border-radius: 5px;
+    background-color: hsla(0, 0%, 47%, 0.227);
+
+    body.dark & {
+        background-color: hsla(0, 83%, 19%, 0.23);
+    }
+}
+
+.switch {
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--text-color);
+        color: var(--accent-color);
+    }
+}
+
+.fi {
+    padding: .6rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: auto;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+
+    &.active {
+        @include active-shadow;
+    }
+}
+
+// Flags
+$flag-list: us, br, in, jp, ru, cn;
+
+@each $flag in $flag-list {
+    .fi-#{$flag} {
+        background-image: url('https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/flags/4x3/#{$flag}.svg');
+    }
+}
+
+@media (max-width: 992px) {
+    .btn.dropdown-toggle {
+        margin-block-end: 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #pageURl {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+}

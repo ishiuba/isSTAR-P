@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iSHIUBA</title>
+    <link rel="icon" href="./static/img/ishiubafavicon.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+    <link rel="stylesheet" href="./static/css/global.css" />
+    <link rel="stylesheet" href="./static/css/components/navbar.css" />
+    <link rel="stylesheet" href="./static/css/components/footer.css" />
+  </head>
+  <body>
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <main id="content">
+      <section id="home">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-10 align-items-center">
+              <h1><span data-translate="greeting"></span></h1>
+              <p class="lead" data-translate="mainMsg"></p>
+              <p class="lead" data-translate="subMsg"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" style="display: none">
+        <div class="container">
+          <div id="about" class="row">
+            <h1 data-translate="aboutTitle"></h1>
+            <div class="col-lg-auto">
+              <p class="lead" data-translate="aboutMsg"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="articles" style="display: none">
+        <div class="container-fluid">
+          <div class="card">
+            <h1 data-translate="articlesTitle"></h1>
+            <p class="lead" data-translate="articlesMsg"></p>
+            <div class="card-body">
+              <iframe id="JotFormIFrame-243416452242046" title="My first article" style="width: 85vw; height: 85vh" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="https://form.jotform.com/243416452242046" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+
+          <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+          <script>
+            window.jotformEmbedHandler(
+              "iframe[id='JotFormIFrame-243416452242046']",
+              "https://form.jotform.com/"
+            );
+          </script>
+        </div>
+      </section>
+
+      <section id="TERMS" style="display: none">
+        <div class="container">
+          <div class="row">
+            <h1 data-translate="tos"></h1>
+            <p class="lead" data-translate="ToSdate"></p>
+            <p class="lead" data-translate="tosDesc"></p>
+            <div class="col-lg-auto text-start">
+              <div>
+                <h2><span data-translate="tosAU"></span></h2>
+                <p><span data-translate="tosAUdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="tosCO"></span></h2>
+                <p><span data-translate="tosCOdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="tosEL"></span></h2>
+                <p><span data-translate="tosELdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="tosLoL"></span></h2>
+                <p><span data-translate="tosLoLdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="tosCttT"></span></h2>
+                <p><span data-translate="tosCttTdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="tosCONTACT"></span></h2>
+                <p><span data-translate="tosCONTACTdesc"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="PRIVACY" style="display: none">
+        <div class="container">
+          <div class="row">
+            <h1 data-translate="privacy"></h1>
+            <p class="lead" data-translate="PPdate"></p>
+            <p class="lead" data-translate="ppDesc"></p>
+            <div class="col-lg-auto">
+              <div>
+                <h2><span data-translate="ppDC"></span></h2>
+                <p><span data-translate="ppDCdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="ppCOOKIE"></span></h2>
+                <p><span data-translate="ppCOOKIEdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="ppDS"></span></h2>
+                <p><span data-translate="ppDSdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="ppCttP"></span></h2>
+                <p><span data-translate="ppCttPdesc"></span></p>
+              </div>
+              <div>
+                <h2><span data-translate="ppCONTACT"></span></h2>
+                <p><span data-translate="ppCONTACTdesc"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer" class="d-flex footer"></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./partials/navbar.js"></script>
+    <script src="./partials/footer.js"></script>
+    <script src="./static/js/colorscheme.js"></script>
+    <script src="./static/js/translations.js"></script>
+  </body>
+</html>

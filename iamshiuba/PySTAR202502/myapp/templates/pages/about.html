@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block content %}
+<!-- About Hero Section -->
+<section class="hero-section">
+  <div class="container-fluid">
+    <div class="row align-items-center min-vh-75">
+      <div class="col-lg-6 hero-content d-grid" style="justify-items: start;">
+        <h1 class="display-3 fw-bold gradient-text" data-translate="aboutTitle"></h1>
+        <p class="lead mt-4 mx-2 text-start" data-translate="aboutMsg"></p>
+      </div>
+      <div class="col-lg-6 hero-image">
+        <div class="floating-image">
+          <img src="{{ url_for('static', filename='img/iamshiuba_web.svg') }}" width="350px" alt="Artist Image" class="img-fluid"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="skill-card text-center">
+          <i class="fas fa-music mb-3"></i>
+          <h3 data-translate="mscProd"></h3>
+          <div class="skill-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card text-center">
+          <i class="fas fa-video mb-3"></i>
+          <h3 data-translate="videoCreation"></h3>
+          <div class="skill-bar">
+            <div class="progress" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="skill-card text-center">
+          <i class="fas fa-paint-brush mb-3"></i>
+          <h3 data-translate="digitalArt"></h3>
+          <div class="skill-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Connect Section -->
+<section class="connect-section py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="connect-card">
+          <h2 class="text-center mb-4" data-translate="aboutSubMsg"></h2>
+          <div class="social-buttons text-center">
+            <a href="https://youtube.com/@iamshiuba" class="btn me-3">
+              <i class="fab fa-youtube me-2"></i>
+              YouTube
+            </a>
+            <a href="https://soundcloud.com/iamshiuba" class="btn me-3">
+              <i class="fab fa-soundcloud me-2"></i>
+              SoundCloud
+            </a>
+            <a href="https://twitter.com/iamshiuba" class="btn">
+              <i class="fab fa-x-twitter me-2"></i>
+              X (Twitter)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

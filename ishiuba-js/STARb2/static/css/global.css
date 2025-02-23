@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color: hsl(0, 50%, 90%);
+    --bg-main: hsl(0, 50%, 95%);
+    --text-color: hsl(0, 0%, 10%);
+    --text-accent: hsl(0, 100%, 80%);
+    --shadow-color: hsla(0, 0%, 0%, 0.151);
+    --box-shadow: hsla(0, 0%, 0%, 0.151);
+    --hover-color: #e6b3b3;
+    --bg-primary: #ff4d4d;
+    --bg-secondary: #e48181;
+    --border-radius: 5px;
+    --transition-duration: 0.5s;
+    --gradient-angle: 45deg;
+    --link-color: #007bff;
+    --accent-color: hsl(231, 100%, 76%);
+    --font-size-base: 16px;
+}
+
+body {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+    font-size: var(--font-size-base);
+}
+
+body.dark {
+    --bg-color: hsl(0, 50%, 5%);
+    --bg-main: hsl(0, 50%, 10%);
+    --bg-primary: #cc0000;
+    --bg-secondary: hsl(0, 100%, 20%);
+    --text-color: hsl(0, 0%, 95%);
+    --text-accent:  hsl(0, 55%, 30%);
+    --hover-color: hsl(0, 50%, 20%);
+    --shadow-color: hsla(0, 0%, 100%, 0.15);
+    --box-shadow: hsla(0, 0%, 100%, 0.15);
+    --link-color: #66b3ff;
+    --accent-color: hsl(36, 100%, 68%);
+}
+
+/* Typography */
+body h1, h2, h3, h4, h5, p, a {
+    text-shadow:  0 0 5px var(--shadow-color);
+    transition: text-shadow var(--transition-duration) ease;
+}
+
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark p, body.dark a {
+    text-shadow: 0 0 10px var(--shadow-color);
+}
+
+h1 {
+    color: var(--text-accent);
+    font-size: 3rem;
+    padding: 1.5rem;
+    letter-spacing: 2px;
+}
+
+h2,
+h3,
+h4 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+h1, .display-1, .display-2, .display-3 {
+    padding: 1.5rem;
+}
+
+.display-1, .display-2, .display-3 {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: color var(--transition-duration) ease;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--bg-primary);
+}
+
+/* Buttons & Links */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--bg-primary);
+    transition: all var(--transition-duration) ease-in-out;
+}
+
+.button,
+.fi {
+    padding: 0.5rem;
+}
+
+.btn{
+    transform: scale(1.2);
+}
+
+.btn, i {
+    text-align: initial;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--bg-primary);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: all var(--transition-duration) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+i {
+    transform: scale(1.5);
+}
+
+.btn:hover, i:hover {
+    transform: scale(1.05);
+    color: var(--text-color);
+    background-color: var(--hover-color);
+}
+
+button:hover {
+    transform: scale(1.05);
+    color: var(--text-color);
+}
+
+/* Containers */
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hItems {
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* Main Content */
+main {
+    background-color: var(--bg-main);
+    animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 1rem;
+    transition: background-color var(--transition-duration) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+body.dark .card {
+    background-color: var(--bg-color);
+}
+
+iframe {
+    margin: auto;
+    width: 570px;
+    height: 320px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px 5px var(--box-shadow);
+}
+
+#playlistContainer {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media screen and (min-width: 3840px) {
+
+    html {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 250px !important;
+    }
+
+    .nav-link {
+        font-size: 1.5rem !important;
+    }
+
+    .fa-brands, .fa-solid, .fa-moon, .fa-sun, #langselect, .fi {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container footer {
+        flex-direction: row;
+    }
+
+    .html {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem !important;
+    }
+    
+
+    .btn {
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav.nav-underline ul {
+        justify-content: center;
+    }
+
+    html{
+        font-size: 1rem;
+    }
+
+    .nav-link{
+        font-size: 1rem !important;
+    }
+
+    .btn {
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #menu .nav {
+        flex-direction: column;
+    }
+
+    html{
+        font-size: 0.8rem;
+    }
+
+    .nav-link{
+        font-size: 0.8rem !important;
+    }
+
+    .btn {
+        transform: scale(1.0);
+    }
+}

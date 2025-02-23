@@ -1,0 +1,274 @@
+/* Global Variables */
+$primary-color: #ff6f69;
+$secondary-color: #420808;
+$light-bg: #dddddd;
+$dark-bg: #000000;
+$highlight-color: #ff0800;
+$font-family: 'Arial', sans-serif;
+
+/* Body */
+body {
+    font-family: $font-family;
+    background-color: $dark-bg;
+    color: $primary-color;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: rgb(20, 20, 20) !important;
+}
+
+/* Container */
+.container {
+    display: flex;
+    /* Habilita Flexbox */
+    justify-content: center;
+    /* Centraliza as colunas horizontalmente */
+    align-items: flex-start;
+    /* Centraliza o conteúdo verticalmente */
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    /* Aplica Flexbox na row */
+    justify-content: center;
+    /* Garante que o conteúdo esteja centralizado */
+}
+
+/* Main Central Column (Carousel) */
+.col-8 {
+    flex: 0 1 60%;
+    /* Define o tamanho da coluna central como 60% */
+    max-width: 60%;
+    /* Garante que a coluna central não ocupe mais do que o necessário */
+    padding: 20px;
+}
+
+/* Left & Right Columns */
+.col-2 {
+    flex: 0 1 20%;
+    /* Define o tamanho das colunas laterais como 20% */
+    max-width: 20%;
+    /* Garante que as colunas laterais não ultrapassem o tamanho */
+}
+
+.col-2 ul {
+    text-align:center;
+}
+
+/* Footer */
+footer#footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: $dark-bg;
+    color: $primary-color;
+
+    p {
+        font-size: 0.9rem;
+        color: lighten($primary-color, 10%);
+    }
+}
+
+/* Carousel */
+.carousel {
+    margin-top: 20px;
+
+    .carousel-inner {
+        border-radius: 10px;
+        background-color: darken($dark-bg, 10%);
+        text-align: center;
+    }
+
+    h1 {
+        color: $highlight-color;
+        text-transform: uppercase;
+        font-size: 3rem;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    p.lead {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        border: 2px solid lighten($primary-color, 20%);
+        border-radius: 5px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(100%);
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: $light-bg;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand {
+        color: $primary-color;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+        color: $highlight-color;
+        transform: scale(1.1);
+    }
+
+    .nav-link {
+        color: lighten($primary-color, 20%);
+        margin-left: 10px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $highlight-color;
+            font-weight: bold;
+            transform: scale(1.05);
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $dark-bg;
+        border-radius: 5px;
+        padding: 10px;
+
+        .dropdown-item {
+            color: $primary-color;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+                color: $highlight-color;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: 1px solid lighten($primary-color, 15%);
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(80%);
+    }
+}
+
+/* Responsividade para o Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-collapse {
+        background-color: $dark-bg;
+        padding: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+}
+
+
+/* Nav Links */
+.nav-link {
+    color: lighten($primary-color, 20%);
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $highlight-color;
+        font-weight: bold;
+        transform: scale(1.1);
+    }
+}
+
+/* Button Styling */
+button {
+    background-color: $primary-color;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: lighten($primary-color, 10%);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: brightness(0) invert(1);
+    }
+}
+
+/* Video Section */
+.video-links {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    a {
+        color: darken($primary-color, 15%);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: lighten($primary-color, 15%);
+        }
+    }
+}
+
+/* Advertisements Column */
+.col-2 h3 {
+    color: lighten($primary-color, 10%);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.col-2 p {
+    color: lighten($primary-color, 15%);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .col-2 {
+        display: none;
+    }
+
+    .col-8 {
+        flex: 0 1 100%;
+        /* Coluna central ocupa 100% da largura na tela pequena */
+        max-width: 100%;
+        padding: 10px;
+    }
+}

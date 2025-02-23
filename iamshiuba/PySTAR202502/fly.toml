@@ -1,0 +1,45 @@
+# fly.toml app configuration file generated for iamshiuba on 2025-01-31T11:15:17-03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "iamshiuba"
+primary_region = "gig"
+
+[build]
+
+[env]
+  FLASK_APP = 'myapp.app:app'
+  FLASK_ENV = 'production'
+  CACHE_TYPE = 'SimpleCache'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  
+  [[http_service.headers]]
+    Cache-Control = "public, max-age=2592000"
+    Access-Control-Allow-Origin = "*"
+
+  [http_service.static]
+    public_dir = "/app/myapp/static"
+
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 2
+
+[checks]
+  [checks.health]
+    port = 8080
+    type = "http"
+    interval = "15s"
+    timeout = "10s"
+    grace_period = "30s"
+    method = "GET"
+    path = "/health"

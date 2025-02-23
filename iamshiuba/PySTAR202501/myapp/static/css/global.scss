@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// Variables
+:root {
+    --bg-url: url('https://png.pngtree.com/background/20241231/original/pngtree-celebrating-2025-a-vibrant-new-years-eve-crowd-picture-image_15922353.jpg') no-repeat center center/cover;
+    --bg-color: hsl(0, 0%, 95%);
+    --bg-main: hsla(0, 0%, 94%, 0.7);
+    --bg-card: hsla(0, 0%, 90%, 0.5);
+    --bg-primary: red;
+    --bg-secondary: hsl(0, 65%, 35%);
+    --text-color: #333333;
+    --text-accent: #666666;
+    --shadow-color: hsla(0, 0%, 0%, 0.151);
+    --hover-color: hsl(0, 0%, 90%);
+    --accent-color: #f5dd5d;
+    --transition-duration: 0.5s;
+    --border-radius: 5px;
+}
+
+// Mixins
+@mixin transition {
+    transition: all var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Base styles
+* {
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Theme variations
+[data-theme='dark'] {
+    --bg-url: url('https://www.visitlondon.com/-/media/images/london/visit/whats-on/new-years-eve/london-new-years-eve-fireworks-2024-1920x1080.png?h=720&w=1280&rev=223b7b740f394d9697facbab46d35543&hash=FCCAEE0BB493F914F087D7EFE1108462') no-repeat center center/cover;
+    --bg-color: hsl(0, 0%, 5%);
+    --bg-main: hsla(0, 0%, 10%, 0.7);
+    --bg-card: hsla(0, 0%, 15%, 0.5);
+    --bg-primary: hsl(0, 100%, 65%);
+    --bg-secondary: orangered;
+    --text-color: #eeeeee;
+    --text-accent: #d0d0d0;
+    --hover-color: hsl(0, 0%, 10%);
+    --shadow-color: hsla(0, 0%, 100%, 0.15);
+    --accent-color: #81d4fa;
+}
+
+[data-theme='is_dark'] {
+    --bg-color: hsl(0, 0%, 5%);
+    --bg-main: hsl(0, 0%, 7%);
+    --bg-primary: #ff4d4d;
+    --bg-secondary: #cc0000;
+    --text-color: #fff;
+    --hover-color: hsl(0, 0%, 9%);
+    --shadow-color: hsla(0, 0%, 100%, 0.15);
+    --accent-color: hsl(48, 100%, 80%);
+}
+
+[data-theme='is_light'] {
+    --bg-color: hsl(0, 0%, 94%);
+    --bg-main: hsl(0, 0%, 90%);
+    --bg-secondary: #cc0000;
+    --text-color: #333;
+    --shadow-color: #aaa;
+    --hover-color: hsl(0, 0%, 84%);
+    --bg-primary: #ff0000;
+    --accent-color: hsl(51, 100%, 20%);
+}
+
+[data-theme='dark'], [data-theme='light'] {
+    @include transition;
+}
+
+// Body styles
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    @include transition;
+}
+
+[data-theme='light'], [data-theme='dark'] {
+    body {
+        background: var(--bg-url);
+    }
+}
+
+// Navigation and Footer
+@import 'components/_navbar.scss';
+nav, footer {
+    background-color: var(--bg-color);
+}
+
+// Typography
+h1, h2, p, a {
+    text-align: center;
+    text-shadow: 0 0 5px var(--shadow-color);
+    transition: text-shadow var(--transition-duration) ease;
+}
+
+h1 {
+    font-weight: 800;
+    color: var(--bg-primary);
+    padding: .5rem;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.display-2, h2 {
+    color: var(--text-accent);
+    font-weight: 400;
+}
+
+// Links and Buttons
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: transparent;
+    color: var(--text-color);
+    transition: all var(--transition-duration) ease;
+    
+    &:hover {
+        transform: scale(0.9);
+        color: var(--bg-primary);
+    }
+}
+
+.btn, i {
+    text-align: initial;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: all var(--transition-duration) ease;
+    position: relative;
+    overflow: hidden;
+    
+    &:hover {
+        transform: scale(1.25);
+        color: var(--bg-primary);
+        background-color: var(--hover-color);
+    }
+}
+
+// Layout
+#about {
+    margin-block: 6rem;
+    padding-block: 3.6rem;
+}
+
+.container-fluid {
+    @include flex-center;
+    flex-direction: row;
+    background-color: transparent;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#hItems {
+    justify-content: space-between;
+}
+
+.row {
+    @include flex-center;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+// Main content
+main {
+    background-color: var(--bg-main);
+    animation: slideDown 1s ease forwards;
+}
+
+// Card styles
+.card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: auto;
+    transition: background-color var(--transition-duration) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme='light'], [data-theme='dark'] {
+    .card {
+        background-color: var(--bg-card);
+    }
+}
+
+// Media elements
+iframe {
+    margin: auto;
+    width: 570px;
+    height: 320px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 .5rem .3rem var(--shadow-color);
+}
+
+#playlistContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+// Animations
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+// Footer
+@import 'components/_footer.scss';
+
+// Media queries
+@media (width <= 7680px) {
+    html {
+        font-size: 250%;
+    }
+
+    .logo {
+        width: 250px;
+    }
+}
+
+@media (width <= 4096px) {
+    html {
+        font-size: 150%;
+    }
+
+    .logo {
+        width: 250px;
+    }
+}
+
+@media (width <= 2560px) {
+    html {
+        font-size: 100%;
+    }
+
+    .logo {
+        width: 125px;
+    }
+
+    .container {
+        flex-direction: column;
+        
+        footer {
+            flex-direction: row;
+        }
+    }
+
+    .btn {
+        transform: scale(1.3);
+    }
+}
+
+@media (width <= 1280px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    #lang-container.d-flex {
+        justify-content: center;
+    }
+
+    #playlistContainer .col-4 {
+        width: 50%;
+    }
+
+    #indexSec1, #indexCard {
+        width: 100%;
+    }
+
+    .nav.nav-underline ul {
+        justify-content: center;
+    }
+
+    .btn {
+        transform: scale(1.2);
+    }
+}
+
+@media (width <= 950px) {
+    .logo {
+        width: 100px;
+    }
+
+    .nav-container {
+        flex-direction: row;
+    }
+
+    #menu .nav {
+        flex-direction: column;
+    }
+
+    #indexSec1 {
+        width: 100%;
+    }
+
+    #playlistContainer {
+        flex-direction: column;
+        
+        .col-4 {
+            width: 100%;
+        }
+    }
+
+    .btn {
+        transform: scale(1.0);
+    }
+}

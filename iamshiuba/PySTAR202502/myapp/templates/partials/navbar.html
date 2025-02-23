@@ -1,0 +1,190 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="nav-container container-fluid">
+    <div class="nav-header">
+      <div class="navBrand">
+        <a href="/">
+          <img
+            class="logo svg-icon"
+            src="{{ url_for('static', filename='img/ishiubahor.svg', v=1) }}"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div class="navToggler">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul id="pageURl" class="nav nav-underline">
+        <li class="nav-item">
+          <a
+            href="/"
+            class="nav-link active"
+            title="Homepage"
+            data-translate="Homepage"
+          >
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="/streaming"
+            class="nav-link"
+            title="Streaming"
+            data-translate="Streaming"
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="/about"
+            class="nav-link"
+            title="About"
+            data-translate="About"
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-bottom">
+      <div id="lang-container" class="col-lg">
+        <button
+          id="langselect"
+          class="icon"
+          type="button"
+          title="Change Language"
+          data-bs-toggle="collapse"
+          data-bs-target="#language"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Change Language"
+        >
+          <span class="fa-solid fa-language"></span>
+          <span data-translate="Translations"></span>
+        </button>
+        <div class="langclp collapse p-1" id="language">
+          <button
+            type="button"
+            data-language="en"
+            title="English"
+            class="fi fi-us"
+            aria-label="English"
+          ></button>
+          <button
+            type="button"
+            data-language="pt"
+            title="Português"
+            class="fi fi-br"
+            aria-label="Português"
+          ></button>
+          <button
+            type="button"
+            data-language="jp"
+            title="日本語"
+            class="fi fi-jp"
+            aria-label="日本語"
+          ></button>
+          <button
+            type="button"
+            data-language="ru"
+            title="Русский"
+            class="fi fi-ru"
+            aria-label="Русский"
+          ></button>
+          <button
+            type="button"
+            data-language="hi"
+            title="हिन्दी"
+            class="fi fi-in"
+            aria-label="हिन्दी"
+          ></button>
+          <button
+            type="button"
+            data-language="zh"
+            title="中文"
+            class="fi fi-cn"
+          ></button>
+        </div>
+      </div>
+      <div class="col-lg">
+        <button
+          id="theme-switcher"
+          type="button"
+          class="switch p-3 fas fa-moon"
+          aria-label="Toggle Theme"
+        ></button>
+      </div>
+      <div class="col-lg">
+        <div class="dropdown d-grid justify-items-center">
+          <button
+            class="btn dropdown-toggle text-center"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span data-translate="Versions"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://ishiuba-js-prealpha.vercel.app/"
+                >PreAlpha</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://ishiuba-js.vercel.app/templates/pages/"
+                >PreAlpha 2025</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://ishiuba-js-alpha.vercel.app/"
+                >Alpha</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://ishiuba-js-beta.vercel.app/"
+                >Beta</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item"
+                 href="https://ishiuba-js-a1.vercel.app/"
+                >STARa1</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item"
+                 href="https://ishiuba-js-b1.vercel.app/"
+                >STARb1</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item"
+                 href="https://ishiuba-js-b2.vercel.app/"
+                >STARb2</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://iamshiuba-202501.vercel.app/"
+                >PySTAR202501</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

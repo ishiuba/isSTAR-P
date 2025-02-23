@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --body-bg: hsl(220, 26%, 14%);
+    --main-bg: hsl(0, 26%, 15%);
+    --hover: hsl(330, 100%, 71%);
+    --font: "Ubuntu", sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    font-family: var(--font);
+}
+
+div#footer-container,
+nav, main {
+    margin: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover);
+    text-shadow: var(--hover) 0 0 10px;
+}
+
+h1, p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+main {
+    transition: all 0.5s ease-in-out;
+    border-radius: .8rem;
+}
+
+main:hover {
+    background-color: var(--main-bg);
+}
+
+.slide-in {
+    animation: slidein forwards 1s ease-in-out;
+}
+
+@keyframes slidein {
+    from {
+        margin: 180px;
+    }
+
+    to {
+        margin: 1;
+    }
+}
+
+.fade-in {
+  animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@import 'container/videos';
+
+@import 'partials/nav';
+@import 'partials/footer';

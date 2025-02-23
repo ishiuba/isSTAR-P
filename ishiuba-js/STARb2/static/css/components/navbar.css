@@ -1,0 +1,129 @@
+.d-flex {
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #ff00007e;
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover {
+    border: none;
+    background-color: var(--bg-primary);
+}
+
+#langselect {
+    padding: 1rem;
+}
+
+#langselect:hover,
+.button:hover {
+    background-color: var(--hover-color);
+}
+
+.logo {
+    margin-left: 1rem;
+    width: 20vh;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.navbar>.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+#pageURl {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-underline .active {
+    color: var(--bg-primary) !important;
+}
+
+.nav-underline .active:hover {
+    color: var(--text-color) !important;
+}
+
+.nav-underline .nav-link {
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item a {
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+    color: var(--bg-secondary);
+    font-weight: 700;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--bg-primary);
+}
+
+.fa-sun,
+.fa-moon {
+    cursor: pointer;
+    padding: 1em !important;
+    border: transparent;
+}
+
+.fa-sun:hover {
+    background-color: transparent;
+    color: var(--bg-secondary);
+    border: 3px solid hsla(15, 100%, 25%, 0.501);
+}
+
+.fa-moon:hover {
+    background-color: transparent;
+    color: hsl(231, 100%, 76%);
+    border: 3px solid hsla(231, 100%, 75%, 0.301);
+}
+
+.fi {
+    margin: .5em;
+    padding-inline: 1.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.fi:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+.langclp {
+    border-radius: 5px;
+    background-color: #7777773a;
+}
+
+body.dark .langclp {
+    background-color: transparent;
+}

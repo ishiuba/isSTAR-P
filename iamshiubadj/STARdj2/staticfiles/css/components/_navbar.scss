@@ -1,0 +1,159 @@
+// Mixins
+@mixin hover-effect {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+@mixin active-shadow {
+    transform: scale(0.8);
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+// Navbar styles
+nav {
+    .d-flex {
+        justify-content: flex-end;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem;
+    background-color: #ff00007e;
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        border: none;
+        background-color: var(--bg-primary);
+    }
+}
+
+#langselect {
+    padding: .5rem;
+    @include hover-effect;
+
+    &.active {
+        color: var(--bg-primary);
+    }
+}
+
+.button {
+    &:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+.logo {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.navbar {
+    > .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+}
+
+#pageURl {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-underline {
+    .active {
+        color: var(--bg-primary) !important;
+
+        &:hover {
+            color: var(--text-color) !important;
+        }
+    }
+
+    .nav-link {
+        color: var(--text-color);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.nav-item {
+    display: inline-block;
+
+    a {
+        font-weight: bold;
+        padding: .5rem .51rem;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--bg-secondary);
+            font-weight: 700;
+        }
+    }
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--bg-primary);
+}
+
+// Icons
+.fa-moon, .fa-sun {
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-moon {
+    color: hsl(231, 100%, 76%);
+
+    &:hover {
+        background-color: var(--hover-color);
+        color: hsl(36, 100%, 68%);
+    }
+}
+
+.fa-sun {
+    color: hsl(36, 100%, 68%);
+
+    &:hover {
+        background-color: var(--hover-color);
+        color: hsl(231, 100%, 76%);
+    }
+}
+
+.fi {
+    padding: 1.3rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(0.9);
+        box-shadow: 0 0 10px 5px var(--shadow-color);
+    }
+
+    &.active {
+        @include active-shadow;
+    }
+}
+
+.langclp {
+    border-radius: 5px;
+    background-color: hsla(0, 0%, 47%, 0.227);
+
+    body.dark & {
+        background-color: hsla(0, 83%, 19%, 0.23);
+    }
+}

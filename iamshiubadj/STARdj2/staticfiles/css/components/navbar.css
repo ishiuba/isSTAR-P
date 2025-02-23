@@ -1,0 +1,142 @@
+nav .d-flex {
+    justify-content: flex-end;
+}
+
+.navbar-toggler {
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem;
+    background-color: #ff00007e;
+    color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover {
+    border: none;
+    background-color: var(--bg-primary);
+}
+
+#langselect {
+    padding: .5rem;
+}
+
+#langselect.active {
+    color: var(--bg-primary);
+}
+
+#langselect:hover,
+.button:hover {
+    background-color: var(--hover-color);
+}
+
+.logo {
+    width: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.navbar>.container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+#pageURl {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-underline .active {
+    color: var(--bg-primary) !important;
+}
+
+.nav-underline .active:hover {
+    color: var(--text-color) !important;
+}
+
+.nav-underline .nav-link {
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item a {
+    font-weight: bold;
+    padding: .5rem .51rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+    color: var(--bg-secondary);
+    font-weight: 700;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--bg-primary);
+}
+
+.fa-moon {
+    color: hsl(231, 100%, 76%);
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-sun {
+    color: hsl(36, 100%, 68%);
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-sun,
+.fa-moon {
+    padding: 1rem;
+}
+
+.fa-sun:hover {
+    background-color: var(--hover-color);
+    color: hsl(231, 100%, 76%);
+}
+
+.fa-moon:hover {
+    background-color: var(--hover-color);
+    color: hsl(36, 100%, 68%);
+}
+
+.fi {
+    margin: .5rem;
+    padding-inline: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.fi:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+.fi.active {
+    transform: scale(0.8);
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+.langclp {
+    border-radius: 5px;
+    background-color: hsla(0, 0%, 47%, 0.227);
+}
+
+body.dark .langclp {
+    background-color: hsla(0, 83%, 19%, 0.23);
+}

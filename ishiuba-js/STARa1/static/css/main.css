@@ -1,0 +1,265 @@
+/* Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --shadow-color: #ff000088;
+}
+
+/* Dark Theme */
+body.dark {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#up, #down, .page-link, button {
+    transition: all 0.3s ease;
+}
+
+svg {
+    color: var(--text-color);
+    margin: 0.5rem;
+}
+
+svg:hover {
+    color: #ff0800;
+}
+
+a {
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.link {
+    animation: fadeIn 5s ease-in-out;
+}
+
+#up, #down {
+    margin: 0;
+    color: #ff0800;
+    padding: 2rem;
+}
+
+#up:hover, #down:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#main h1 {
+    /* Style the heading */
+    font-size: 4rem;
+    /* Add a shadow for readability */
+    margin-bottom: 2rem;
+}
+
+#main p.lead {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body, h1, h2, h3, h4, h5, p, a {
+    text-shadow: 3px 3px 4px var(--shadow-color);
+
+    padding: 0.5rem;
+    text-align: center;
+}
+
+h1 {
+    color: #ff0800;
+    font-size: 3rem;
+}
+
+h2, h3, h4 {
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5 {
+    animation: fadeIn 3s ease-in-out;
+}
+
+p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 5s ease-in-out;
+}
+
+iframe {
+    border: 1px solid #ccc;
+    /* Or your chosen color */
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    margin-bottom: 1rem;
+}
+
+#youtube, .video-links {
+    text-align: center;
+}
+
+.video-links {
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.video-links a {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: #ff261d;
+    transition: color, border 0.3s ease;
+}
+
+.video-links a:hover {
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+}
+
+.nav-link {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ff0800;
+    text-shadow: 0 0 3px #ff0800;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav-tab {
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+button {
+    border: none;
+    margin: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#langselect, #swicher, .navbar-brand, label {
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch input:checked+.slider {
+    background-color: #000000, var(--text-color);
+}
+
+.switch input:checked+.slider:before {
+    transform: translateX(20px);
+    background-color: transparent;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    box-shadow: inset -5px -3px 0 #d8e9ef;
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    transition: 0.4s;
+    border-radius: 20px;
+    box-shadow: 0 0 0.25em rgba(67, 71, 85, 0.27), 0.2px 0.2em 24px 0 rgba(1, 29, 77, 0.15);
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: yellow;
+    transition: 0.4s;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+}
+
+div, button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        display: block;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+}

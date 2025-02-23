@@ -1,0 +1,1 @@
+loadComponent("nav", "/templates/partials/nav.html");

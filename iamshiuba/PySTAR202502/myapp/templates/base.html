@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the music and videos of IamSHIUBA, a talented artist."
+    />
+    <meta
+      name="keywords"
+      content="iamshiuba, music, videos, musician, entertainment, artist, singles, music videos"
+    />
+    <title>IamSHIUBA</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ url_for('static', filename='img/is_web.svg') }}"
+      sizes="any"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/global.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    {% include 'partials/navbar.html' %}
+    <main class="d-flex row mx-auto">{% block content %}{% endblock %}</main>
+    {% include 'partials/footer.html' %}
+    <script src="{{ url_for('static', filename='js/classactive.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/is_colorscheme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/translations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lazy-iframe.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-link {
+        color: var(--bs-body-color);
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        color: #ff3e37;
+        text-shadow: #ff6f69 0 0 10px;
+    }
+
+    .navbar-toggler {
+        background-color: #ff3e37;
+    }
+}
