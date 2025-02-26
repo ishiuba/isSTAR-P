@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+<script src="{{ url_for('static', filename='js/spotifyplaylist.js') }}"></script>
+<script src="{{ url_for('static', filename='js/ytbplaylist.js') }}"></script>
+
+<section class="streaming-header">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold gradient-text mb-4" data-translate="streaming"></h1>
+        <p class="lead mb-5" data-translate="streamingDesc"></p>
+    </div>
+</section>
+
+<section class="streaming-content mb-5">
+    <div class="d-grid">
+        <div class="mb-4">
+            <input type="text" id="youtubeSearch" class="form-control mb-2" placeholder="Search YouTube playlists..."/>
+            <div id="playlistContainer" class="row g-4"></div>
+        </div>
+
+        <div class="mb-4">
+            <input type="text" id="spotifySearch" class="form-control mb-4" placeholder="Search Spotify playlists..."/>
+            <div id="spotifyContainer" class="row g-4"></div>
+        </div>
+
+        <div id="loadingAnimation" class="text-center mb-4">
+            <div class="spinner"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

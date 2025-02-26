@@ -1,0 +1,136 @@
+// Mixins
+@mixin hover-effect {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+@mixin active {
+    transform: scale(0.8);
+}
+
+// Navbar styles
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.7rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navBrand a {
+        display: flex;
+        align-items: center;
+
+        img.svg-icon {
+
+            filter: invert(13%) sepia(83%) saturate(5797%) hue-rotate(0deg) brightness(97%) contrast(118%);
+            transition: all 0.3s ease;
+
+            &:hover {
+                filter: invert(13%) sepia(83%) saturate(2797%) hue-rotate(0deg) brightness(97%) contrast(118%);
+            }
+        }
+
+        .logo {
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.navToggler {
+    padding-inline-start: .5rem;
+    padding-block-start: .5rem;
+}
+
+#pageURl {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: stretch;
+}
+
+.navbar-collapse {
+    align-items: center;
+    width: stretch;
+}
+
+.nav-underline {
+    .nav-link {
+        color: var(--text-accent);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--bg-primary);
+        }
+
+        &.active {
+            color: var(--bg-primary);
+
+            &:hover {
+                color: var(--text-accent);
+            }
+        }
+    }
+}
+
+.nav-item {
+    display: inline-block;
+
+    .nav-link {
+        font-weight: 600;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &:hover::after,
+        &.active::after {
+            width: 100%;
+        }
+    }
+
+    a {
+        padding: .5rem .51rem;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #pageURl {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+}

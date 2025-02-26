@@ -1,0 +1,37 @@
+.privacy-header {
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-main) 100%);
+    padding: 4rem 0;
+}
+
+.privacy-card {
+    background: var(--bg-main);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    section {
+        padding: 1.5rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: var(--bg-main-accent);
+            transform: translateX(10px);
+        }
+
+        i {
+            font-size: 1.5rem;
+            color: var(--bg-primary);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        p {
+            color: var(--text-color);
+            margin-left: 2.8rem;
+        }
+    }
+}

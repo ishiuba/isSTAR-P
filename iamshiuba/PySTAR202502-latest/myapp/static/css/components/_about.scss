@@ -1,0 +1,63 @@
+.skill-card {
+    background: var(--bg-main);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    i {
+        font-size: 2.5rem;
+        color: var(--bg-primary);
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: var(--text-color);
+    }
+
+    .skill-bar {
+        background: var(--bg-color);
+        height: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        .progress {
+            height: 100%;
+            background: var(--bg-primary);
+            animation: slideRight 1s ease-out;
+        }
+    }
+}
+
+.connect-card {
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease forwards;
+
+    .social-buttons {
+        .btn {
+            margin: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

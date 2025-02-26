@@ -1,0 +1,91 @@
+{% extends "base.html" %}{% block content %}
+<script src="{{ url_for('static', filename='js/indexplaylist.js') }}"></script>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container-fluid">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6 hero-content d-grid" style="justify-items: start;">
+        <h1 class="display-3 fw-bold gradient-text" data-translate="greeting"></h1>
+        <p class="lead mt-4 mx-2 text-start">
+          <span data-translate="mainMsg"></span>
+          <br/>
+          <span data-translate="subMsg"></span>
+        </p>
+        <div class="hero-buttons mt-3 mb-5">
+          <a href="/streaming" class="btn me-3">
+            <i class="fas fa-play me-2"></i>
+            <span data-translate="startListening"></span>
+          </a>
+          <a href="/about" class="btn">
+            <span data-translate="learnMore"></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-auto hero-image">
+        <div class="floating-image">
+          <img src="{{ url_for('static', filename='img/iamshiuba_web.svg') }}" width="450px" alt="Hero Image" class="img-fluid"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Section -->
+<section class="featured-section py-5">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-auto">
+        <div class="featured-card">
+          <div class="card-header text-center">
+            <h2 class="display-6 mb-3" data-translate="highlight"></h2>
+            <p class="lead" data-translate="hDescription"></p>
+          </div>
+          
+          <div id="highlightContainer" class="ratio ratio-16x9 mt-4"></div>
+          
+          <div class="text-center mt-4">
+            <button
+              class="btn btn-lg"
+              onclick="window.open('https://www.youtube.com/playlist?list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q')"
+              aria-label="Check Out YouTube Playlist"
+            >
+              <i class="fab fa-youtube me-2"></i>
+              <span data-translate="checkOut"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof Section -->
+<section class="social-proof py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="stats-card text-center">
+          <i class="fas fa-music mb-3"></i>
+          <h3 class="counter">30+</h3>
+          <p data-translate="tracksCreated"></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stats-card text-center">
+          <i class="fas fa-users mb-3"></i>
+          <h3 class="counter">300+</h3>
+          <p data-translate="monthlyListeners"></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stats-card text-center">
+          <i class="fas fa-star mb-3"></i>
+          <h3 class="counter">5.0</h3>
+          <p data-translate="averageRating"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="nav-container container-fluid">
+    <div class="nav-header">
+      <div class="navBrand">
+        <a href="/">
+          <img
+            class="logo svg-icon"
+            src="{{ url_for('static', filename='img/ishiubahor.svg', v=1) }}"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div class="navToggler">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul id="pageURl" class="nav nav-underline">
+        <li class="nav-item">
+          <a
+            href="/"
+            class="nav-link active"
+            title="Homepage"
+            data-translate="Homepage"
+          >
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="/streaming"
+            class="nav-link"
+            title="Streaming"
+            data-translate="Streaming"
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="/about"
+            class="nav-link"
+            title="About"
+            data-translate="About"
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
