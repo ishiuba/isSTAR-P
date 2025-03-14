@@ -1,0 +1,165 @@
+#navContainer {
+    @apply hidden md:grid grid-cols-2 bg-[var(--is-red-85)] dark:bg-[var(--is-red-10)] text-[var(--is-red-20)] dark:text-[var(--is-red-80)];
+
+    #desktopMenu {
+        @apply hidden md:block place-self-center container;
+
+        ul {
+            @apply font-medium text-[var(--is-red-20)] dark:text-[var(--is-red-80)] p-2 flex items-center justify-end gap-2.5;
+
+            li a {
+                @apply px-4 py-2 hover:bg-[var(--is-red-90)] dark:hover:bg-[var(--is-red-20)] hover:text-red-400 dark:hover:text-stone-300 transition duration-300 ease-in-out rounded-lg;
+            }
+        }
+    }
+}
+
+#m-NavContainer {
+    @apply md:hidden bg-[var(--is-red-85)] dark:bg-[var(--is-red-10)] text-[var(--is-red-20)] dark:text-[var(--is-red-80)];
+
+    & h1 {
+        @apply font-bold text-4xl bg-gradient-to-r from-red-500 from-10% to-red-700 to-60% text-transparent bg-clip-text;
+    }
+
+    #mobileMenu {
+        .nav-item {
+            @apply flex flex-col items-center justify-center w-full py-1 transition-all p-2;
+
+            .nav-label {
+                @apply text-xs opacity-0 transition-all -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0;
+            }
+
+            &:hover {
+                @apply text-red-600 dark:text-red-400;
+            }
+
+            &:active {
+                @apply scale-90;
+            }
+        }
+    }
+
+    .modal {
+        @apply fixed inset-0 bottom-16 bg-[var(--is-red-85)] dark:bg-[var(--is-red-10)] z-50 m-0 h-[calc(100vh-4rem)] w-full p-0;
+
+        &::backdrop {
+            @apply bg-black/50 backdrop-blur-sm;
+        }
+
+        .modal-content {
+            @apply h-full w-full flex flex-col mx-auto;
+
+            .modal-header {
+                @apply flex items-center justify-between p-4 border-b border-red-200/20 dark:border-red-800/20;
+
+                h3 {
+                    @apply text-xl font-bold text-[var(--is-red-20)] dark:text-[var(--is-red-80)];
+                }
+
+                .modal-close {
+                    @apply text-3xl text-[var(--is-red-20)] dark:text-[var(--is-red-80)] transition-colors;
+                }
+            }
+
+            .modal-body {
+                @apply p-4 overflow-y-auto;	
+
+                ul {
+                    @apply space-y-4;
+                }
+
+                .modal-link {
+                    @apply flex items-center text-lg text-[var(--is-red-20)] dark:text-[var(--is-red-80)] transition-colors;
+                }
+            }
+        }
+
+        &[open] {
+            @apply animate-[slideUp_0.5s_ease-out];
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+}
+
+#socialLinks {
+    #social-icons {
+        @apply flex gap-5 text-4xl md:text-3xl;
+
+        & .fa-x-twitter {
+            @apply text-sky-600 dark:text-sky-400;
+        }
+
+        & .fa-soundcloud {
+            @apply text-orange-600 dark:text-orange-400;
+        }
+
+        & .fa-youtube {
+            @apply text-red-600;
+        }
+
+        & :hover {
+            &.fa-x-twitter {
+                @apply text-sky-500;
+            }
+
+            &.fa-soundcloud {
+                @apply text-orange-500;
+            }
+
+            &.fa-youtube {
+                @apply text-red-700;
+            }
+        }
+    }
+}
+
+#versionLinks {
+    .v-item {
+        @apply px-2.5 py-1;
+    }
+}
+
+.modal-body {
+    @apply text-red-600 dark:text-[var(--is-red-80)];
+
+    & h4 {
+        @apply mb-2.5 mt-2.5 text-2xl font-bold;
+    }
+
+    #theme-container div button {
+        @apply text-yellow-600 dark:text-blue-400 text-4xl md:text-3xl;
+    }
+    
+    #language-container {
+        @apply mt-12 mb-12;
+    
+        #language {
+    
+            & .langItem {
+                @apply grid items-center justify-start;
+    
+                & .fi {
+                    @apply text-3xl md:text-2xl transition-all ease-in-out duration-400 cursor-pointer saturate-0 hover:saturate-100;
+    
+                    &.active {
+                        @apply text-4xl md:text-3xl saturate-100;
+                    }
+                }
+    
+                & p {
+                    @apply text-sm md:text-base lg:text-lg fixed left-5/4 bottom-1 w-20;
+                }
+            }
+    
+        }
+    }
+}

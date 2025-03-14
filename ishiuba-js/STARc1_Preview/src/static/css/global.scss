@@ -1,0 +1,13 @@
+@use './container/root';
+
+@import "../../../node_modules/tailwindcss/";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@import "./container/navbar";
+
+@import "./container/main";
+
+@import "./components/home";
+
+@import "./container/footer";

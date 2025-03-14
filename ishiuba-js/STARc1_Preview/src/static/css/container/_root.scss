@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root,
+[data-theme=light] {
+  scrollbar-color: var(--is-red-80) var(--is-red-90);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  --is-font-family: 'Poppins', sans-serif;
+  /* These numbers on the variable stands for the hsl color lightness percentage(but they're rounded for readability). */
+  --is-red-90: hsl(0, 61%, 90%);
+  --is-red-85: hsl(0, 61%, 86%);
+  --is-red-80: hsl(0, 61%, 82%);
+  /*--is-red-75: hsl(0, 61%, 77%);
+  --is-red-70: hsl(0, 61%, 72%);
+  --is-red-65: hsl(0, 61%, 65%);
+  --is-red-60: hsl(0, 61%, 60%);
+  --is-red-55: hsl(0, 61%, 55%);
+  --is-red-50: hsl(0, 61%, 48%);
+  --is-red-45: hsl(0, 61%, 45%);
+  --is-red-40: hsl(0, 61%, 40%);
+  --is-red-35: hsl(0, 61%, 35%);
+  --is-red-30: hsl(0, 61%, 30%);
+  --is-red-25: hsl(0, 61%, 25%);*/
+  --is-red-20: hsl(0, 61%, 19%);
+  --is-red-15: hsl(0, 61%, 15%);
+  --is-red-10: hsl(0, 61%, 10%);
+}
+
+[data-theme=dark] {
+  scrollbar-color: var(--is-red-20) var(--is-red-10);
+}
+
+@theme {
+  --font-display: var(--is-font-family);
+}
+
+body {
+  @apply bg-gray-300 dark:bg-[var(--is-red-10)] font-display;
+}

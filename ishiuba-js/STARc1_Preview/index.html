@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IamSHIUBA</title>
+    <link
+      rel="icon"
+      href="/src/static/img/iamshiuba_web.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
+    <link rel="stylesheet" href="/src/static/css/global.css" />
+    <link rel="stylesheet" href="/src/static/css/output.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navContainer">
+        <div id="navBrand" class="p-3">
+          <a href="/">
+            <img
+              id="logo"
+              class="hover:brightness-120 inline-block w-1/3 md:w-1/4 lg:w-1/10"
+              src="./src/static/img/is_web.svg"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div id="desktopMenu">
+          <ul>
+            <li>
+              <a href="/" title="Homepage" data-translate="Homepage"></a>
+            </li>
+            <li>
+              <a
+                href="#streaming"
+                title="Streaming"
+                data-translate="Streaming"
+              ></a>
+            </li>
+            <li>
+              <a href="#about" title="About" data-translate="About"></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="Content">
+      <div class="justify-center items-center grid">
+        <section id="hero-section">
+          <div class="flex flex-col lg:flex-row items-center">
+            <div id="hero-content" class="columns-lg-auto grid">
+              <h1 data-translate="greeting"></h1>
+              <p class="text-lg mt-4 text-start">
+                <span data-translate="mainMsg"></span>
+                <br />
+                <span data-translate="subMsg"></span>
+              </p>
+              <div id="hero-buttons">
+                <a href="#streaming" class="hBtn">
+                  <i class="fas fa-play me-2"></i>
+                  <span data-translate="startListening"></span>
+                </a>
+                <a href="#about" class="hBtn">
+                  <span data-translate="learnMore"></span>
+                </a>
+              </div>
+            </div>
+            <div id="floating-image">
+              <img
+                src="./src/static/img/iamshiuba_web.svg"
+                alt="Hero Image"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </section>
+        <script src="/src/static/js/highlights.js"></script>
+        <section id="highlight-section">
+          <div id="featured-card">
+            <div id="card-header" class="text-center">
+              <h2 class="text-4xl mb-3" data-translate="highlight"></h2>
+              <p class="lead" data-translate="hDescription"></p>
+            </div>
+            <div id="highlightContainer"></div>
+            <div class="text-center mt-4">
+              <button
+                class="inline-flex items-center px-5 py-2 text-stone-200 bg-red-600 hover:saturate-80 rounded-lg w-full max-w-3xl justify-center font-bold text-lg"
+                onclick="window.open('https://www.youtube.com/playlist?list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q')"
+                aria-label="Check Out YouTube Playlist"
+                type="button"
+              >
+                <i class="fab fa-youtube me-2"></i>
+                <p data-translate="checkOut"></p>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section id="social-proof">
+          <div id="statsContainer">
+            <div class="stats-card">
+              <i class="fas fa-music"></i>
+              <h3 class="counter">30+</h3>
+              <p data-translate="tracksCreated"></p>
+            </div>
+            <div class="stats-card">
+              <i class="fas fa-users"></i>
+              <h3 class="counter">300+</h3>
+              <p data-translate="monthlyListeners"></p>
+            </div>
+            <div class="stats-card">
+              <i class="fas fa-star"></i>
+              <h3 class="counter">5.0</h3>
+              <p data-translate="averageRating"></p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div id="desktop">
+        <div id="footer-content">
+          <div id="quick-links">
+            <h4 data-translate="quickLinks">Links</h4>
+            <ul>
+              <li>
+                <a href="#about" data-translate="About" class="f-link">Sobre</a>
+              </li>
+              <li>
+                <a href="#terms" data-translate="tos" class="f-link">Termos</a>
+              </li>
+              <li>
+                <a href="#privacy" data-translate="privacy" class="f-link"
+                  >Privacidade</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div id="social-links">
+            <h4 data-translate="followMe">Siga-me</h4>
+            <div id="social-icons">
+              <a
+                href="https://twitter.com/iamshiuba"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter"
+                class="fa-brands fa-x-twitter"
+              >
+              </a>
+              <a
+                href="https://soundcloud.com/iamshiuba"
+                target="_blank"
+                rel="noopener"
+                aria-label="SoundCloud"
+                class="fa-brands fa-soundcloud"
+              >
+              </a>
+              <a
+                href="https://youtube.com/@iamshiuba"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+                class="fa-brands fa-youtube"
+              >
+              </a>
+            </div>
+          </div>
+          <div id="theme-container">
+            <h4><span data-translate="theme">Tema</span></h4>
+            <div class="pt-2 text-center w-20">
+              <button
+                type="button"
+                class="fas fa-moon"
+                aria-label="Toggle Theme"
+                data-theme-switch
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div id="footer-bottom">
+          <div id="version-container">
+            <div class="columns-lg">
+              <div class="container">
+                <h4 data-translate="Versions">Versões</h4>
+                <ul>
+                  <li>
+                    <a
+                      class="v-item"
+                      href="https://ishiuba-js-prealpha.vercel.app/"
+                      >PreAlpha</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="v-item"
+                      href="https://ishiuba-js-pas25.vercel.app/templates/pages/"
+                      >PreAlpha 2025</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="v-item"
+                      href="https://ishiuba-js-alpha.vercel.app/"
+                      >Alpha</a
+                    >
+                  </li>
+                  <li>
+                    <a class="v-item" href="https://ishiuba-js-beta.vercel.app/"
+                      >Beta</a
+                    >
+                  </li>
+                  <li>
+                    <a class="v-item" href="https://ishiuba-js-a1.vercel.app/"
+                      >STARa1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="v-item" href="https://ishiuba-js-b1.vercel.app/"
+                      >STARb1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="v-item" href="https://ishiuba-js-b2.vercel.app/"
+                      >STARb2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="v-item"
+                      href="https://iamshiuba-202501.vercel.app/"
+                      >PySTAR202501</a
+                    >
+                  </li>
+                  <li>
+                    <a class="v-item" href="https://iamshiuba.vercel.app/"
+                      >PySTAR202502</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="language-container">
+            <h4 data-translate="Translations"></h4>
+            <ul id="language" aria-labelledby="language-label" role="group">
+              <li class="langItem">
+                <a
+                  data-language="en-US"
+                  title="English"
+                  class="fi fi-us"
+                  aria-label="English"
+                  ><p>en-US</p></a
+                >
+              </li>
+              <li class="langItem">
+                <a
+                  data-language="pt-BR"
+                  title="Português"
+                  class="fi fi-br"
+                  aria-label="Português"
+                  ><p>pt-BR</p></a
+                >
+              </li>
+              <li class="langItem">
+                <a
+                  data-language="jp-JP"
+                  title="日本語"
+                  class="fi fi-jp"
+                  aria-label="日本語"
+                >
+                  <p>ni-NI</p></a
+                >
+              </li>
+              <li class="langItem">
+                <a
+                  data-language="ru-RU"
+                  title="Русский"
+                  class="fi fi-ru"
+                  aria-label="Русский"
+                  ><p>ru-RO</p></a
+                >
+              </li>
+              <li class="langItem">
+                <a
+                  data-language="hi-IN"
+                  title="हिन्दी"
+                  class="fi fi-in"
+                  aria-label="हिन्दी"
+                  ><p>bh-BH</p></a
+                >
+              </li>
+              <li class="langItem">
+                <a data-language="zh-CN" title="中文" class="fi fi-cn"
+                  ><p>zh-ZH</p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="copyright" class="text-center">
+          <hr id="f-divider" />
+          <p>
+            <span data-translate="prdBy"></span> &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            <span data-translate="footer"></span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="m-NavContainer">
+      <nav
+        id="mobileMenu"
+        class="fixed bottom-0 left-0 right-0 md:hidden bg-[var(--is-red-85)] dark:bg-[var(--is-red-15)] z-50 border-t border-red-200/20 dark:border-red-800/20 backdrop-blur-sm"
+      >
+        <div
+          class="grid grid-cols-5 items-center justify-items-center p-2 text-[var(--is-red-20)] dark:text-[var(--is-red-80)]"
+        >
+          <a href="/" class="nav-item" aria-label="Início">
+            <i class="fas fa-home text-xl"></i>
+          </a>
+
+          <button
+            class="nav-item"
+            onclick="document.getElementById('menuLinks').showModal()"
+            aria-label="Menu"
+          >
+            <i class="fas fa-compass text-xl"></i>
+          </button>
+
+          <button
+            class="nav-item"
+            onclick="document.getElementById('socialLinks').showModal()"
+            aria-label="Social"
+          >
+            <i class="fas fa-share-nodes text-xl"></i>
+          </button>
+
+          <button
+            class="nav-item"
+            onclick="document.getElementById('versionLinks').showModal()"
+            aria-label="Versões"
+          >
+            <i class="fas fa-code-branch text-xl"></i>
+          </button>
+
+          <button
+            class="nav-item"
+            onclick="document.getElementById('configMenu').showModal()"
+            aria-label="Config"
+          >
+            <i class="fas fa-sliders text-xl"></i>
+          </button>
+        </div>
+      </nav>
+
+      <dialog id="menuLinks" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 data-translate="Menu">Menu</h1>
+            <button
+              onclick="this.closest('dialog').close()"
+              class="modal-close"
+              aria-label="Fechar"
+            >
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                <a href="/" class="modal-link"
+                  ><i class="fas fa-home me-2"></i>
+                  <span data-translate="Homepage">Início</span></a
+                >
+              </li>
+              <li>
+                <a href="#streaming" class="modal-link"
+                  ><i class="fas fa-play me-2"></i>
+                  <span data-translate="Streaming">Streaming</span></a
+                >
+              </li>
+              <li>
+                <a href="#about" class="modal-link"
+                  ><i class="fas fa-info-circle me-2"></i>
+                  <span data-translate="About">Sobre</span></a
+                >
+              </li>
+              <li>
+                <a href="#terms" class="modal-link"
+                  ><i class="fas fa-file-contract me-2"></i>
+                  <span data-translate="tos">Termos</span></a
+                >
+              </li>
+              <li>
+                <a href="#privacy" class="modal-link"
+                  ><i class="fas fa-shield-halved me-2"></i>
+                  <span data-translate="privacy">Privacidade</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog id="socialLinks" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 data-translate="followMe">Siga-me</h1>
+            <button
+              onclick="this.closest('dialog').close()"
+              class="modal-close"
+              aria-label="Fechar"
+            >
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="social-icons">
+              <a
+                href="https://twitter.com/iamshiuba"
+                target="_blank"
+                rel="noopener"
+                aria-label="Twitter"
+                class="fa-brands fa-x-twitter"
+              >
+              </a>
+              <a
+                href="https://soundcloud.com/iamshiuba"
+                target="_blank"
+                rel="noopener"
+                aria-label="SoundCloud"
+                class="fa-brands fa-soundcloud"
+              >
+              </a>
+              <a
+                href="https://youtube.com/@iamshiuba"
+                target="_blank"
+                rel="noopener"
+                aria-label="YouTube"
+                class="fa-brands fa-youtube"
+              >
+              </a>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog id="versionLinks" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 data-translate="Versions">Versões</h1>
+            <button
+              onclick="this.closest('dialog').close()"
+              class="modal-close"
+              aria-label="Fechar"
+            >
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="version-container">
+              <ul>
+                <li>
+                  <a
+                    class="v-item"
+                    href="https://ishiuba-js-prealpha.vercel.app/"
+                    >PreAlpha</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="v-item"
+                    href="https://ishiuba-js-pas25.vercel.app/templates/pages/"
+                    >PreAlpha 2025</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://ishiuba-js-alpha.vercel.app/"
+                    >Alpha</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://ishiuba-js-beta.vercel.app/"
+                    >Beta</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://ishiuba-js-a1.vercel.app/"
+                    >STARa1</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://ishiuba-js-b1.vercel.app/"
+                    >STARb1</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://ishiuba-js-b2.vercel.app/"
+                    >STARb2</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://iamshiuba-202501.vercel.app/"
+                    >PySTAR202501</a
+                  >
+                </li>
+                <li>
+                  <a class="v-item" href="https://iamshiuba.vercel.app/"
+                    >PySTAR202502</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog id="configMenu" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 data-translate="config">Configurações</h1>
+            <button
+              onclick="this.closest('dialog').close()"
+              class="modal-close"
+              aria-label="Fechar"
+            >
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="theme-container">
+              <h4><span data-translate="theme">Tema</span></h4>
+              <div class="pt-2 text-center w-20">
+                <button
+                  data-theme-switch
+                  type="button"
+                  class="fas fa-moon"
+                  aria-label="Toggle Theme"
+                ></button>
+              </div>
+            </div>
+            <div id="language-container">
+              <h4 data-translate="Translations"></h4>
+              <ul id="language" aria-labelledby="language-label" role="group">
+                <li class="langItem">
+                  <a
+                    data-language="en-US"
+                    title="English"
+                    class="fi fi-us"
+                    aria-label="English"
+                    ><p>en-US</p></a
+                  >
+                </li>
+                <li class="langItem">
+                  <a
+                    data-language="pt-BR"
+                    title="Português"
+                    class="fi fi-br"
+                    aria-label="Português"
+                    ><p>pt-BR</p></a
+                  >
+                </li>
+                <li class="langItem">
+                  <a
+                    data-language="jp-JP"
+                    title="日本語"
+                    class="fi fi-jp"
+                    aria-label="日本語"
+                  >
+                    <p>ni-NI</p></a
+                  >
+                </li>
+                <li class="langItem">
+                  <a
+                    data-language="ru-RU"
+                    title="Русский"
+                    class="fi fi-ru"
+                    aria-label="Русский"
+                    ><p>ru-RO</p></a
+                  >
+                </li>
+                <li class="langItem">
+                  <a
+                    data-language="hi-IN"
+                    title="हिन्दी"
+                    class="fi fi-in"
+                    aria-label="हिन्दी"
+                    ><p>bh-BH</p></a
+                  >
+                </li>
+                <li class="langItem">
+                  <a data-language="zh-CN" title="中文" class="fi fi-cn"
+                    ><p>zh-ZH</p></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <h4>Versão: <b class="text-sm">STARc1 (Preview)</b></h4>
+          </div>
+        </div>
+      </dialog>
+    </div>
+
+    <script src="/src/static/js/utils/Theme.js"></script>
+    <script src="/src/static/js/utils/Translations.js"></script>
+  </body>
+</html>

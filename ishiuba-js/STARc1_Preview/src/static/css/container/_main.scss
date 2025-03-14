@@ -1,0 +1,7 @@
+main {
+    @apply bg-[var(--is-red-90)] dark:bg-[var(--is-red-15)] text-black dark:text-white p-2;
+
+    h1 {
+        @apply font-bold text-5xl bg-gradient-to-r from-red-500 from-10% to-red-700 to-60% text-transparent bg-clip-text;
+    }
+}

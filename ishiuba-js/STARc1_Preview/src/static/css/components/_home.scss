@@ -1,0 +1,84 @@
+#hero-section {
+    @apply py-16 overflow-hidden md:w-3/4 mx-auto flex flex-col md:flex-row items-center;
+
+    #hero-content {
+        @apply animate-[slide-up_3s_ease-in-out] mb-2.5;
+
+        #hero-buttons {
+            @apply mt-10 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4;
+
+            .hBtn {
+                @apply hover:saturate-80 bg-red-600 text-white px-5 py-2.5 rounded text-center text-lg;
+            }
+        }
+    }
+
+    #floating-image {
+        @apply animate-[float_6s_ease-in-out_infinite] w-full md:w-1/2 mx-auto mt-30;
+
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+
+            50% {
+                transform: translatey(-20px);
+            }
+
+            100% {
+                transform: translatey(0px);
+            }
+        }
+    }
+}
+
+#highlight-section {
+    @apply mx-auto my-15;
+
+    #featured-card {
+        @apply animate-[slide-up_1s_ease-in-out] bg-[var(--is-red-80)] dark:bg-[var(--is-red-20)] rounded-3xl p-8 shadow-lg;
+
+        & #highlightContainer {
+            @apply mt-5 items-center justify-center flex lg:w-3xl;
+        }
+    }
+}
+
+#social-proof {
+    @apply pb-5;
+
+    #statsContainer {
+        @apply flex flex-row justify-center flex-wrap gap-2.5;
+
+        .stats-card {
+            @apply text-center transition duration-300 ease-in-out bg-[var(--is-red-80)] dark:bg-[var(--is-red-20)] text-black dark:text-white my-auto p-8 rounded-3xl shadow-lg lg:max-w-70 md:max-w-50 w-full;
+
+            & .fas {
+                @apply text-red-600 mb-3;
+            }
+
+            & .counter {
+                @apply my-4;
+            }
+
+            & .fas,
+            .counter {
+                @apply text-[size:2.5rem] font-bold;
+            }
+
+            &:hover {
+                @apply transform -translate-y-2.5;
+            }
+        }
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
