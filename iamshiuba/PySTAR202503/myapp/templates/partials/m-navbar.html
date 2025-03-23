@@ -1,0 +1,305 @@
+<div id="m-NavContainer">
+  <nav
+    id="mobileMenu"
+    class="fixed bottom-0 left-0 right-0 md:hidden bg-[var(--is-red-85)] dark:bg-[var(--is-red-15)] z-50 border-t border-red-200/20 dark:border-red-800/20 backdrop-blur-sm"
+  >
+    <div class="menu-grid">
+      <a href="/" class="nav-item" aria-label="Início">
+        <i class="fas fa-home"></i>
+      </a>
+
+      <button
+        class="nav-item"
+        onclick="document.getElementById('menuLinks').showModal()"
+        aria-label="Menu"
+      >
+        <i class="fas fa-compass"></i>
+      </button>
+
+      <button
+        class="nav-item"
+        onclick="document.getElementById('socialLinks').showModal()"
+        aria-label="Social"
+      >
+        <i class="fas fa-share-nodes"></i>
+      </button>
+
+      <button
+        class="nav-item"
+        onclick="document.getElementById('versionLinks').showModal()"
+        aria-label="Versões"
+      >
+        <i class="fas fa-code-branch"></i>
+      </button>
+
+      <button
+        class="nav-item"
+        onclick="document.getElementById('configMenu').showModal()"
+        aria-label="Config"
+      >
+        <i class="fas fa-sliders"></i>
+      </button>
+    </div>
+  </nav>
+
+  <dialog id="menuLinks" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 data-translate="Menu">Menu</h1>
+        <button
+          onclick="this.closest('dialog').close()"
+          class="modal-close"
+          aria-label="Fechar"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>
+            <a href="/" class="modal-link"
+              ><i class="fas fa-home"></i>
+              <span data-translate="Homepage">Início</span></a
+            >
+          </li>
+          <li>
+            <a href="/streaming" class="modal-link"
+              ><i class="fas fa-play"></i>
+              <span data-translate="Streaming">Streaming</span></a
+            >
+          </li>
+          <li>
+            <a href="/about" class="modal-link"
+              ><i class="fas fa-info-circle"></i>
+              <span data-translate="About">Sobre</span></a
+            >
+          </li>
+          <li>
+            <a href="/terms" class="modal-link"
+              ><i class="fas fa-file-contract"></i>
+              <span data-translate="tos">Termos</span></a
+            >
+          </li>
+          <li>
+            <a href="/privacy" class="modal-link"
+              ><i class="fas fa-shield-halved"></i>
+              <span data-translate="privacy">Privacidade</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="socialLinks" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 data-translate="followMe">Siga-me</h1>
+        <button
+          onclick="this.closest('dialog').close()"
+          class="modal-close"
+          aria-label="Fechar"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="social-icons">
+          <a
+            href="https://twitter.com/iamshiuba"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+            class="fa-brands fa-x-twitter"
+          >
+          </a>
+          <a
+            href="https://soundcloud.com/iamshiuba"
+            target="_blank"
+            rel="noopener"
+            aria-label="SoundCloud"
+            class="fa-brands fa-soundcloud"
+          >
+          </a>
+          <a
+            href="https://youtube.com/@iamshiuba"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+            class="fa-brands fa-youtube"
+          >
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="versionLinks" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 data-translate="Versions">Versões</h1>
+        <button
+          onclick="this.closest('dialog').close()"
+          class="modal-close"
+          aria-label="Fechar"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="version-container">
+          <ul>
+            <li>
+              <a class="v-item" href="https://ishiuba-js-prealpha.vercel.app/"
+                >PreAlpha</a
+              >
+            </li>
+            <li>
+              <a
+                class="v-item"
+                href="https://ishiuba-js-pas25.vercel.app/templates/pages/"
+                >PreAlpha 2025</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://ishiuba-js-alpha.vercel.app/"
+                >Alpha</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://ishiuba-js-beta.vercel.app/"
+                >Beta</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://ishiuba-js-a1.vercel.app/"
+                >STARa1</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://ishiuba-js-b1.vercel.app/"
+                >STARb1</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://ishiuba-js-b2.vercel.app/"
+                >STARb2</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://iamshiuba.pages.dev/"
+                >STARc1 (Prévia)</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://iamshiubadj1.vercel.app/"
+                >STARdj1</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://iamshiubadj2.vercel.app/"
+                >STARdj2</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://iamshiuba-202501.vercel.app/"
+                >PySTAR202501</a
+              >
+            </li>
+            <li>
+              <a class="v-item" href="https://iamshiuba-202502.vercel.app/"
+                >PySTAR202502</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="configMenu" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 data-translate="config">Configurações</h1>
+        <button
+          onclick="this.closest('dialog').close()"
+          class="modal-close"
+          aria-label="Fechar"
+        >
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="theme-container">
+          <h4><span data-translate="theme">Tema</span></h4>
+          <div class="pt-2 text-center w-20">
+            <button
+              data-theme-switch
+              type="button"
+              class="fas fa-moon"
+              aria-label="Light and dark mode toggle"
+            ></button>
+          </div>
+        </div>
+        <div id="language-container">
+          <h4 data-translate="Translations"></h4>
+          <ul id="language" aria-labelledby="language-label" role="group">
+            <li class="langItem">
+              <a
+                data-language="en-US"
+                title="English"
+                class="fi fi-us"
+                aria-label="English"
+                ><p>en-US</p></a
+              >
+            </li>
+            <li class="langItem">
+              <a
+                data-language="pt-BR"
+                title="Português"
+                class="fi fi-br"
+                aria-label="Português"
+                ><p>pt-BR</p></a
+              >
+            </li>
+            <li class="langItem">
+              <a
+                data-language="jp-JP"
+                title="日本語"
+                class="fi fi-jp"
+                aria-label="日本語"
+              >
+                <p>ni-NI</p></a
+              >
+            </li>
+            <li class="langItem">
+              <a
+                data-language="ru-RU"
+                title="Русский"
+                class="fi fi-ru"
+                aria-label="Русский"
+                ><p>ru-RO</p></a
+              >
+            </li>
+            <li class="langItem">
+              <a
+                data-language="hi-IN"
+                title="हिन्दी"
+                class="fi fi-in"
+                aria-label="हिन्दी"
+                ><p>bh-BH</p></a
+              >
+            </li>
+            <li class="langItem">
+              <a data-language="zh-CN" title="中文" class="fi fi-cn"
+                ><p>zh-ZH</p></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <h4 lang="pt-BR">Versão: <b class="text-sm">STARc1 (Preview)</b></h4>
+      </div>
+    </div>
+  </dialog>
+</div>

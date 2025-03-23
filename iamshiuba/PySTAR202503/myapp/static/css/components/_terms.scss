@@ -1,0 +1,59 @@
+#TERMS {
+    .tos-header {
+        @apply mb-5;
+
+        .container {
+            @apply mx-auto px-4;
+
+            .header-content {
+                @apply flex justify-center text-center py-5;
+
+                .content-wrapper {
+                    @apply md:w-2/3;
+
+                    p {
+                        &.description {
+                            @apply text-xl mt-3;
+                        }
+
+                        &.date {
+                            @apply p-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tos-content {
+        @apply container mx-auto px-4;
+
+        .content-wrapper {
+            @apply flex justify-center gap-4;
+
+            .tos-card {
+                @apply bg-[var(--is-red-80)] dark:bg-[var(--is-red-20)] p-6 rounded-lg shadow-lg w-full;
+
+                section {
+                    @apply mb-4;
+
+                    .section-header {
+                        @apply flex items-center mb-3;
+
+                        i {
+                            @apply mr-3 text-red-600 dark:text-red-400;
+                        }
+
+                        h2 {
+                            @apply mb-0 text-2xl;
+                        }
+                    }
+
+                    p {
+                        @apply text-start;
+                    }
+                }
+            }
+        }
+    }
+}

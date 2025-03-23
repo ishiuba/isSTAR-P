@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.9",
+    "tailwindcss": "^4.0.9",
+    "sass": "^1.71.1"
+  },
+  "scripts": {
+    "build": "sass --load-path=node_modules myapp/static/css/global.scss:myapp/static/css/global.css && npx tailwindcss -i ./myapp/static/css/global.css -o ./myapp/static/css/output.css"
+  }
+}

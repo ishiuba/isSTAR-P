@@ -1,0 +1,90 @@
+#streaming {
+  .streaming-header {
+    @apply mt-10 mb-10 animate-[fade-in_1s_ease-in-out] text-center;
+
+    h1 {
+      @apply mb-4;
+    }
+
+    p {
+      @apply mb-5;
+    }
+  }
+
+  .streaming-content {
+    @apply mb-5;
+
+    .search-section {
+      @apply mb-4;
+    }
+
+    .form-control {
+      @apply text-red-600 dark:text-red-500 bg-[var(--is-red-80)] dark:bg-[var(--is-red-20)] rounded-lg p-2.5 transition-all duration-500 ease-in-out w-full mb-7.5;
+
+      &::placeholder {
+        @apply text-red-800 dark:text-red-400;
+      }
+
+      &:focus {
+        @apply outline-3 outline-red-400 dark:outline-red-800;
+      }
+    }
+
+    .streaming-container {
+      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+
+      .playlist-item {
+        @apply text-center animate-[slideUp_0.5s_ease-out_forwards];
+
+        .video-container {
+          @apply aspect-video;
+
+          iframe {
+            @apply w-full h-full;
+          }
+        }
+      }
+    }
+
+    #loadingAnimation {
+      @apply text-center mb-4;
+    }
+  }
+
+  .spotify-playlist,
+  .youtube-playlist {
+    @apply rounded-lg overflow-hidden shadow-lg mb-7.5;
+
+    iframe {
+      @apply w-full aspect-video rounded-lg;
+    }
+  }
+
+  .playlist-links {
+
+    @apply max-w-full grid mb-7.5;
+
+    .btn {
+      @apply px-4 py-2 rounded-lg transition-colors duration-300;
+
+      i {
+        @apply mr-2;
+      }
+    }
+
+    .youtube {
+      @apply bg-red-600 hover:bg-red-700;
+    }
+
+    .spotify {
+      @apply bg-green-600 hover:bg-green-700;
+
+
+    }
+  }
+
+  #playlistContainer,
+  #spotifyContainer {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5;
+  }
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+<script src="{{ url_for('static', filename='js/spot-playlists.js') }}" defer></script>
+<script src="{{ url_for('static', filename='js/yt-playlists.js') }}" defer></script>
+
+<div id="streaming">
+    <section class="streaming-header">
+      <h1 data-translate="streaming"></h1>
+      <p data-translate="streamingDesc"></p>
+    </section>
+
+    <section class="streaming-content">
+      <div class="search-section">
+        <input
+          type="text"
+          id="youtubeSearch"
+          class="form-control"
+          placeholder="Search YouTube playlists..."
+        />
+        <div id="playlistContainer" class="streaming-container"></div>
+      </div>
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="spotifySearch"
+          class="form-control"
+          placeholder="Search Spotify playlists..."
+        />
+        <div id="spotifyContainer" class="streaming-container"></div>
+      </div>
+
+      <div id="loadingAnimation">
+        <div class="spinner"></div>
+      </div>
+    </section>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+@use 'sass:math';
+
+@use '../../../node_modules/tailwindcss/preflight';
+
+@use '../../../node_modules/tailwindcss/theme'; 
+
+@use '../../../node_modules/tailwindcss/utilities';
+
+@use '../css/container/root';
+
+@use '../css/container/navbar';
+
+@use '../css/container/main';
+
+@use '../css/components/home';
+
+@use '../css/components/streaming';
+
+@use '../css/components/about';
+
+@use '../css/components/terms';
+
+@use '../css/components/privacy';
+
+@use '../css/container/footer';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

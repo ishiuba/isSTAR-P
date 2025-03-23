@@ -1,0 +1,40 @@
+<nav id="navContainer">
+  <div id="navBrand">
+    <a href="/">
+      <img
+        id="logo"
+        src="{{ url_for('static', filename='img/is_web.svg', v=1) }}"
+        alt="logo"
+        href="/"
+      />
+    </a>
+  </div>
+  <div id="desktopMenu">
+    <ul>
+      <li>
+        <a
+          href="/"
+          class="n-link"
+          title="Homepage"
+          data-translate="Homepage"
+        ></a>
+      </li>
+      <li>
+        <a
+          class="n-link"
+          href="/streaming"
+          title="Streaming"
+          data-translate="Streaming"
+        ></a>
+      </li>
+      <li>
+        <a
+          class="n-link"
+          href="/about"
+          title="About"
+          data-translate="About"
+        ></a>
+      </li>
+    </ul>
+  </div>
+</nav>

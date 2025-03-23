@@ -1,0 +1,75 @@
+{% extends "base.html" %}{% block content %}
+<script src="{{ url_for('static', filename='js/highlights.js') }}" async></script>
+
+<div id="home">
+  <section class="hero-section">
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <h1 data-translate="greeting"></h1>
+        <p>
+          <span data-translate="mainMsg"></span>
+          <br />
+          <span data-translate="subMsg"></span>
+        </p>
+        <div class="hero-buttons">
+          <a href="/streaming" class="hBtn">
+            <i class="fas fa-play"></i>
+            <span data-translate="startListening"></span>
+          </a>
+          <a href="/about" class="hBtn">
+            <i class="fas fa-info-circle"></i>
+            <span data-translate="learnMore"></span>
+          </a>
+        </div>
+      </div>
+      <div class="floating-image">
+        <img
+          src="{{ url_for('static', filename='img/iamshiuba_web.svg') }}"
+          alt="Hero Image"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="highlight-section">
+    <div id="featured-card">
+      <div id="card-header">
+        <h2 data-translate="highlight"></h2>
+        <p class="lead" data-translate="hDescription"></p>
+      </div>
+      <div id="highlightContainer"></div>
+      <div class="button-container">
+        <button
+          onclick="window.open('https://www.youtube.com/playlist?list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q')"
+          aria-label="Check Out YouTube Playlist"
+          type="button"
+        >
+          <i class="fab fa-youtube"></i>
+          <p data-translate="checkOut"></p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-proof">
+    <div id="statsContainer">
+      <div class="stats-card">
+        <i class="fas fa-music"></i>
+        <h3 class="counter">30+</h3>
+        <p data-translate="tracksCreated"></p>
+      </div>
+      <div class="stats-card">
+        <i class="fas fa-users"></i>
+        <h3 class="counter">300+</h3>
+        <p data-translate="monthlyListeners"></p>
+      </div>
+      <div class="stats-card">
+        <i class="fas fa-star"></i>
+        <h3 class="counter">5.0</h3>
+        <p data-translate="averageRating"></p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

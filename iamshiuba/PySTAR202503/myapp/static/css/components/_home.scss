@@ -1,0 +1,87 @@
+#home {
+    @apply justify-center items-center;
+
+    .hero-section {
+        @apply animate-[fade-in_1s_ease-in-out] py-16 overflow-hidden mx-auto md:max-w-[80%];
+
+        .hero-wrapper {
+            @apply flex flex-col lg:flex-row items-center;
+        }
+
+        .hero-content {
+            @apply mb-2.5;
+
+            p {
+                @apply text-lg mt-4 text-start;
+            }
+
+            .hero-buttons {
+                @apply mt-10 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4;
+
+                i {
+                    @apply mr-2;
+                }
+            }
+        }
+
+        .floating-image {
+            @apply animate-[float_6s_ease-in-out_infinite] w-full md:w-1/2 mx-auto mt-30;
+        }
+    }
+}
+
+#highlight-section {
+    @apply md:max-w-[80%] lg:max-w-[60%] mx-auto my-15;
+
+    #featured-card {
+        @apply bg-[var(--is-red-80)] dark:bg-[var(--is-red-20)] rounded-3xl p-8 shadow-lg;
+
+        #card-header {
+            @apply text-center;
+
+            h2 {
+                @apply text-4xl mb-3;
+            }
+        }
+
+        #highlightContainer {
+            @apply mt-5 items-center justify-center flex;
+        }
+
+        .button-container {
+            @apply text-center mt-4;
+
+            button {
+                @apply inline-flex items-center px-5 py-2 text-stone-200 bg-red-600 hover:saturate-80 rounded-lg w-full justify-center font-bold text-lg transition-all duration-500 ease-in-out cursor-pointer;
+
+                i {
+                    @apply mr-2;
+                }
+            }
+        }
+    }
+}
+
+#social-proof {
+    @apply pb-5;
+
+    #statsContainer {
+        @apply flex flex-row justify-center flex-wrap gap-2.5;
+
+        .stats-card {
+            @apply text-center transition duration-300 ease-in-out bg-[var(--is-red-80)] dark:bg-[var(--is-red-20)] text-black dark:text-white my-auto p-8 rounded-3xl shadow-lg lg:max-w-70 md:max-w-50 w-full;
+
+            i {
+                @apply text-red-600 text-5xl;
+            }
+
+            .counter {
+                @apply text-4xl font-bold my-4;
+            }
+
+            &:hover {
+                @apply transform -translate-y-2.5;
+            }
+        }
+    }
+}
