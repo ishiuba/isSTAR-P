@@ -10,8 +10,8 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - 0 (2025): [@pAS2025](https://ishiuba-js-pas25.vercel.app/)
 - 0.1: [@Alpha](https://ishiuba-js-alpha.vercel.app/)
 - 0.2: [@Beta](https://ishiuba-js-beta.vercel.app/)
-- a1: [@STARa1](https://ishiuba-js-stara1.vercel.app/)
-- b1: [@STARb1](https://ishiuba-js-starb1.vercel.app/)
+- a1: [@STARa1](https://ishiuba-js-a1.vercel.app/)
+- b1: [@STARb1](https://ishiuba-js-b1.vercel.app/)
 - Current: [@STARb2](https://ishiuba-js.vercel.app/)
 - Preview: [@STARc1](https://iamshiuba.pages.dev/)
 # Django 
