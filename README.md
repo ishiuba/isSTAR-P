@@ -19,7 +19,8 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - dj2: [@STARdj2](https://iamshiubadj2.vercel.app/)
 # Flask
 - Py202501: [@PySTAR202501](https://iamshiuba-202501.vercel.app/)
-- Live: [@PySTAR202502](https://iamshiuba.vercel.app/)
+- Py202502: [@PySTAR202502](https://iamshiuba-202502.vercel.app/)
+- Live: [@PySTAR202503](https://iamshiuba.vercel.app/)
 
 ## Contact
 
