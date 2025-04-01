@@ -1,0 +1,33 @@
+@import '../scss/container/_root.scss';
+
+@import "tailwindcss";
+
+@import "flowbite/src/themes/default";
+
+@plugin "flowbite/plugin";
+
+@source "../../node_modules/flowbite";
+
+@import '../scss/container/_navbar.scss';
+
+@import '../scss/container/_main.scss';
+
+@import '../scss/components/_home.scss';
+
+@import '../scss/components/_streaming.scss';
+
+@import '../scss/components/_about.scss';
+
+@import '../scss/components/_terms.scss';
+
+@import '../scss/components/_privacy.scss';
+
+@import '../scss/components/_error.scss';
+
+@import '../scss/container/_footer.scss';
+
+@import '../scss/utils/_theme-selector.scss';
+
+@import '../scss/utils/_pwa.scss';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

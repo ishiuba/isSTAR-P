@@ -38,6 +38,7 @@ A lightweight Flask-based web application that replaces the original iamshiubadj
 4. Run the development server:
    ```bash
    flask run
+   npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css
    ```
 
 5. Visit `http://localhost:5000` in your browser

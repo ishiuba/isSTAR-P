@@ -1,0 +1,49 @@
+#about {
+    .about-section {
+        @apply flex flex-row animate-[fade-in_1s_ease-in-out] justify-center mb-15;
+
+        .aboutHeader {
+            @apply flex flex-col lg:max-w-[80%];
+
+            .floating-image {
+                @apply animate-[float_6s_ease-in-out_infinite] w-full md:w-1/2 mx-auto mt-7.5;
+            }
+
+            p {
+                @apply text-lg mt-4 text-start text-wrap;
+            }
+        }
+    }
+
+    .skills-section {
+        @apply flex flex-wrap gap-4 justify-center mb-15;
+
+        .skill-card {
+            @apply bg-[var(--background-secondary)] px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center shadow-lg lg:max-w-70 md:max-w-50 w-full;
+
+            &:hover {
+                @apply transform translate-y-[-10px];
+            }
+
+            h3 {
+                @apply text-2xl font-semibold mb-2.5;
+            }
+
+            .skill-bar {
+                @apply bg-[var(--background-primary)] h-2 rounded-full overflow-hidden;
+
+                .progress {
+                    @apply h-full bg-[var(--accent-color)] rounded-full animate-[slideRight_1s_ease-in-out];
+                }
+            }
+        }
+    }
+
+    .connect-section {
+        @apply grid justify-items-center mb-15;
+
+        .connect-card {
+            @apply bg-[var(--background-secondary)] px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center flex flex-col items-center md:max-w-4/5 w-full;
+        }
+    }
+}

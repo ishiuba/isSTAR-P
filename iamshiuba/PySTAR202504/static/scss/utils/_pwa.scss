@@ -1,0 +1,24 @@
+.update-notification {
+  @apply fixed bottom-4 left-4 bg-red-600 text-white p-4 rounded-lg shadow-lg z-50 flex items-center justify-between;
+  max-width: 300px;
+  
+  p {
+    @apply mr-4;
+  }
+  
+  button {
+    @apply bg-white text-red-600 px-3 py-1 rounded hover:bg-gray-100 transition-colors;
+  }
+}
+
+.install-button {
+  @apply fixed bottom-20 right-5 bg-red-600 text-white px-4 py-2 rounded-full shadow-lg z-40 flex items-center;
+  
+  i {
+    @apply mr-2;
+  }
+  
+  &:hover {
+    @apply bg-red-700;
+  }
+}

@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block content %}
+<script
+  src="{{ url_for('static', filename='js/spot-playlists.js') }}"
+  defer
+></script>
+<script
+  src="{{ url_for('static', filename='js/yt-playlists.js') }}"
+  defer
+></script>
+
+<div id="streaming">
+  <section class="streaming-header">
+    <h1 data-translate="streaming"></h1>
+    <p data-translate="streamingDesc"></p>
+  </section>
+
+  <section class="streaming-content">
+    <div class="search-section">
+      <form class="mx-auto">
+        <label
+          for="youtubeSearch"
+          class="mb-2 text-sm font-medium text-red-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-red-500 dark:text-red-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="youtubeSearch"
+            placeholder="Search YouTube playlists..."
+            required
+          />
+        </div>
+      </form>
+
+      <div id="playlistContainer" class="streaming-container"></div>
+    </div>
+
+    <div class="search-section">
+      <form class="mx-auto">
+        <label
+          for="spotifySearch"
+          class="mb-2 text-sm font-medium text-green-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-green-500 dark:text-green-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="spotifySearch"
+            placeholder="Search Spotify playlists..."
+            required
+          />
+        </div>
+      </form>
+
+      <div id="spotifyContainer" class="streaming-container"></div>
+    </div>
+
+    <div id="loadingAnimation">
+      <div class="spinner"></div>
+    </div>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+.error-container {
+    @apply flex flex-col items-center justify-center min-h-screen;
+
+    h1 {
+        @apply text-6xl mb-4;
+    }
+
+    .btn {
+        @apply bg-gradient-to-r from-red-500 from-10% to-red-700 to-60% bg-clip-text text-[var(--text-primary)] px-5 py-2 rounded-lg font-bold text-lg transition-all duration-500 ease-in-out cursor-pointer;
+
+        &:hover {
+            @apply transform -translate-y-2.5;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+#streaming {
+  .streaming-header {
+    @apply animate-[fade-in_1s_ease-in-out] text-center;
+
+    h1 {
+      @apply mb-4;
+    }
+
+    p {
+      @apply mb-5;
+    }
+  }
+
+  .streaming-content {
+    @apply mb-5;
+
+    .search-section {
+      @apply mb-4;
+    }
+
+    #youtubeSearch,
+    #spotifySearch {
+      @apply block w-full p-4 ps-10 text-sm;
+    }
+
+    #youtubeSearch {
+      @apply border rounded-lg  bg-[var(--is-red-20)] border-red-500 placeholder-red-500 focus:placeholder-red-600 text-[var(--is-red-70)] focus:ring-red-600 focus:border-red-600;
+    }
+
+    #spotifySearch {
+      @apply border rounded-lg bg-green-800 border-green-500 placeholder-green-500 focus:placeholder-green-600 text-green-300 focus:ring-green-600 focus:border-green-600;
+    }
+
+    .streaming-container {
+      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+
+      .playlist-item {
+        @apply text-center bg-[var(--background-secondary)] rounded-lg overflow-hidden shadow-lg transition-all duration-300;
+
+        .video-container {
+          @apply aspect-video;
+
+          iframe {
+            @apply w-full h-full;
+          }
+        }
+        
+        .playlist-info {
+          @apply p-4;
+          
+          h3 {
+            @apply text-lg font-bold mb-2;
+          }
+          
+          .playlist-actions {
+            @apply flex justify-center gap-2 mt-3;
+            
+            .action-button {
+              @apply px-3 py-1.5 rounded text-white text-sm transition-all;
+              
+              &.youtube {
+                @apply bg-red-600 hover:bg-red-700;
+              }
+              
+              &.spotify {
+                @apply bg-green-600 hover:bg-green-700;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #loadingAnimation {
+      @apply text-center mb-4;
+    
+      .spinner {
+        @apply inline-block w-12 h-12 border-4 border-t-red-500 rounded-full animate-spin;
+        border-color: var(--is-red-50) transparent transparent transparent;
+      }
+    }
+  }
+
+  /* Adicionando a animação de slideUp */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mantendo os estilos existentes para compatibilidade */
+  .spotify-playlist,
+  .youtube-playlist {
+    @apply rounded-lg overflow-hidden shadow-lg mb-7.5;
+
+    iframe {
+      @apply w-full aspect-video rounded-lg;
+    }
+  }
+
+  .playlist-links {
+    @apply max-w-full grid mb-7.5;
+
+    .btn {
+      @apply px-4 py-2 rounded-lg transition-colors duration-300;
+
+      i {
+        @apply mr-2;
+      }
+    }
+
+    .youtube {
+      @apply bg-red-500 hover:bg-red-700;
+    }
+
+    .spotify {
+      @apply bg-green-500 hover:bg-green-700;
+    }
+  }
+
+  #playlistContainer,
+  #spotifyContainer {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5;
+  }
+}
