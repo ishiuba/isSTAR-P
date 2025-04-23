@@ -46,7 +46,7 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Melhorias na estrutura de arquivos estáticos
 - Versão de produção estável
 
-### v3.0.4 (STARc1)
+### v3.1.4 (STARc1)
 - Reorganização completa com estrutura src/
 - Componentes CSS mais avançados
 - Utilitários JavaScript (pasta js/utils)
