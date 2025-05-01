@@ -4,7 +4,7 @@ Este repositório contém todas as versões do projeto IamSHIUBA, implementado e
 
 ## Visão Geral das Implementações
 
-### 1. Vanilla JavaScript (v0.1.0 - v3.0.4)
+### 1. Vanilla JavaScript (v0.1.0 - v3.1.4)
 
 A implementação original em JavaScript puro, evoluindo de uma simples página HTML para uma aplicação mais estruturada.
 
@@ -15,7 +15,7 @@ A implementação original em JavaScript puro, evoluindo de uma simples página 
 - Implementação progressiva de recursos como internacionalização
 - Organização modular de código com partials e componentes
 
-#### Estrutura do Projeto (versão mais recente - v3.0.4):
+#### Estrutura do Projeto (versão mais recente - v3.1.4):
 ```
 src/
 ├── static/
@@ -34,7 +34,7 @@ src/
 Basta abrir o arquivo `index.html` em um navegador web ou usar um servidor local simples:
 ```bash
 # Usando Python para criar um servidor local
-cd iamshiuba/v3.0.4
+cd iamshiuba/v3.0.6
 python -m http.server 8000
 
 # Ou usando Node.js com http-server
@@ -87,7 +87,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 3. Flask (v2.1.28 - v3.2.12)
+### 3. Flask (v2.1.28 - v3.2.19)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
@@ -101,9 +101,9 @@ A implementação atual, usando Flask como um framework mais leve e flexível, m
 - Suporte a múltiplos idiomas
 - Testes automatizados
 
-#### Estrutura do Projeto (versão mais recente - v3.2.12):
+#### Estrutura do Projeto (versão mais recente - v3.2.19):
 ```
-v3.2.12/
+v3.2.19/
 ├── static/                # Arquivos estáticos
 │   ├── dist/              # Arquivos compilados (CSS/JS)
 │   ├── img/               # Imagens e recursos gráficos
@@ -118,9 +118,12 @@ v3.2.12/
 │   ├── src/               # Código-fonte para compilação
 │   └── translations/      # Arquivos de tradução
 ├── templates/             # Templates HTML
+│   ├── base.html          # Layout base
+│   ├── admin/             # Templates de administração
 │   ├── errors/            # Páginas de erro
 │   ├── pages/             # Páginas principais
 │   └── partials/          # Componentes reutilizáveis
+├── updates/               # Módulo para gerenciamento de atualizações
 ├── tests/                 # Testes automatizados
 ├── app.py                 # Aplicação Flask principal
 └── config.py              # Configurações da aplicação
@@ -199,7 +202,7 @@ flask run
    ```
    FLASK_APP=app.py
    FLASK_DEBUG=1
-   SECRET_KEY=sua-chave-secreta
+   ADMIN_PASSWORD=sua-chave-secreta
    ```
 
 5. Compile os assets CSS:

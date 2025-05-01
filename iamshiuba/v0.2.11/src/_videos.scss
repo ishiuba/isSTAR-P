@@ -1,0 +1,134 @@
+@keyframes fade-in {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#videos-content {
+  h1 {
+    @apply text-3xl font-bold mb-4;
+  }
+
+  p {
+    @apply mb-6 text-red-400;
+  }
+
+  #playlistContainer {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 visible opacity-100;
+
+    .playlist-item {
+      @apply text-center bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 visible opacity-100;
+
+      &.is-favorite {
+        @apply ring-2 ring-yellow-400;
+      }
+
+      .video-container {
+        @apply aspect-video relative;
+
+        iframe {
+          @apply w-full h-full absolute top-0 left-0;
+        }
+
+        .placeholder {
+          @apply w-full h-full absolute top-0 left-0 bg-black/50 flex items-center justify-center;
+
+          .placeholder-content {
+            @apply text-center p-4;
+
+            .placeholder-icon {
+              @apply text-5xl text-red-500 mb-3;
+            }
+
+            p {
+              @apply text-white mb-4 font-medium;
+            }
+
+            .load-video-btn {
+              @apply bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-all duration-300;
+
+              i {
+                @apply mr-2;
+              }
+            }
+          }
+        }
+      }
+
+      .playlist-info {
+        @apply p-4;
+
+        .playlist-header {
+          @apply flex justify-between items-center mb-2;
+
+          h3 {
+            @apply text-lg font-bold;
+          }
+
+          .favorite-button {
+            @apply w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300;
+            @apply hover:bg-gray-700;
+
+            i {
+              @apply text-gray-400;
+            }
+
+            &.active i {
+              @apply text-yellow-400;
+            }
+          }
+        }
+
+        .playlist-actions {
+          @apply flex justify-center gap-2 mt-3;
+
+          .action-button {
+            @apply px-3 py-1.5 rounded text-white text-sm transition-all;
+
+            &.youtube {
+              @apply bg-red-600 hover:bg-red-700;
+            }
+          }
+        }
+      }
+    }
+
+    .no-results {
+      @apply col-span-full text-center py-10 text-gray-400;
+    }
+
+    .error-message {
+      @apply col-span-full text-center py-10 flex flex-col items-center;
+
+      i {
+        @apply text-4xl text-red-500 mb-4;
+      }
+
+      p {
+        @apply mb-4 text-gray-400;
+      }
+
+      .retry-button {
+        @apply bg-red-600 text-white px-4 py-2 rounded-lg transition-all duration-300;
+        @apply hover:bg-red-700;
+
+        i {
+          @apply text-base text-white mr-2 mb-0;
+        }
+      }
+    }
+  }
+
+  #loadingAnimation {
+    @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50;
+
+    .spinner {
+      @apply inline-block w-12 h-12 border-4 border-t-red-500 rounded-full animate-spin;
+      border-color: #f56565 transparent transparent transparent;
+    }
+  }
+}

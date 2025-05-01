@@ -1,0 +1,27 @@
+main {
+    @apply bg-[var(--background-primary)] text-[var(--text-primary)] pt-10 pb-10 px-2.5 outline-none min-h-screen;
+
+    h1 {
+        @apply font-bold text-5xl bg-gradient-to-r from-red-500 from-10% to-red-700 to-60% text-transparent bg-clip-text;
+    }
+
+    form {
+        @apply my-5;
+    }
+
+    .hBtn {
+        @apply hover:saturate-80 bg-red-600 text-white px-5 py-2.5 rounded text-center text-lg transition-all duration-500 ease-in-out cursor-pointer;
+    }
+
+    .hero-buttons,
+    .social-buttons {
+        @apply mt-10 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4;
+    }
+
+    .skill-card,
+    .stats-card {
+        & .fas {
+            @apply text-red-600 text-5xl;
+        }
+    }
+}

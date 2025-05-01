@@ -24,6 +24,10 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Aprimoramento do CSS
 - Melhor organização de assets
 
+### v0.2.11 (Alpha2025)
+- Substituição do Framework Bootstrap 5 pelo TailwindCSS 4 + Flowbite Library
+- Componente de navegação, Botão seletor de idiomas e Icones de redes sociais aprimorados
+
 ### v1.0.11 (Beta)
 - Reorganização para estrutura static/
 - Separação clara de CSS, JS e imagens
@@ -44,7 +48,6 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Adição de suporte a traduções (pasta json/translations)
 - Componentes CSS aprimorados
 - Melhorias na estrutura de arquivos estáticos
-- Versão de produção estável
 
 ### v3.1.4 (STARc1)
 - Reorganização completa com estrutura src/
@@ -101,7 +104,6 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Organização aprimorada de arquivos estáticos
 
 ### v3.2.12 (PySTAR202504)
-- Versão Flask atual de produção
 - Migração para SCSS (pasta scss/)
 - Estrutura avançada com utils, components e containers
 - Pasta de ícones dedicada
@@ -112,6 +114,11 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Tratamento de erros aprimorado
 - Validação de códigos de idioma
 - Endpoint de verificação de saúde
+
+### v3.2.19 (PySTAR202505)
+- Versão atualizada da v3.2.12
+- Nova implementação de versão usando banco de dados SQLite3
+- Correções e melhorias incrementais
 
 ## Observações sobre a Evolução do Projeto
 

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root,
+[data-theme="light"] {
+    scrollbar-color: var(--color-gray-950) var(--color-gray-100);
+    scrollbar-width: thin;
+    @apply overflow-auto scroll-smooth;
+    --background-primary: var(--color-gray-100);
+    --background-secondary: var(--color-gray-200);
+    --text-primary: var(--color-gray-950);
+    --text-secondary: var(--color-gray-600);
+    --accent-color: var(--is-red-50);
+    --border-color: var(--color-gray-200);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    scrollbar-color: var(--color-gray-300) var(--color-gray-950);
+    --background-primary: var(--color-gray-950);
+    --background-secondary: var(--color-gray-900);
+    --text-primary: var(--color-gray-100);
+    --text-secondary: var(--color-gray-300);
+    --accent-color: var(--is-red-40);
+    --border-color: var(--color-gray-900);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="black"] {
+    scrollbar-color: white black;
+    --background-primary: black;
+    --background-secondary: #101010;
+    --text-primary: white;
+    --text-secondary: #cccccc;
+    --accent-color: var(--is-red-50);
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="red"] {
+    scrollbar-color: var(--is-red-50) var(--is-red-10);
+    --background-primary: var(--is-red-20);
+    --background-secondary: var(--is-red-15);
+    --text-primary: white;
+    --text-secondary: var(--is-red-80);
+    --accent-color: var(--is-red-45);
+    --border-color: var(--is-red-20);
+    --shadow-color: rgba(255, 0, 0, 0.1);
+}
+
+@theme {
+    /* These numbers on the variable stands for the hsl color lightness percentage(but they're rounded for readability). */
+    --is-red-90: hsl(0, 61%, 90%);
+    --is-red-85: hsl(0, 61%, 86%);
+    --is-red-80: hsl(0, 61%, 82%);
+    --is-red-75: hsl(0, 61%, 77%);
+    --is-red-70: hsl(0, 61%, 72%);
+    --is-red-65: hsl(0, 61%, 65%);
+    --is-red-60: hsl(0, 61%, 60%);
+    --is-red-55: hsl(0, 61%, 55%);
+    --is-red-50: hsl(0, 61%, 48%);
+    --is-red-45: hsl(0, 61%, 45%);
+    --is-red-40: hsl(0, 61%, 40%);
+    --is-red-35: hsl(0, 61%, 35%);
+    --is-red-30: hsl(0, 61%, 30%);
+    --is-red-25: hsl(0, 61%, 25%);
+    --is-red-20: hsl(0, 61%, 19%);
+    --is-red-15: hsl(0, 61%, 15%);
+    --is-red-10: hsl(0, 61%, 10%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-[var(--background-primary)] text-[var(--text-primary)];
+}
+
+.active {
+    @apply text-[var(--text-secondary)] font-bold;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}

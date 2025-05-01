@@ -1,0 +1,81 @@
+{% extends "base.html" %}{% block content %}
+
+<script
+  src="{{ url_for('static', filename='js/highlights.js') }}"
+  defer
+></script>
+
+<div id="home">
+  <section class="hero-section">
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <h1 data-translate="greeting"></h1>
+        <p>
+          <span data-translate="mainMsg"></span>
+          <br />
+          <span data-translate="subMsg"></span>
+        </p>
+        <div class="hero-buttons">
+          <a href="/streaming" class="hBtn">
+            <i class="fas fa-play"></i>
+            <span data-translate="startListening"></span>
+          </a>
+          <a href="/about" class="hBtn">
+            <i class="fas fa-info-circle"></i>
+            <span data-translate="learnMore"></span>
+          </a>
+        </div>
+      </div>
+      <div class="floating-image">
+        <img
+          data-src="{{ url_for('static', filename='img/iamshiuba_web.svg') }}"
+          alt="IamSHIUBA Artist Logo"
+          width="500"
+          height="500"
+          class="hero-image"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="highlight-section">
+    <div id="featured-card">
+      <div id="card-header">
+        <h2 data-translate="highlight"></h2>
+        <p data-translate="hDescription"></p>
+      </div>
+      <div id="highlightContainer"></div>
+      <div class="button-container">
+        <button
+          onclick="window.open('https://www.youtube.com/playlist?list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q')"
+          aria-label="Check Out YouTube Playlist"
+          type="button"
+        >
+          <i class="fab fa-youtube"></i>
+          <p data-translate="checkOut"></p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-proof">
+    <div id="statsContainer">
+      <div class="stats-card">
+        <i class="fas fa-music"></i>
+        <h3 class="counter" data-target="30" data-suffix="+" data-duration="1500">0</h3>
+        <p data-translate="tracksCreated"></p>
+      </div>
+      <div class="stats-card">
+        <i class="fas fa-users"></i>
+        <h3 class="counter" data-target="300" data-suffix="+" data-duration="2000" data-delay="200">0</h3>
+        <p data-translate="monthlyListeners"></p>
+      </div>
+      <div class="stats-card">
+        <i class="fas fa-star"></i>
+        <h3 class="counter" data-target="5.0" data-decimals="1" data-duration="1800" data-delay="400">0.0</h3>
+        <p data-translate="averageRating"></p>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block content %}
+<div
+  class="max-w-md mx-auto mt-10 p-6 bg-[var(--background-secondary)] rounded-lg shadow-md"
+>
+  <h1
+    class="text-3xl font-bold mb-6 bg-gradient-to-r from-red-500 from-10% to-red-700 to-60% text-transparent bg-clip-text"
+    data-translate="admin_login"
+  ></h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div
+    class="p-4 mb-4 text-sm rounded-lg {% if category == 'error' %}bg-red-100 text-red-700{% else %}bg-green-100 text-green-700{% endif %}"
+  >
+    {{ message }}
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+
+  <form method="POST">
+    <div class="mb-4">
+      <label
+        for="password"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_password"
+      ></label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        class="bg-white border border-[var(--border-color)] text-[var(--text-primary)] text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+      />
+    </div>
+    <button type="submit" class="hBtn w-full" data-translate="admin_login"></button>
+  </form>
+</div>
+{% endblock %}

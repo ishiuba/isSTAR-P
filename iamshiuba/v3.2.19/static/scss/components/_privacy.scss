@@ -1,0 +1,45 @@
+#PRIVACY {
+    .privacy-section {
+        @apply py-8 px-4;
+
+        .privacy-container {
+            @apply max-w-screen-xl mx-auto;
+
+            .header-content {
+                @apply mb-8 text-center;
+
+                .description {
+                    @apply text-xl mt-3 text-[var(--text-primary)];
+                }
+
+                .date {
+                    @apply mt-2 text-[var(--is-red-60)];
+                }
+            }
+
+            .cards-grid {
+                @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+
+                .privacy-card {
+                    @apply p-6 rounded-lg shadow-lg bg-[var(--background-secondary)];
+
+                    .card-header {
+                        @apply flex items-center mb-4;
+
+                        i {
+                            @apply text-2xl mr-3 text-[var(--text-secondary)];
+                        }
+
+                        h2 {
+                            @apply text-xl font-bold text-[var(--text-primary)];
+                        }
+                    }
+
+                    p {
+                        @apply text-[var(--text-secondary)];
+                    }
+                }
+            }
+        }
+    }
+}

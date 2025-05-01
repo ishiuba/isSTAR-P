@@ -1,0 +1,10 @@
+form {
+    input[type="text"],
+    textarea {
+        @apply block w-full p-2.5 text-sm text-red-500 bg-white border border-[var(--border-color)] rounded-lg focus:ring-red-500 focus:border-red-500;
+    }
+
+    label {
+        @apply block mb-2 text-sm font-medium text-[var(--text-primary)];
+    }
+}

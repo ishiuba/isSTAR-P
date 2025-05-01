@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iSHIUBA</title>
+    <link
+      rel="shortcut icon"
+      href="https://avatars.githubusercontent.com/u/168146145?v=4"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-gray-900">
+    <div class="flex flex-row">
+      <button
+        data-drawer-target="default-sidebar"
+        data-drawer-toggle="default-sidebar"
+        aria-controls="default-sidebar"
+        type="button"
+        class="fixed top-4 left-4 z-50 inline-flex items-center p-2 text-sm text-white rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700"
+      >
+        <span class="sr-only">Toggle sidebar</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            fill-rule="evenodd"
+            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+          ></path>
+        </svg>
+      </button>
+
+      <aside
+        id="default-sidebar"
+        class="block fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full"
+        aria-label="Sidebar"
+        data-drawer-backdrop="false"
+      >
+        <div class="h-full px-3 py-4 overflow-y-auto bg-black">
+          <div class="mb-5">
+            <a href="#" class="flex items-center justify-center">
+              <span
+                class="self-center text-2xl font-bold text-red-600 hover:text-white"
+                data-translate="ishiuba"
+                >iSHIUBA</span
+              >
+            </a>
+          </div>
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-white rounded-lg hover:bg-gray-700 group"
+                id="home-tab"
+                data-tabs-target="#home-content"
+                role="tab"
+                aria-controls="home-content"
+                aria-selected="true"
+              >
+                <i class="fa-solid fa-home w-5 h-5 transition duration-75"></i>
+                <span class="ml-3" data-translate="homeNav">Home</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-white rounded-lg hover:bg-gray-700 group"
+                id="videos-tab"
+                data-tabs-target="#videos-content"
+                role="tab"
+                aria-controls="videos-content"
+                aria-selected="false"
+              >
+                <i class="fa-solid fa-video w-5 h-5 transition duration-75"></i>
+                <span class="ml-3" data-translate="videosNav">Videos</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-white rounded-lg hover:bg-gray-700 group"
+                id="about-tab"
+                data-tabs-target="#about-content"
+                role="tab"
+                aria-controls="about-content"
+                aria-selected="false"
+              >
+                <i class="fa-solid fa-user w-5 h-5 transition duration-75"></i>
+                <span class="ml-3" data-translate="aboutNav">About</span>
+              </a>
+            </li>
+          </ul>
+          <div class="mt-8">
+            <ul class="grid grid-cols-4 gap-2 text-center text-2xl">
+              <li class="py-2">
+                <a
+                  rel="noopener"
+                  href="https://github.com/ishiuba"
+                  class="text-purple-400 fa-brands fa-github"
+                  target="_blank"
+                  aria-label="GitHub"
+                ></a>
+              </li>
+              <li class="py-2">
+                <a
+                  rel="noopener"
+                  href="https://x.com/iamshiuba"
+                  class="text-stone-300 fa-brands fa-x-twitter"
+                  target="_blank"
+                  aria-label="X (Twitter)"
+                ></a>
+              </li>
+              <li class="py-2">
+                <a
+                  rel="noopener"
+                  href="https://www.youtube.com/@iamshiuba"
+                  class="text-red-600 fa-brands fa-youtube"
+                  target="_blank"
+                  aria-label="YouTube"
+                ></a>
+              </li>
+              <li class="py-2">
+                <a
+                  rel="noopener"
+                  href="https://soundcloud.com/iamshiuba"
+                  class="text-orange-400 fa-brands fa-soundcloud"
+                  target="_blank"
+                  aria-label="SoundCloud"
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <img
+              src="https://avatars.githubusercontent.com/u/168146145?v=4"
+              class="max-w-[150px] w-full mx-auto rounded-full"
+              alt="shiuba"
+            />
+          </div>
+          <div class="my-8 flex justify-center">
+            <button
+              id="dropdownHoverButton"
+              data-dropdown-toggle="dropdownHover"
+              data-dropdown-trigger="hover"
+              class="cursor-pointer rounded text-center"
+              type="button"
+            >
+              🌐
+            </button>
+            <div
+              id="dropdownHover"
+              class="z-10 hidden bg-gray-950 divide-y divide-gray-600 rounded-lg shadow-sm w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-200"
+                aria-labelledby="dropdownHoverButton"
+              >
+                <li>
+                  <a
+                    class="block px-4 py-2 hover:bg-gray-800"
+                    data-language="en-US"
+                    ><span class="fi fi-us mr-2"></span>en-US</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block px-4 py-2 hover:bg-gray-800"
+                    data-language="pt-BR"
+                    ><span class="fi fi-br mr-2"></span>pt-BR</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="block px-4 py-2 hover:bg-gray-800"
+                    data-language="ja-JP"
+                    ><span class="fi fi-jp mr-2"></span>ja-JP</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <footer id="footer" class="mt-8 px-5">
+            <p>
+              <span class="font-light text-xs">
+                &copy; <span id="copyright-year"></span> IamSHIUBA.
+                <span data-translate="footer"></span>
+              </span>
+            </p>
+          </footer>
+        </div>
+      </aside>
+
+      <aside
+        id="compact-sidebar"
+        class="fixed top-0 left-0 z-30 w-16 h-screen bg-black transition-all duration-300 md:hidden"
+      >
+        <div class="h-full px-2 py-4 overflow-y-auto">
+          <ul class="mt-15 space-y-8 font-medium">
+            <li class="flex justify-center">
+              <a
+                href="#"
+                class="text-white hover:text-red-400 p-2"
+                id="home-tab-icon"
+                data-tabs-target="#home-content"
+              >
+                <i class="fa-solid fa-home w-5 h-5"></i>
+              </a>
+            </li>
+            <li class="flex justify-center">
+              <a
+                href="#"
+                class="text-white hover:text-red-400 p-2"
+                id="videos-tab-icon"
+                data-tabs-target="#videos-content"
+              >
+                <i class="fa-solid fa-video w-5 h-5"></i>
+              </a>
+            </li>
+            <li class="flex justify-center">
+              <a
+                href="#"
+                class="text-white hover:text-red-400 p-2"
+                id="about-tab-icon"
+                data-tabs-target="#about-content"
+              >
+                <i class="fa-solid fa-user w-5 h-5"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div
+        id="myTabContent"
+        class="ml-15 transition-all duration-300 container"
+      >
+        <div
+          id="content-container"
+          class="min-h-screen transition-opacity duration-300"
+        ></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <script src="./javascript/tabs.js"></script>
+    <script src="./javascript/translations.js"></script>
+    <script src="./javascript/Streaming.js"></script>
+    <script src="./javascript/copyright.js"></script>
+  </body>
+</html>

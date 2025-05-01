@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block content %}
+<div id="about">
+  <section class="about-section">
+    <div class="aboutHeader">
+      <h1 data-translate="aboutTitle"></h1>
+      <div class="columns-2">
+        <p data-translate="aboutMsg"></p>
+        <div class="floating-image">
+          <img
+            data-src="{{ url_for('static', filename='img/iamshiuba_web.svg') }}"
+            width="350"
+            height="350"
+            alt="IamSHIUBA Artist Portrait"
+            class="about-image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="skills-section mb-2.5">
+    <div class="skill-card">
+      <i class="fas fa-music mb-3"></i>
+      <h3 data-translate="mscProd"></h3>
+      <div class="skill-bar">
+        <div class="progress" style="width: 90%"></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-video mb-3"></i>
+      <h3 data-translate="videoCreation"></h3>
+      <div class="skill-bar">
+        <div class="progress" style="width: 85%"></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <i class="fas fa-paint-brush mb-3"></i>
+      <h3 data-translate="digitalArt"></h3>
+      <div class="skill-bar">
+        <div class="progress" style="width: 80%"></div>
+      </div>
+    </div>
+  </section>
+  <section class="connect-section">
+    <div class="connect-card">
+      <p class="text-center mb-4 text-xl" data-translate="aboutSubMsg"></p>
+      <div class="social-buttons text-center grid justify-center">
+        <a href="https://youtube.com/@iamshiuba" class="hBtn">
+          <i class="fab fa-youtube me-2"></i>
+          YouTube
+        </a>
+        <a href="https://soundcloud.com/iamshiuba" class="hBtn">
+          <i class="fab fa-soundcloud me-2"></i>
+          SoundCloud
+        </a>
+        <a href="https://twitter.com/iamshiuba" class="hBtn">
+          <i class="fab fa-x-twitter me-2"></i>
+          Twitter
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

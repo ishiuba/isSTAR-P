@@ -9,6 +9,7 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v0.1.0: [@PreAlpha](https://ishiuba-js-prealpha.vercel.app/)
 - v0.1.2: [@PreAlpha2025](https://ishiuba-js-pas25.vercel.app/)
 - v0.2.7: [@Alpha](https://ishiuba-js-alpha.vercel.app/)
+- v0.2.11: [@Alpha2025](https://ishiuba-js-as25.vercel.app/)
 - v1.0.11: [@Beta](https://ishiuba-js-beta.vercel.app/)
 - v1.1.2: [@STARa1](https://ishiuba-js-a1.vercel.app/)
 - v1.2.7: [@STARb1](https://ishiuba-js-b1.vercel.app/)
@@ -22,6 +23,7 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v3.0.6: [@PySTAR202502](https://iamshiuba-202502.vercel.app/)
 - v3.1.7: [@PySTAR202503](https://iamshiuba-202503.vercel.app/)
 - v3.2.12: [@PySTAR202504](https://iamshiuba-202504.vercel.app/)
+- v3.2.19: [@PySTAR202505](https://iamshiuba-202505.vercel.app/)
 
 ## Contact
 

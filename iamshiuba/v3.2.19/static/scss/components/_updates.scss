@@ -1,0 +1,88 @@
+.updates-section {
+  @apply py-8 px-4;
+
+  .updates-container {
+    @apply max-w-screen-xl mx-auto;
+
+    .header-content {
+      @apply mb-8 text-center;
+
+      .description {
+        @apply text-xl mt-3 text-[var(--text-primary)];
+      }
+
+      .date {
+        @apply mt-2 text-[var(--is-red-60)];
+      }
+    }
+
+    .updates-grid {
+      @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+
+      .update-card {
+        @apply p-6 rounded-lg shadow-lg bg-[var(--background-secondary)];
+
+        .card-header {
+          @apply flex items-center mb-4;
+
+          i {
+            @apply text-2xl mr-3 text-[var(--text-secondary)];
+          }
+
+          h2 {
+            @apply text-xl font-bold text-[var(--text-primary)];
+          }
+        }
+
+        .version-badge {
+          @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+          @apply bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200;
+          @apply mt-2;
+        }
+
+        .update-date {
+          @apply text-sm text-[var(--text-secondary)] mt-2 flex items-center;
+
+          i {
+            @apply mr-2 opacity-70;
+          }
+        }
+
+        .update-content {
+          @apply mt-4 text-[var(--text-secondary)];
+
+          .v-item {
+            @apply hover:text-red-600 hover:font-bold p-1 rounded-md;
+        }
+
+          p {
+            @apply mb-4;
+          }
+
+          ul,
+          ol {
+            @apply pl-5 mb-4;
+          }
+
+          li {
+            @apply mb-1;
+          }
+
+          a {
+            @apply text-[var(--is-red-60)] hover:underline;
+          }
+
+          code {
+            @apply px-1 py-0.5 rounded text-sm bg-[var(--background-primary)];
+            @apply text-[var(--is-red-60)];
+          }
+
+          pre {
+            @apply p-3 rounded-lg bg-[var(--background-primary)] overflow-x-auto;
+            @apply text-sm text-[var(--text-primary)] mb-4;
+          }
+        }
+      }
+    }
+  }
+}

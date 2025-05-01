@@ -1,0 +1,91 @@
+{% extends "base.html" %} {% block content %}
+<script
+  src="{{ url_for('static', filename='js/utils/EnhancedStreaming.js') }}"
+  defer
+></script>
+
+<div id="streaming">
+  <section class="streaming-header">
+    <h1 data-translate="streaming"></h1>
+    <p data-translate="streamingDesc"></p>
+  </section>
+
+  <section class="streaming-content">
+    <div class="streaming-controls">
+      <div class="tabs-container">
+        <button class="tab-button active" data-tab="youtube">
+          <i class="fab fa-youtube"></i> <span>YouTube</span>
+        </button>
+        <button class="tab-button" data-tab="spotify">
+          <i class="fab fa-spotify"></i> <span>Spotify</span>
+        </button>
+      </div>
+      <div class="view-controls">
+        <button
+          id="viewToggle"
+          class="view-toggle"
+          aria-label="Mudar visualização"
+        >
+          <i class="fas fa-list"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-section youtube-section">
+      <form class="mx-auto">
+        <label
+          for="youtubeSearch"
+          class="mb-2 text-sm font-medium text-red-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <i class="fas fa-search text-red-500 dark:text-red-400"></i>
+          </div>
+          <input
+            type="search"
+            id="youtubeSearch"
+            placeholder="Search YouTube playlists..."
+            aria-label="Pesquisar playlists do YouTube"
+          />
+        </div>
+      </form>
+
+      <div id="playlistContainer" class="streaming-container"></div>
+      <div id="paginationYoutube" class="pagination-container"></div>
+    </div>
+
+    <div class="search-section spotify-section">
+      <form class="mx-auto">
+        <label
+          for="spotifySearch"
+          class="mb-2 text-sm font-medium text-green-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <i class="fas fa-search text-green-500 dark:text-green-400"></i>
+          </div>
+          <input
+            type="search"
+            id="spotifySearch"
+            placeholder="Search Spotify playlists..."
+            aria-label="Pesquisar playlists do Spotify"
+          />
+        </div>
+      </form>
+
+      <div id="spotifyContainer" class="streaming-container"></div>
+      <div id="paginationSpotify" class="pagination-container"></div>
+    </div>
+
+    <div id="loadingAnimation">
+      <div class="spinner"></div>
+    </div>
+  </section>
+</div>
+{% endblock %}

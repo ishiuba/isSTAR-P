@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@import "./_home.scss";
+@import "./_videos.scss";
+@import "./_about.scss";
+@import "./_sidebar.scss";
+@import "./_router.scss";
+
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gray-900) var(--color-gray-950);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  @apply bg-gray-950 text-stone-300;
+}
+
+.active {
+  @apply bg-red-700;
+}
+
+h1 {
+  @apply text-red-600 text-4xl font-bold;
+}
+
+p {
+  @apply text-lg text-red-400;
+}
+
+a.block {
+  @apply p-3 hover:bg-gray-900 hover:text-white cursor-pointer;
+}
+
+a.fa-brands {
+  @apply hover:brightness-80;
+}
