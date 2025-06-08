@@ -1,0 +1,166 @@
+{% extends "base.html" %} {% block content %}
+<div
+  class="max-w-2xl mx-auto mt-10 p-6 bg-[var(--background-secondary)] rounded-lg shadow-md"
+>
+  <h1>
+    {% if playlist %}
+    <span data-translate="admin_edit_playlist">Edit Playlist</span>
+    {% else %}
+    <span data-translate="admin_add_playlist">Add Playlist</span>
+    {% endif %}
+  </h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div
+    class="p-4 mb-4 text-sm rounded-lg {% if category == 'error' %}bg-red-100 text-red-700{% else %}bg-green-100 text-green-700{% endif %}"
+  >
+    {{ message }}
+  </div>
+  {% endfor %} {% endif %} {% endwith %}
+
+  <form method="POST">
+    <div class="mb-4">
+      <label
+        for="title"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_title_field"
+      >Title</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="bg-[var(--background-primary)] border border-[var(--border-color)] text-[var(--text-primary)] text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+        value="{{ playlist['title'] if playlist else '' }}"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="playlist_id"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_playlist_id_field"
+      >Playlist ID</label>
+      <input
+        type="text"
+        id="playlist_id"
+        name="playlist_id"
+        value="{{ playlist['playlist_id'] if playlist else '' }}"
+        required
+      />
+      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        For YouTube: PLxUVZPvKMNEcKd2omhOo6aH6egvDd5_nB<br>
+        For Spotify: 0PLKbR6S8a262A50Cds0sI
+      </p>
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="url"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_url_field"
+      >URL</label>
+      <input
+        type="url"
+        id="url"
+        name="url"
+        value="{{ playlist['url'] if playlist else '' }}"
+        required
+      />
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="platform"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_platform_field"
+      >Platform</label>
+      <select
+        id="platform"
+        name="platform"
+        class="bg-[var(--background-primary)] border border-[var(--border-color)] text-[var(--text-primary)] text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+        required
+      >
+        <option value="">Select platform</option>
+        <option value="youtube" {% if playlist and playlist['platform_name'] == 'youtube' %}selected{% endif %}>
+          YouTube
+        </option>
+        <option value="spotify" {% if playlist and playlist['platform_name'] == 'spotify' %}selected{% endif %}>
+          Spotify
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="description"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_description_field"
+      >Description (optional)</label>
+      <textarea
+        id="description"
+        name="description"
+        rows="3"
+      >{{ playlist['description'] if playlist and playlist['description'] else '' }}</textarea>
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="release_date"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_release_date_field"
+      >Release Date (optional)</label>
+      <input
+        type="date"
+        id="release_date"
+        name="release_date"
+        value="{{ playlist['release_date'] if playlist and playlist['release_date'] else '' }}"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label
+        for="tags"
+        class="block mb-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_tags_field"
+      >Tags (comma separated, optional)</label>
+      <input
+        type="text"
+        id="tags"
+        name="tags"
+        class="bg-[var(--background-primary)] border border-[var(--border-color)] text-[var(--text-primary)] text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+        value="{{ playlist['tags'] if playlist and playlist['tags'] else '' }}"
+        placeholder="singles, 2024, remix"
+      />
+    </div>
+
+    <div class="mb-4 flex items-center">
+      <input
+        type="checkbox"
+        id="is_highlight"
+        name="is_highlight"
+        {% if playlist and playlist['is_highlight'] %}checked{% endif %}
+      />
+      <label
+        for="is_highlight"
+        class="ml-2 text-sm font-medium text-[var(--text-primary)]"
+        data-translate="admin_is_highlight_field"
+      >Set as highlight (featured on homepage)</label>
+    </div>
+
+    <div class="flex space-x-4">
+      <button 
+        type="submit" 
+        class="hBtn" 
+        data-translate="admin_save"
+      >Save</button>
+      <a
+        href="{{ url_for('admin_playlists') }}"
+        class="px-5 py-2.5 bg-gray-500 text-white rounded text-center text-lg transition-all duration-500 ease-in-out hover:bg-gray-600"
+        data-translate="admin_cancel"
+      >Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

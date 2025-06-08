@@ -20,104 +20,89 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 
 ### v0.2.7 (Alpha)
 - Adição de pasta de imagens
-- Melhorias na estrutura JavaScript
-- Aprimoramento do CSS
-- Melhor organização de assets
+- Novos idiomas (Português e Japonês)
+- Navegação de páginas usando carousel
 
 ### v0.2.11 (Alpha2025)
 - Substituição do Framework Bootstrap 5 pelo TailwindCSS 4 + Flowbite Library
 - Componente de navegação, Botão seletor de idiomas e Icones de redes sociais aprimorados
 
 ### v1.0.11 (Beta)
-- Reorganização para estrutura static/
-- Separação clara de CSS, JS e imagens
 - Melhorias na organização de arquivos
-- Implementação de componentes reutilizáveis
+- Adição de botão de alternância de tema
+- Seção de destaques na página inicial
+- Botões para colapsar cabeçalho e rodapé
+- Pequenas melhorias na estrutura de arquivos estáticos
 
 ### v1.1.2 (STARa1)
-- Introdução de partials como componentes separados
-- Melhorias na estrutura de arquivos estáticos
-- Organização mais modular do código
+- Pequenas correções e melhorias
 
 ### v1.2.7 (STARb1)
-- Continuação da arquitetura de partials
-- Melhorias na estrutura de arquivos estáticos
-- Refinamentos na organização do código
+- Adição da página de Notícias
+- Pequenas correções e melhorias
 
 ### v1.3.5 (STARb2)
-- Adição de suporte a traduções (pasta json/translations)
-- Componentes CSS aprimorados
-- Melhorias na estrutura de arquivos estáticos
+- Página de Notícias substituída por página de Artigos
+- Remoção da página de Streaming
+- Adição de Termos de Serviço e Política de Privacidade
+- Adição de favicon
+- Paleta de cores atualizada
+- Pequenas correções e melhorias
 
 ### v3.1.4 (STARc1)
-- Reorganização completa com estrutura src/
-- Componentes CSS mais avançados
-- Utilitários JavaScript (pasta js/utils)
-- Suporte a traduções aprimorado
-- Estrutura de containers CSS
+- Bootstrap 5 substituído pelo TailwindCSS 4
+- Melhorias significativas no design do website
+- Adição de página de Streaming
+- Buscador de vídeos do YouTube e músicas do Spotify
+- Adição de menu mobile para dispositivos móveis
+- Pequenas correções e melhorias
 
 ## Versões Django
 
 ### v1.3.18 (STARdj1)
 - Primeira implementação com Django
-- Estrutura de aplicações Django: home, videos, about, news, partials
-- Sistema de templates Django
-- Configuração de arquivos estáticos e staticfiles
-- Configuração básica de banco de dados SQLite
-- Uso do django_bootstrap5
-- Migrações para cada aplicação
+- Pequnas correções e melhorias (originário da versão STARb2)
 
 ### v2.0.27 (STARdj2)
-- Estrutura Django aprimorada
-- Novas aplicações: project, layout
-- Melhor organização de templates
-- Componentes CSS avançados
-- Suporte a playlists e traduções
-- Melhorias na estrutura de arquivos estáticos
-- Configuração de staticfiles aprimorada
+- Evolução da versão v1.3.18
+- Novos idiomas (Russo e Hindi)
+- Adição de tema personalizado (Ano Novo 2025)
+- Pequenas correções e melhorias
 
 ## Versões Flask
 
 ### v2.1.28 (PySTAR202501)
-- Migração para Flask
-- Estrutura myapp/ para organização do código
-- Templates organizados em pages e partials
-- Arquivos estáticos com componentes CSS
-- Suporte a playlists e traduções
+- Primeira implementação com Flask
+- Pequenas correções e melhorias (originário da versão STARdj2)
 
 ### v3.0.5 (PySTAR202502)
-- Estrutura Flask aprimorada
-- Adição de templates de erro
-- Implementação de testes
-- Melhor organização de templates e partials
+- Versão atualizada da v2.1.28
+- Redesign de 3ª geração
+- Novo idioma (Chinês)
+- Pequenas correções e melhorias
 
 ### v3.0.6 (PySTAR202502-latest)
-- Versão atualizada da v3.0.5
+- Patch da v3.0.5
 - Correções e melhorias incrementais
-- Mantém a mesma estrutura básica da v3.0.5
 
 ### v3.1.7 (PySTAR202503)
-- Adição de pasta dist para arquivos compilados
-- Utilitários JavaScript (pasta js/utils)
-- Estrutura CSS com containers
-- Melhorias nos testes
-- Organização aprimorada de arquivos estáticos
+- Melhorias no design e usabilidade (originário da versão STARc1)
+- Pequenas correções e melhorias
 
 ### v3.2.12 (PySTAR202504)
-- Migração para SCSS (pasta scss/)
-- Estrutura avançada com utils, components e containers
-- Pasta de ícones dedicada
-- Implementação de compressão e limitação de taxa
-- Middleware de proxy e segurança avançada
-- Headers de segurança e CORS
-- Modo de manutenção
-- Tratamento de erros aprimorado
-- Validação de códigos de idioma
-- Endpoint de verificação de saúde
+- Adição de componentes Flowbite
+- Implementação de PWA (App Instalável)
+- Novo uso de temas (Claro, Escuro e Vermelho)
+- Pequenas correções e melhorias
 
 ### v3.2.19 (PySTAR202505)
-- Versão atualizada da v3.2.12
-- Nova implementação de versão usando banco de dados SQLite3
+- Novo tema (Preto)
+- Seção de versões substituída por uma página de Atualizações
+- Correções e melhorias incrementais
+
+
+### v3.2.25 (PySTAR202506)
+- Melhor integração com APIs externas (YouTube e Spotify)
 - Correções e melhorias incrementais
 
 ## Observações sobre a Evolução do Projeto
