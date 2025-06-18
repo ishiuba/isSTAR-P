@@ -57,6 +57,10 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Adição de menu mobile para dispositivos móveis
 - Pequenas correções e melhorias
 
+### v3.3.26 (STARc2)
+- Melhorias no design e usabilidade (originário da versão v3.2.25)
+- Pequenas correções e melhorias
+
 ## Versões Django
 
 ### v1.3.18 (STARdj1)

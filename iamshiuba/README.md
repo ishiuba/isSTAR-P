@@ -4,7 +4,7 @@ Este repositório contém todas as versões do projeto IamSHIUBA, implementado e
 
 ## Visão Geral das Implementações
 
-### 1. Vanilla JavaScript (v0.1.0 - v3.1.4)
+### 1. Vanilla JavaScript (v0.1.0 - v3.3.26)
 
 A implementação original em JavaScript puro, evoluindo de uma simples página HTML para uma aplicação mais estruturada.
 
@@ -15,17 +15,17 @@ A implementação original em JavaScript puro, evoluindo de uma simples página 
 - Implementação progressiva de recursos como internacionalização
 - Organização modular de código com partials e componentes
 
-#### Estrutura do Projeto (versão mais recente - v3.1.4):
+#### Estrutura do Projeto (versão mais recente - v3.3.26):
 ```
 src/
 ├── static/
 │   ├── css/
 │   │   ├── components/    # Componentes CSS reutilizáveis
 │   │   └── container/     # Estilos para containers
+│   ├── data/              # Dados em formato JSON
 │   ├── img/               # Imagens e recursos gráficos
 │   ├── js/
 │   │   └── utils/         # Utilitários JavaScript
-│   ├── json/              # Dados em formato JSON
 │   └── translations/      # Arquivos de tradução
 └── index.html             # Página principal
 ```
@@ -87,7 +87,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 3. Flask (v2.1.28 - v3.2.19)
+### 3. Flask (v2.1.28 - v3.2.25)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
@@ -101,9 +101,9 @@ A implementação atual, usando Flask como um framework mais leve e flexível, m
 - Suporte a múltiplos idiomas
 - Testes automatizados
 
-#### Estrutura do Projeto (versão mais recente - v3.2.19):
+#### Estrutura do Projeto (versão mais recente - v3.2.25):
 ```
-v3.2.19/
+v3.2.25/
 ├── static/                # Arquivos estáticos
 │   ├── dist/              # Arquivos compilados (CSS/JS)
 │   ├── img/               # Imagens e recursos gráficos
@@ -118,14 +118,15 @@ v3.2.19/
 │   ├── src/               # Código-fonte para compilação
 │   └── translations/      # Arquivos de tradução
 ├── templates/             # Templates HTML
-│   ├── base.html          # Layout base
 │   ├── admin/             # Templates de administração
 │   ├── errors/            # Páginas de erro
 │   ├── pages/             # Páginas principais
-│   └── partials/          # Componentes reutilizáveis
-├── updates/               # Módulo para gerenciamento de atualizações
+│   ├── partials/          # Componentes reutilizáveis
+│   └── base.html          # Layout base
 ├── tests/                 # Testes automatizados
 ├── app.py                 # Aplicação Flask principal
+├── spotify_service.py     # Serviço para interagir com a API do Spotify
+├── youtube_service.py     # Serviço para interagir com a API do YouTube
 └── config.py              # Configurações da aplicação
 ```
 

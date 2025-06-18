@@ -1,0 +1,35 @@
+./__pycache__
+/.idea
+/__pycache__
+qodana.yaml
+/.vscode
+/.env
+*.pyc
+
+# Logs
+logs/
+*.log
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+.env/
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+node_modules/
+.vercel
+
+.trae/
+
+*.md
+*.cache

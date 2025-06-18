@@ -1,0 +1,71 @@
+/* Estilos para o container de seleção de tema */
+[data-theme-selector] {
+    @apply flex items-center gap-5;
+}
+
+/* Estilo base para botões de tema */
+.theme-button,
+[data-theme-switch] {
+    @apply flex items-center justify-center cursor-pointer transition-all duration-300 ease-in-out relative transform scale-80;
+}
+
+/* Botão ativo */
+.theme-button.active,
+[data-theme-switch].active {
+    @apply transform scale-100;
+}
+
+/* Hover effect */
+.theme-button:hover,
+[data-theme-switch]:hover {
+    @apply opacity-[0.9];
+}
+
+/* Estilos específicos para cada tema */
+[data-theme-value="light"] {
+    @apply text-yellow-500;
+}
+
+[data-theme-value="dark"] {
+    @apply text-blue-500;
+}
+
+[data-theme-value="red"] {
+    @apply text-red-600;
+}
+
+/* Versão mais compacta para cabeçalhos */
+.header [data-theme-switch],
+.header .theme-button {
+    @apply md:w-10 md:h-10 md:text-lg;
+}
+
+/* Animação ao trocar de tema */
+@keyframes theme-transition {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.theme-transition {
+    @apply animate-[theme-transition_0.3s_ease];
+}
+
+/* Tooltip básico (opcional) */
+[data-theme-switch]::after {
+    content: attr(title);
+
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black px-2 py-1 text-xs text-white opacity-0 hidden transition-all duration-200 ease-in-out;
+}
+
+[data-theme-switch]:hover::after {
+    @apply opacity-100 visible;
+}
