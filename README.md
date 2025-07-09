@@ -38,6 +38,8 @@ This repository will not be updated regularly, it'll receive monthly/+ changes i
 
 Just kidding, I want to make sure the project's update didn't mess anything. So I'll test, commit, check if I miss something and only then share it here.
 
+2025-07-09: The flask project will now be updated every 3~6 months. The monthly changes from may to june were so small that I believe it's not a good idea to keep sharing every month/+ but rather wait a bit more so you can actually notice a change!
+
 ---
 
 Thank you for visiting! ⭐ Star this repository if you find it helpful!
