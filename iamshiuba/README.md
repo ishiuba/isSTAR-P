@@ -101,7 +101,7 @@ A implementação atual, usando Flask como um framework mais leve e flexível, m
 - Suporte a múltiplos idiomas
 - Testes automatizados
 
-#### Estrutura do Projeto (versão mais recente - v3.2.25):
+#### Estrutura do Projeto (versão mais recente - v3.2.30):
 ```
 v3.2.25/
 ├── static/                # Arquivos estáticos
