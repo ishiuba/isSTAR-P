@@ -87,7 +87,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 3. Flask (v2.1.28 - v3.2.25)
+### 3. Flask (v2.1.28 - v3.2.30)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
