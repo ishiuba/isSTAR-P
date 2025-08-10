@@ -1,0 +1,513 @@
+/* Enhanced Theme System with CSS Custom Properties */
+
+/* Light Theme (Default) */
+:root,
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --shadow-color-d: rgba(0, 0, 0, 0.051);
+    --shadow-color-l: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(0, 0, 0, 0.125);
+    --hover-bg-color: rgba(0, 0, 0, 0.05);
+    --card-bg-color: #ffffff;
+    --navbar-bg-color: rgba(255, 255, 255, 0.95);
+    --accent-color: #ff0800;
+    --accent-hover-color: #cc0600;
+    --muted-text-color: #6c757d;
+}
+
+/* Dark Theme */
+[data-theme="dark"],
+body.dark {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --shadow-color-d: rgba(255, 255, 255, 0.051);
+    --shadow-color-l: rgba(0, 0, 0, 0.05);
+    --border-color: rgba(255, 255, 255, 0.125);
+    --hover-bg-color: rgba(255, 255, 255, 0.05);
+    --card-bg-color: #1a1a1a;
+    --navbar-bg-color: rgba(0, 0, 0, 0.95);
+    --accent-color: #ff4444;
+    --accent-hover-color: #ff6666;
+    --muted-text-color: #adb5bd;
+}
+
+/* Apply theme colors to body and html */
+html {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Enhanced Bootstrap Button Styles with Theme Support */
+.btn-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--accent-hover-color);
+  --bs-btn-hover-border-color: var(--accent-hover-color);
+  --bs-btn-active-color: var(--bs-white);
+  --bs-btn-active-bg: var(--accent-hover-color);
+  --bs-btn-active-border-color: var(--accent-hover-color);
+}
+
+/* Theme-aware outline buttons */
+.btn-outline-primary {
+  --bs-btn-color: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--accent-color);
+  --bs-btn-hover-border-color: var(--accent-color);
+  --bs-btn-active-color: var(--bs-white);
+  --bs-btn-active-bg: var(--accent-color);
+  --bs-btn-active-border-color: var(--accent-color);
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: var(--text-color);
+  --bs-btn-border-color: var(--border-color);
+  --bs-btn-hover-color: var(--bg-color);
+  --bs-btn-hover-bg: var(--text-color);
+  --bs-btn-hover-border-color: var(--text-color);
+  --bs-btn-active-color: var(--bg-color);
+  --bs-btn-active-bg: var(--text-color);
+  --bs-btn-active-border-color: var(--text-color);
+}
+
+/* Enhanced Theme Switch with Better Theme Integration */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch input:checked + .slider {
+    background-color: var(--text-color);
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(20px);
+    background-color: transparent;
+    border-radius: 50%;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    box-shadow: inset -5px -3px 0 var(--bg-color);
+}
+
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--hover-bg-color);
+    transition: all 0.4s ease;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 0.25em var(--shadow-color-d), 0.2px 0.2em 24px 0 var(--shadow-color-l);
+}
+
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffd700;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    box-shadow: 0 0 0.25em var(--shadow-color-d);
+}
+
+/* Theme Toggle Button Styles (for new Bootstrap approach) */
+.theme-toggle-btn {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--hover-bg-color);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.theme-toggle-btn.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--bs-white);
+}
+
+
+#up,
+#down,
+.page-link,
+button {
+    transition: all 0.3s ease;
+}
+
+svg {
+    color: var(--text-color);
+}
+
+a {
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.link {
+    animation: fadeIn 7s ease-in-out;
+}
+
+#up,
+#down {
+    margin: 0;
+    color: var(--accent-color);
+    padding: 2rem;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+}
+
+#up:hover,
+#down:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--accent-hover-color);
+    border-color: var(--accent-color);
+}
+
+.container {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    text-align: center;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 3rem;
+}
+
+h2,
+h3,
+h4 {
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    animation: fadeIn 3s ease-in-out;
+}
+
+p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 5s ease-in-out;
+}
+
+iframe {
+    aspect-ratio: 16/9;
+    animation: fadeIn 5s ease-in-out;
+}
+
+#youtube,
+.video-links {
+    text-align: center;
+}
+
+.video-links {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.video-links a {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.video-links a:hover {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-hover-color);
+    background-color: var(--hover-bg-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+    background-color: var(--hover-bg-color);
+    text-shadow: 0 0 3px var(--accent-color);
+}
+
+.nav-link:focus {
+    color: var(--accent-color);
+    background-color: var(--hover-bg-color);
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav-item {
+    padding-right: 1rem;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#langselect,
+#swicher,
+.navbar-brand,
+.nav-item {
+    padding: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enhanced Streaming Styles */
+
+/* Video Container Enhancements */
+#videoContainer {
+    min-height: 200px;
+    transition: all 0.3s ease;
+}
+
+#videoContainer .card, .card.shadow-sm, .card.shadow-lg, .input-group-text {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.3s ease;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+
+    .video-placeholder {
+        background-color: var(--bg-color);
+    }
+
+    .card-title {
+        color: var(--text-color);
+        transition: color 0.3s ease;
+    }
+}
+
+#videoContainer .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] #videoContainer .card:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Favorite Button Styles */
+.favorite-btn {
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.favorite-btn.active:hover {
+    background-color: #ffcd39;
+    border-color: #ffcd39;
+}
+
+/* Favorite Card Border */
+.card.border-warning {
+    border-width: 2px !important;
+    position: relative;
+}
+
+.card.border-warning::before {
+    content: '⭐';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ffc107;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    z-index: 1;
+}
+
+/* Input Placeholder Styles */
+.input-group .form-control::placeholder {
+    color: var(--text-color);
+}
+
+.load-video-btn {
+    transition: all 0.2s ease;
+}
+
+.load-video-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Loading Animation Enhancements */
+#loadingAnimation {
+    animation: fadeIn 0.3s ease;
+}
+
+#loadingAnimation .spinner-border {
+    animation: spin 1s linear infinite;
+}
+
+/* Search Input Enhancements */
+#youtubeSearch {
+    transition: all 0.2s ease;
+    background-color: var(--card-bg-color);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+#youtubeSearch:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 8, 0, 0.25);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #youtubeSearch:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 68, 68, 0.25);
+}
+
+/* View Toggle Button */
+#viewToggle {
+    transition: all 0.2s ease;
+    border-radius: 0.375rem;
+}
+
+#viewToggle:hover {
+    transform: scale(1.05);
+}
+
+/* Refresh Button Animation */
+#refreshButton .fa-sync-alt {
+    transition: transform 0.3s ease;
+}
+
+#refreshButton:hover .fa-sync-alt {
+    transform: rotate(180deg);
+}
+
+/* Alert Enhancements */
+.alert {
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 576px) {
+    #videoContainer .card {
+        margin-bottom: 1rem;
+    }
+
+    .favorite-btn {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Animation for card loading */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#videoContainer .card {
+    animation: slideInUp 0.3s ease forwards;
+}
+
+/* Stagger animation for multiple cards */
+#videoContainer .card:nth-child(1) { animation-delay: 0.1s; }
+#videoContainer .card:nth-child(2) { animation-delay: 0.2s; }
+#videoContainer .card:nth-child(3) { animation-delay: 0.3s; }
+#videoContainer .card:nth-child(4) { animation-delay: 0.4s; }
+#videoContainer .card:nth-child(5) { animation-delay: 0.5s; }
+#videoContainer .card:nth-child(6) { animation-delay: 0.6s; }

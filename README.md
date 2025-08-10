@@ -11,10 +11,10 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v0.2.7: [@Alpha](https://ishiuba-js-alpha.vercel.app/)
 - v0.2.11: [@Alpha2025](https://ishiuba-js-as25.vercel.app/)
 - v1.0.11: [@Beta](https://ishiuba-js-beta.vercel.app/)
+- v1.0.12: [@Beta2025](https://ishiuba-js-bs25.vercel.app/)
 - v1.1.2: [@STARa1](https://ishiuba-js-a1.vercel.app/)
 - v1.2.7: [@STARb1](https://ishiuba-js-b1.vercel.app/)
 - v1.3.5: [@STARb2](https://ishiuba-js-b2.vercel.app/)
-- v3.1.4: [@STARc1]
 - v3.3.26: [@STARc2](https://iamshiuba.pages.dev/)
 # Django
 - v1.3.18: [@STARdj1](https://iamshiubadj1.vercel.app/)
@@ -26,6 +26,7 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v3.2.12: [@PySTAR202504](https://iamshiuba-202504.vercel.app/)
 - v3.2.19: [@PySTAR202505](https://iamshiuba-202505.vercel.app/)
 - v3.2.25: [@PySTAR202506](https://iamshiuba-202506.vercel.app/)
+- v3.2.30: [@PySTAR20250729](https://iamshiuba-20250729.vercel.app/)
 
 ## Contact
 
@@ -39,6 +40,8 @@ This repository will not be updated regularly, it'll receive monthly/+ changes i
 Just kidding, I want to make sure the project's update didn't mess anything. So I'll test, commit, check if I miss something and only then share it here.
 
 2025-07-09: The flask project will now be updated every 3~6 months. The monthly changes from may to june were so small that I believe it's not a good idea to keep sharing every month/+ but rather wait a bit more so you can actually notice a change!
+
+2025-08-10: Mudei de ideia, vou voltar a atualizar com mais frequencia, semanal/mensalmente.
 
 ---
 

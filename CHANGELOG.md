@@ -34,6 +34,10 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Botões para colapsar cabeçalho e rodapé
 - Pequenas melhorias na estrutura de arquivos estáticos
 
+### v1.0.12 (Beta2025)
+- Melhorias no design e usabilidade
+- Pequenas correções e melhorias
+
 ### v1.1.2 (STARa1)
 - Pequenas correções e melhorias
 
@@ -108,6 +112,40 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 ### v3.2.25 (PySTAR202506)
 - Melhor integração com APIs externas (YouTube e Spotify)
 - Correções e melhorias incrementais
+
+### v3.2.29 (PySTAR20250716)
+Tema e Navbar
+- Atualização das cores do tema.
+- Ajuste na estrutura da navbar.
+- Remoção do logo da navbar.
+
+HTML e Estrutura
+- Ajustes na estrutura do HTML.
+
+Estilos e SCSS
+- Ajuste no brilho de elementos com hover para 1.2.
+- Refatoração de estilos SCSS.
+- Atualização das classes de botões.
+
+Limpeza de Código
+- Remoção de arquivos de template desnecessários.
+
+### v3.2.30 (PySTAR20250729)
+
+Navbar e ícones sociais:
+- Adição de novas classes utilitárias CSS.
+- Ajuste dos estilos dos ícones sociais, incluindo aplicação de flex-wrap.
+- Remoção de estilos de hover desnecessários.
+
+Footer e links:
+- Ajuste de estilos do footer e da navbar.
+- Inclusão de links de streaming de música no footer.
+
+Tema e cores:
+- Ajuste e atualização de cores do tema.
+- Alteração de cores de destaque e bordas nos campos de busca.
+- Refatoração de estilos do tema.
+- Remoção de comentários desnecessários em templates.
 
 ## Observações sobre a Evolução do Projeto
 

@@ -1,0 +1,297 @@
+<!-- youtube.html -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="iSHIUBA's video page." />
+    <meta name="keywords" content="iamshiuba, music, videos, entertainment" />
+    <title>Videos - iSHIUBA</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.5.0/css/flag-icons.min.css"
+      integrity="sha512-+WVTaUIzUw5LFzqIqXOT3JVAc5SrMuvHm230I9QAZa6s+QRk8NDPswbHo2miIZj3yiFyV9lAgzO1wVrjdoO4tw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body>
+    <div class="container-fluid" id="page">
+      <header></header>
+      <main>
+        <div id="youtube" class="container-fluid py-4">
+          <div class="text-center mb-4">
+            <h1 data-translate="videosTitle" class="mb-3">Videos</h1>
+            <p data-translate="videosDescription" class="lead">
+              Explore my music playlists and videos
+            </p>
+          </div>
+
+          <!-- Enhanced Controls Section -->
+          <div class="row mb-4">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <div class="row g-3 align-items-center">
+                    <!-- Search Input -->
+                    <div class="col-12 col-sm-8">
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <i class="fas fa-search"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="youtubeSearch"
+                          placeholder="Search playlists..."
+                          data-translate-placeholder="searchPlaylists"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- View Toggle Button -->
+                    <div class="col-12 col-sm-4">
+                      <div class="d-flex gap-2 justify-content-end">
+                        <button
+                          id="viewToggle"
+                          class="btn btn-outline-primary"
+                          title="Toggle view layout"
+                          aria-label="Toggle view layout"
+                        >
+                          <i class="fas fa-th"></i>
+                        </button>
+
+                        <!-- Refresh Button -->
+                        <button
+                          id="refreshButton"
+                          class="btn btn-outline-primary"
+                          title="Refresh playlists"
+                          aria-label="Refresh playlists"
+                        >
+                          <i class="fas fa-sync-alt"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loading Animation -->
+          <div
+            id="loadingAnimation"
+            class="text-center py-5"
+            style="display: none"
+          >
+            <div
+              class="spinner-border text-primary mb-3"
+              role="status"
+              style="width: 3rem; height: 3rem"
+            >
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="text-muted" data-translate="loading">
+              Loading playlists...
+            </p>
+          </div>
+
+          <!-- Video Container -->
+          <div id="videoContainer" class="mb-4">
+            <!-- Playlists will be loaded here by the EnhancedStreaming class -->
+          </div>
+
+          <!-- Pagination (for future use) -->
+          <div
+            id="paginationYoutube"
+            class="d-flex justify-content-center mt-4"
+            style="display: none !important"
+          >
+            <!-- Pagination will be added here if needed -->
+          </div>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+
+    <!-- Floating Social Media Button -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050">
+      <button
+        class="btn btn-primary rounded-circle shadow-lg"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#floatingMenu"
+        aria-controls="floatingMenu"
+        aria-expanded="false"
+        aria-label="Show social links"
+        style="width: 56px; height: 56px"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+          />
+        </svg>
+      </button>
+
+      <!-- Floating Menu -->
+      <div
+        class="collapse position-absolute bottom-100 end-0 mb-2"
+        id="floatingMenu"
+      >
+        <div class="card shadow-lg" style="min-width: 200px">
+          <div class="card-body p-2">
+            <div class="d-flex flex-column gap-2">
+              <a
+                rel="noopener"
+                href="https://github.com/ishiuba"
+                class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+                GitHub
+              </a>
+              <a
+                rel="noopener"
+                href="https://x.com/iamshiuba"
+                class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                target="_blank"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+                X (Twitter)
+              </a>
+              <a
+                rel="noopener"
+                href="https://www.youtube.com/@iamshiuba"
+                class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                target="_blank"
+              >
+                <i class="fa-brands fa-youtube"></i>
+                YouTube
+              </a>
+              <a
+                rel="noopener"
+                href="https://soundcloud.com/iamshiuba"
+                class="btn btn-outline-primary btn-sm d-flex align-items-center gap-2"
+                target="_blank"
+              >
+                <i class="fa-brands fa-soundcloud"></i>
+                SoundCloud
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="static/js/translations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- New modular structure -->
+    <script src="static/js/nav.js"></script>
+    <script src="static/js/footer.js"></script>
+    <script src="static/js/videoLoader.js"></script>
+    <script src="static/js/languageManager.js"></script>
+    <script src="static/js/themeManager.js"></script>
+    <script src="static/js/app.js"></script>
+
+    <!-- Enhanced Streaming Integration -->
+    <script>
+      // Enhanced streaming integration
+      document.addEventListener("DOMContentLoaded", function () {
+        // Setup refresh button functionality
+        const refreshButton = document.getElementById("refreshButton");
+        if (refreshButton) {
+          refreshButton.addEventListener("click", async function () {
+            const icon = this.querySelector(".fa-sync-alt");
+            const instance = getStreamingInstance
+              ? getStreamingInstance()
+              : null;
+
+            if (instance) {
+              // Add spinning animation
+              icon.style.animation = "spin 1s linear infinite";
+              this.disabled = true;
+
+              try {
+                await instance.refresh();
+                console.log("Playlists refreshed successfully");
+              } catch (error) {
+                console.error("Error refreshing playlists:", error);
+              } finally {
+                // Remove spinning animation
+                icon.style.animation = "";
+                this.disabled = false;
+              }
+            } else {
+              // Fallback to page reload
+              location.reload();
+            }
+          });
+        }
+
+        // Setup keyboard shortcuts
+        document.addEventListener("keydown", function (e) {
+          // Ctrl/Cmd + R for refresh (prevent default and use our refresh)
+          if ((e.ctrlKey || e.metaKey) && e.key === "r") {
+            e.preventDefault();
+            refreshButton?.click();
+          }
+
+          // Ctrl/Cmd + F for search focus
+          if ((e.ctrlKey || e.metaKey) && e.key === "f") {
+            e.preventDefault();
+            const searchInput = document.getElementById("youtubeSearch");
+            if (searchInput) {
+              searchInput.focus();
+              searchInput.select();
+            }
+          }
+        });
+
+        // Add search placeholder animation
+        const searchInput = document.getElementById("youtubeSearch");
+        if (searchInput) {
+          const placeholders = [
+            "Search playlists...",
+            'Try "remix"...',
+            'Try "piano"...',
+            'Try "2024"...',
+            "Search by title...",
+          ];
+
+          let currentIndex = 0;
+          setInterval(() => {
+            if (!searchInput.value && document.activeElement !== searchInput) {
+              searchInput.placeholder = placeholders[currentIndex];
+              currentIndex = (currentIndex + 1) % placeholders.length;
+            }
+          }, 3000);
+        }
+      });
+    </script>
+  </body>
+</html>
