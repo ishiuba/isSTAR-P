@@ -27,22 +27,17 @@ body.dark {
     --hover-bg-color: rgba(255, 255, 255, 0.05);
     --card-bg-color: #1a1a1a;
     --navbar-bg-color: rgba(0, 0, 0, 0.95);
-    --accent-color: #ff4444;
-    --accent-hover-color: #ff6666;
     --muted-text-color: #adb5bd;
-}
-
-/* Apply theme colors to body and html */
-html {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.active {
+    color: var(--accent-color);
 }
 
 /* Enhanced Bootstrap Button Styles with Theme Support */
