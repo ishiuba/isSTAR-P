@@ -1,0 +1,49 @@
+main {
+    @apply bg-[var(--background-primary)] text-[var(--text-primary)] pt-10 pb-10 px-2.5 outline-none min-h-screen;
+
+    h1 {
+        @apply font-bold text-5xl text-[var(--text-secondary)];
+    }
+
+    form {
+        @apply my-5;
+    }
+
+    .btn {
+        @apply text-left bg-[var(--background-secondary)] text-[var(--text-secondary)];
+    }
+
+    .hBtn {
+        @apply bg-[var(--background-primary)] text-[var(--text-primary)] text-center inline-flex items-center w-full justify-center;
+
+        i {
+            @apply mr-2;
+        }
+
+        p {
+            @apply text-lg font-medium;
+        }
+    }
+
+    .sBtn {
+        @apply bg-[var(--background-primary)] text-[var(--text-primary)] text-center;
+    }
+
+    .btn,
+    .sBtn,
+    .hBtn {
+        @apply hover:contrast-[95%] px-5 py-2.5 rounded text-lg transition-all duration-500 ease-in-out cursor-pointer;
+    }
+
+    .hero-buttons,
+    .social-buttons {
+        @apply mt-10 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4;
+    }
+
+    .skill-card,
+    .stats-card {
+        & .fas {
+            @apply text-[var(--accent-color)] text-5xl;
+        }
+    }
+}
