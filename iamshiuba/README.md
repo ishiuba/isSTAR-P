@@ -34,7 +34,7 @@ src/
 Basta abrir o arquivo `index.html` em um navegador web ou usar um servidor local simples:
 ```bash
 # Usando Python para criar um servidor local
-cd iamshiuba/v3.0.6
+cd iamshiuba/v3.3.26/
 python -m http.server 8000
 
 # Ou usando Node.js com http-server
@@ -87,7 +87,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 3. Flask (v2.1.28 - v3.2.30)
+### 3. Flask (v2.1.28 - v3.2.31)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
@@ -101,9 +101,19 @@ A implementação atual, usando Flask como um framework mais leve e flexível, m
 - Suporte a múltiplos idiomas
 - Testes automatizados
 
-#### Estrutura do Projeto (versão mais recente - v3.2.30):
+#### Estrutura do Projeto (versão mais recente - v3.2.31):
 ```
-v3.2.25/
+v3.2.31/
+├── blueprints/          # Rotas organizadas em blueprints
+│   ├── __init__.py      # Inicialização dos blueprints
+│   ├── main_routes.py   # Rotas da aplicação principal
+│   └── api_routes.py    # Rotas da API
+├── services/            # Camada de serviço
+│   ├── __init__.py      # Inicialização dos serviços
+│   ├── exceptions.py    # Exceções customizadas
+│   ├── spotify_service.py 
+│   ├── youtube_service.py
+│   └── updates_service.py
 ├── static/                # Arquivos estáticos
 │   ├── dist/              # Arquivos compilados (CSS/JS)
 │   ├── img/               # Imagens e recursos gráficos
@@ -118,12 +128,12 @@ v3.2.25/
 │   ├── src/               # Código-fonte para compilação
 │   └── translations/      # Arquivos de tradução
 ├── templates/             # Templates HTML
-│   ├── admin/             # Templates de administração
 │   ├── errors/            # Páginas de erro
 │   ├── pages/             # Páginas principais
 │   ├── partials/          # Componentes reutilizáveis
 │   └── base.html          # Layout base
 ├── tests/                 # Testes automatizados
+├── __init__.py            # Application Factory
 ├── app.py                 # Aplicação Flask principal
 ├── spotify_service.py     # Serviço para interagir com a API do Spotify
 ├── youtube_service.py     # Serviço para interagir com a API do YouTube
@@ -138,12 +148,13 @@ source venv/bin/activate  # No Windows: venv\Scripts\activate
 
 # Instalar dependências
 pip install -r requirements.txt
+npm install
 
 # Compilar assets (se necessário)
-npx tailwindcss -i ./static/scss/input.scss -o ./static/dist/css/output.css
+npm run dev
 
 # Iniciar servidor de desenvolvimento
-flask run
+python wsgi.py
 ```
 
 ## Comparação entre as Implementações
@@ -199,21 +210,24 @@ flask run
    pip install -r requirements.txt
    ```
 
-4. Configure as variáveis de ambiente (crie um arquivo `.env`):
+4. Configure as variáveis de ambiente (`.env`):
    ```
-   FLASK_APP=app.py
-   FLASK_DEBUG=1
-   ADMIN_PASSWORD=sua-chave-secreta
+   SPOTIFY_CLIENT_ID="sua-chave-cliente-spotify"
+   SPOTIFY_CLIENT_SECRET="seu-client-secret-spotify"
+   YOUTUBE_API_KEY="sua-chave-api-youtube"
+   YOUTUBE_CHANNEL_ID="seu-id-de-canal-youtube"
+   JSONBIN_ID="seu-id-do-jsonbin"
+   JSONBIN_ACCESS_KEY="sua-chave-de-acesso-do-jsonbin"
    ```
 
 5. Compile os assets CSS:
    ```bash
-   npx tailwindcss -i ./static/css/input.css -o ./static/dist/css/output.css --watch
+   npm run dev
    ```
 
 6. Execute o servidor de desenvolvimento:
    ```bash
-   flask run
+   python wsgi.py
    ```
 
 7. Acesse `http://localhost:5000` no navegador

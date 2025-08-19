@@ -27,6 +27,7 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v3.2.19: [@PySTAR202505](https://iamshiuba-202505.vercel.app/)
 - v3.2.25: [@PySTAR202506](https://iamshiuba-202506.vercel.app/)
 - v3.2.30: [@PySTAR20250729](https://iamshiuba-20250729.vercel.app/)
+- v3.2.31: [@F20250819](https://iamshiuba-flask20250819.vercel.app/)
 
 ## Contact
 

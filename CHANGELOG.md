@@ -147,6 +147,35 @@ Tema e cores:
 - Refatoração de estilos do tema.
 - Remoção de comentários desnecessários em templates.
 
+## 3.2.31 (F20250819)
+
+#### Refatoração Completa da Arquitetura
+Estrutura Modular:
+
+- Implementação do padrão Application Factory em `__init__.py`
+- Criação de blueprints para organização de rotas (`main_routes.py`, `api_routes.py`)
+- Reorganização dos serviços em diretório services/ dedicado
+- Simplificação do app.py para wrapper de compatibilidade (487→22 linhas)
+
+Melhorias nos Serviços:
+- Criação de exceções customizadas (YouTubeServiceError, SpotifyServiceError, UpdatesServiceError)
+- Implementação do UpdatesService centralizado com cache inteligente
+- Correção da estrutura de resposta da API JSONBin
+- Tratamento robusto de erros com códigos HTTP apropriados
+
+Frontend Aprimorado:
+
+- Remoção de valores hardcoded do `highlights.js`
+- Implementação de data attributes para playlist ID dinâmico
+- Melhoria no fluxo de dados backend→frontend
+
+Performance e Qualidade:
+
+- Validação de parâmetros de entrada nas APIs
+- Cache de 15 minutos para updates com cache-busting
+- Eliminação completa de duplicação de código
+- Manutenção de 100% compatibilidade com versões anteriores
+
 ## Observações sobre a Evolução do Projeto
 
 - Evolução de uma simples página HTML para uma aplicação Flask completa
