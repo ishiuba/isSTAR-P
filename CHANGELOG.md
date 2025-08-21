@@ -67,11 +67,11 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 
 ## Versões Django
 
-### v1.3.18 (STARdj1)
+### v1.3.18 (dj2024v1)
 - Primeira implementação com Django
 - Pequnas correções e melhorias (originário da versão STARb2)
 
-### v2.0.27 (STARdj2)
+### v2.0.27 (dj2024v2)
 - Evolução da versão v1.3.18
 - Novos idiomas (Russo e Hindi)
 - Adição de tema personalizado (Ano Novo 2025)
@@ -79,41 +79,41 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 
 ## Versões Flask
 
-### v2.1.28 (PySTAR202501)
+### v2.1.28 (F202501)
 - Primeira implementação com Flask
 - Pequenas correções e melhorias (originário da versão STARdj2)
 
-### v3.0.5 (PySTAR202502)
+### v3.0.5 (F202502)
 - Versão atualizada da v2.1.28
 - Redesign de 3ª geração
 - Novo idioma (Chinês)
 - Pequenas correções e melhorias
 
-### v3.0.6 (PySTAR202502-latest)
+### v3.0.6 (F202502-latest)
 - Patch da v3.0.5
 - Correções e melhorias incrementais
 
-### v3.1.7 (PySTAR202503)
+### v3.1.7 (F202503)
 - Melhorias no design e usabilidade (originário da versão STARc1)
 - Pequenas correções e melhorias
 
-### v3.2.12 (PySTAR202504)
+### v3.2.12 (F202504)
 - Adição de componentes Flowbite
 - Implementação de PWA (App Instalável)
 - Novo uso de temas (Claro, Escuro e Vermelho)
 - Pequenas correções e melhorias
 
-### v3.2.19 (PySTAR202505)
+### v3.2.19 (F202505)
 - Novo tema (Preto)
 - Seção de versões substituída por uma página de Atualizações
 - Correções e melhorias incrementais
 
 
-### v3.2.25 (PySTAR202506)
+### v3.2.25 (F202506)
 - Melhor integração com APIs externas (YouTube e Spotify)
 - Correções e melhorias incrementais
 
-### v3.2.29 (PySTAR20250716)
+### v3.2.29 (F20250716)
 Tema e Navbar
 - Atualização das cores do tema.
 - Ajuste na estrutura da navbar.
@@ -130,7 +130,7 @@ Estilos e SCSS
 Limpeza de Código
 - Remoção de arquivos de template desnecessários.
 
-### v3.2.30 (PySTAR20250729)
+### v3.2.30 (F20250729)
 
 Navbar e ícones sociais:
 - Adição de novas classes utilitárias CSS.
