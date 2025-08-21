@@ -17,16 +17,16 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v1.3.5: [@STARb2](https://ishiuba-js-b2.vercel.app/)
 - v3.3.26: [@STARc2](https://iamshiuba.pages.dev/)
 # Django
-- v1.3.18: [@STARdj1](https://iamshiubadj1.vercel.app/)
-- v2.0.27: [@STARdj2](https://iamshiubadj2.vercel.app/)
+- v1.3.18: [@Rdj2024v1](https://iamshiubadj1.vercel.app/)
+- v2.0.27: [@dj2024v2](https://iamshiubadj2.vercel.app/)
 # Flask
-- v2.1.28: [@PySTAR202501](https://iamshiuba-202501.vercel.app/)
-- v3.0.6: [@PySTAR202502](https://iamshiuba-202502.vercel.app/)
-- v3.1.7: [@PySTAR202503](https://iamshiuba-202503.vercel.app/)
-- v3.2.12: [@PySTAR202504](https://iamshiuba-202504.vercel.app/)
-- v3.2.19: [@PySTAR202505](https://iamshiuba-202505.vercel.app/)
-- v3.2.25: [@PySTAR202506](https://iamshiuba-202506.vercel.app/)
-- v3.2.30: [@PySTAR20250729](https://iamshiuba-20250729.vercel.app/)
+- v2.1.28: [@F202501](https://iamshiuba-202501.vercel.app/)
+- v3.0.6: [@F202502](https://iamshiuba-202502.vercel.app/)
+- v3.1.7: [@F202503](https://iamshiuba-202503.vercel.app/)
+- v3.2.12: [@F202504](https://iamshiuba-202504.vercel.app/)
+- v3.2.19: [@F202505](https://iamshiuba-202505.vercel.app/)
+- v3.2.25: [@F202506](https://iamshiuba-202506.vercel.app/)
+- v3.2.30: [@F20250729](https://iamshiuba-20250729.vercel.app/)
 - v3.2.31: [@F20250819](https://iamshiuba-flask20250819.vercel.app/)
 
 ## Contact
