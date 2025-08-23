@@ -1,4 +1,5 @@
-#privacy {
+#privacy,
+#PRIVACY {
     .privacy-section {
         @apply py-8 px-4;
 
@@ -9,11 +10,13 @@
                 @apply mb-8 text-center;
 
                 .description {
-                    @apply text-xl mt-3 text-[var(--text-primary)];
+                    @apply text-xl mt-3;
+                    color: var(--text-primary);
                 }
 
                 .date {
-                    @apply mt-2 text-[var(--is-red-60)];
+                    @apply mt-2;
+                    color: var(--is-red-60);
                 }
             }
 
@@ -21,22 +24,25 @@
                 @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
 
                 .privacy-card {
-                    @apply p-6 rounded-lg shadow-lg bg-[var(--background-secondary)];
+                    @apply p-6 rounded-lg shadow-lg;
+                    background-color: var(--background-secondary);
 
                     .card-header {
                         @apply flex items-center mb-4;
 
                         i {
-                            @apply text-2xl mr-3 text-[var(--text-secondary)];
+                            @apply text-2xl mr-3;
+                            color: var(--text-secondary);
                         }
 
                         h2 {
-                            @apply text-xl font-bold text-[var(--text-primary)];
+                            @apply text-xl font-bold;
+                            color: var(--text-primary);
                         }
                     }
 
                     p {
-                        @apply text-[var(--text-secondary)];
+                        color: var(--text-secondary);
                     }
                 }
             }

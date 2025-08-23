@@ -23,17 +23,17 @@
         @apply flex flex-wrap gap-4 justify-center mb-15;
 
         .skill-card {
-            @apply bg-[var(--background-secondary)] px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center shadow-lg lg:max-w-70 md:max-w-50 w-full;
+            @apply px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center shadow-lg lg:max-w-70 md:max-w-50 w-full bg-[var(--background-secondary)];
 
             h3 {
                 @apply text-2xl font-semibold mb-2.5;
             }
 
             .skill-bar {
-                @apply bg-[var(--background-primary)] h-2 rounded-full overflow-hidden;
+                @apply h-2 rounded-full overflow-hidden bg-[var(--background-primary)];
 
                 .progress {
-                    @apply h-full bg-[var(--accent-color)] rounded-full animate-[slideRight_1s_ease-in-out];
+                    @apply h-full rounded-full animate-[slideRight_1s_ease-in-out] bg-[var(--accent-color)];
                 }
             }
         }
@@ -43,7 +43,7 @@
         @apply grid justify-items-center mb-15;
 
         .connect-card {
-            @apply bg-[var(--background-secondary)] px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center flex flex-col items-center md:max-w-4/5 w-full;
+            @apply px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center flex flex-col items-center md:max-w-4/5 w-full bg-[var(--background-secondary)];
         }
     }
 }

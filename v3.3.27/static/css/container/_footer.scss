@@ -12,40 +12,28 @@ footer {
         #footer-bottom {
             @apply grid grid-cols-1 gap-1 md:grid-cols-2 m-1 md:m-5;
 
+            &>div {
+                @apply m-5 bg-[var(--background-primary)] rounded-xl w-auto h-auto shadow-lg;
+
+                & h4,
+                &>div,
+                & ul {
+                    @apply p-5;
+                }
+            }
+
             #quick-links {
                 .f-link {
-                    @apply hover:text-red-600 hover:font-bold cursor-pointer;
+                    @apply hover:text-[var(--is-red-60)] hover:font-bold cursor-pointer;
                 }
             }
 
             #social-links {
                 #social-icons {
-                    @apply flex gap-5 text-4xl md:text-3xl;
-
-                    & .fa-x-twitter {
-                        @apply text-sky-600 dark:text-sky-400;
-                    }
-
-                    & .fa-soundcloud {
-                        @apply text-orange-600 dark:text-orange-400;
-                    }
-
-                    & .fa-youtube {
-                        @apply text-red-600;
-                    }
+                    @apply flex gap-5 text-4xl md:text-3xl drop-shadow-lg flex-wrap;
 
                     & :hover {
-                        &.fa-x-twitter {
-                            @apply text-sky-500;
-                        }
-
-                        &.fa-soundcloud {
-                            @apply text-orange-500;
-                        }
-
-                        &.fa-youtube {
-                            @apply text-red-700;
-                        }
+                        @apply brightness-[0.9];
                     }
                 }
             }

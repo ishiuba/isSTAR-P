@@ -121,21 +121,7 @@
             }
         }
 
-        .button-container {
-            @apply text-center;
 
-            button {
-                @apply inline-flex items-center px-5 py-2.5 w-full justify-center text-sm font-medium text-center text-white bg-red-700 hover:bg-red-800 dark:bg-red-600 dark:hover:bg-red-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800;
-
-                i {
-                    @apply mr-2;
-                }
-
-                p {
-                    @apply text-lg font-medium;
-                }
-            }
-        }
     }
 }
 
@@ -149,11 +135,12 @@
             @apply text-center transition duration-300 ease-in-out bg-[var(--background-secondary)] text-[var(--text-primary)] my-auto p-8 rounded-3xl shadow-lg lg:max-w-70 md:max-w-50 w-full;
 
             i {
-                @apply text-red-600 text-5xl;
+                @apply text-[var(--accent-color)] text-5xl;
             }
 
             .counter {
                 @apply text-4xl font-bold my-4;
+                @apply animate-[count_1s_ease-in-out];
             }
         }
     }

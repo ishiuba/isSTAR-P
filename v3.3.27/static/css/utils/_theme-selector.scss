@@ -1,24 +1,45 @@
 /* Estilos para o container de seleção de tema */
 [data-theme-selector] {
-    @apply flex items-center gap-5;
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 5);
 }
 
 /* Estilo base para botões de tema */
 .theme-button,
 [data-theme-switch] {
-    @apply flex items-center justify-center cursor-pointer transition-all duration-300 ease-in-out relative transform scale-80;
+    position: relative;
+    display: flex;
+    --tw-scale-x: 80%;
+    --tw-scale-y: 80%;
+    --tw-scale-z: 80%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
 }
 
 /* Botão ativo */
 .theme-button.active,
 [data-theme-switch].active {
-    @apply transform scale-100;
+    --tw-scale-x: 100%;
+    --tw-scale-y: 100%;
+    --tw-scale-z: 100%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
 }
 
 /* Hover effect */
 .theme-button:hover,
 [data-theme-switch]:hover {
-    @apply opacity-[0.9];
+    opacity: 0.9;
 }
 
 /* Estilos específicos para cada tema */

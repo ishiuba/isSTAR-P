@@ -3,10 +3,6 @@
 
     #navBrand {
         @apply m-3;
-
-        #logo {
-            @apply hover:brightness-120 inline-block md:max-w-[10%] lg:max-w-[8%];
-        }
     }
 
     #desktopMenu {
@@ -30,7 +26,7 @@
     }
 
     .menu-grid {
-        @apply grid h-full grid-cols-4 bg-[var(--background-secondary)] border-t border-[var(--border-color)]/20 backdrop-blur-sm;
+        @apply grid h-full grid-cols-4 bg-[var(--background-primary)] border-t border-[var(--border-color)]/20 backdrop-blur-sm;
     }
 
     .nav-item {
@@ -46,7 +42,7 @@
     }
 
     .drawer {
-        @apply fixed top-0 z-50 h-screen p-4 overflow-y-auto w-80;
+        @apply fixed top-0 z-50 h-screen p-4 w-80;
 
         &[data-drawer-placement="left"] {
             @apply left-0 -translate-x-full;
@@ -56,14 +52,14 @@
             @apply right-0 translate-x-full;
         }
 
-        @apply bg-[var(--background-primary)] transition-transform;
+        @apply bg-[var(--background-secondary)] transition-transform;
     }
 
     .drawer-header {
         @apply flex items-center justify-between pb-4 mb-4 border-b border-[var(--border-color)]/20;
 
         h1 {
-            @apply font-bold text-3xl bg-gradient-to-r from-red-500 from-10% to-red-700 to-60% text-transparent bg-clip-text;
+            @apply font-bold text-2xl;
         }
 
         .drawer-close {
@@ -74,6 +70,16 @@
 
 .drawer-content {
     @apply py-4 text-[var(--text-secondary)];
+
+    &>div {
+        @apply m-5 bg-[var(--background-primary)] rounded-xl w-auto h-auto shadow-lg;
+
+        & h5,
+        &>div,
+        & ul {
+            @apply p-5;
+        }
+    }
 
     & h5 {
         @apply mb-2.5 mt-2.5 text-2xl font-bold;
@@ -103,6 +109,8 @@
 }
 
 #config-drawer {
+    scrollbar-width: thin;
+
     #theme-container {
         @apply mb-6;
 
@@ -123,7 +131,7 @@
                     @apply text-3xl md:text-2xl transition-all ease-in-out duration-400 cursor-pointer saturate-0 hover:saturate-100;
 
                     &.active {
-                        @apply text-4xl md:text-3xl saturate-100 text-red-600 font-bold;
+                        @apply text-4xl md:text-3xl saturate-100 text-[var(--accent-color)] font-bold;
                     }
 
                     & p {
@@ -138,32 +146,7 @@
 
 #social-drawer {
     #social-icons {
-        @apply flex gap-5 text-4xl md:text-3xl;
+        @apply flex gap-5 text-4xl md:text-3xl flex-wrap;
 
-        & .fa-x-twitter {
-            @apply text-sky-600 dark:text-sky-400;
-        }
-
-        & .fa-soundcloud {
-            @apply text-orange-600 dark:text-orange-400;
-        }
-
-        & .fa-youtube {
-            @apply text-red-600;
-        }
-
-        & :hover {
-            &.fa-x-twitter {
-                @apply text-sky-500;
-            }
-
-            &.fa-soundcloud {
-                @apply text-orange-500;
-            }
-
-            &.fa-youtube {
-                @apply text-red-700;
-            }
-        }
     }
 }
