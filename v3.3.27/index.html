@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IamSHIUBA</title>
+    <title>Pagina Inicial</title>
     <link
       rel="icon"
       href="./static/img/iamshiuba_web.svg"
@@ -22,1008 +22,151 @@
     />
     <link rel="stylesheet" href="./static/css/output.css" />
   </head>
+
   <body>
-    <header>
-      <nav id="navContainer">
-        <div id="navBrand">
-          <a href="#home" class="text-lg font-black">
-            <p>IamSHIUBA</p>
-          </a>
+    <i-nav></i-nav>
+
+    <main id="home">
+      <section class="hero-section">
+        <div class="hero-wrapper">
+          <div class="hero-content">
+            <h1 data-translate="greeting"></h1>
+            <p>
+              <span data-translate="mainMsg"></span>
+              <br />
+              <span data-translate="subMsg"></span>
+            </p>
+            <div class="hero-buttons">
+              <a title="Streaming" href="./streaming.html" class="btn" >
+                <i class="fas fa-play"></i>
+                <span data-translate="startListening"></span>
+              </a>
+              <a title="About" href="./about.html" class="btn">
+                <i class="fas fa-info-circle"></i>
+                <span data-translate="learnMore"></span>
+              </a>
+            </div>
+          </div>
+          <div class="floating-image">
+            <img
+              src="./static/img/iamshiuba_web.svg"
+              alt="IamSHIUBA Artist Logo"
+              width="500"
+              height="500"
+              class="hero-image"
+            />
+          </div>
         </div>
-        <div id="desktopMenu">
-          <ul>
-            <li>
-              <a
-                href="#home"
-                class="n-link"
-                title="Homepage"
-                data-translate="Homepage"
-                data-page-target="home"
-              ></a>
-            </li>
-            <li>
-              <a
-                class="n-link"
-                href="#streaming"
-                title="Streaming"
-                data-translate="Streaming"
-                data-page-target="streaming"
-              ></a>
-            </li>
-            <li>
-              <a
-                class="n-link"
-                href="#about"
-                title="About"
-                data-translate="About"
-                data-page-target="about"
-              ></a>
-            </li>
-          </ul>
+      </section>
+
+      <section id="highlight-section">
+        <div id="featured-card">
+          <div id="card-header">
+            <h2 data-translate="highlight"></h2>
+            <p data-translate="hDescription"></p>
+          </div>
+          <div id="highlightContainer">
+            <div class="highlight-loading" style="display: none">
+              <div class="loading-spinner">
+                <i class="fas fa-circle-notch fa-spin"></i>
+              </div>
+              <p>Carregando destaques...</p>
+            </div>
+
+            <div class="highlight-error" style="display: none">
+              <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <p id="error-message"></p>
+              <button id="retry-highlights" class="retry-btn">
+                <i class="fas fa-sync-alt"></i> Tentar novamente
+              </button>
+            </div>
+
+            <div class="highlight-wrapper" style="display: none">
+              <div class="video-container">
+                <iframe
+                  id="highlight-iframe"
+                  src=""
+                  title="Featured Playlist"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="button-container">
+            <button
+              aria-label="Check Out YouTube Playlist"
+              type="button"
+              class="hBtn"
+              id="playlist-button"
+            >
+              <i class="fab fa-youtube"></i>
+              <p data-translate="checkOut"></p>
+            </button>
+          </div>
         </div>
-      </nav>
-    </header>
+      </section>
 
-    <main id="Content">
-      <div class="justify-center items-center">
-        <div id="home" data-page-content="home">
-          <section class="hero-section">
-            <div class="hero-wrapper">
-              <div class="hero-content">
-                <h1 data-translate="greeting"></h1>
-                <p>
-                  <span data-translate="mainMsg"></span>
-                  <br />
-                  <span data-translate="subMsg"></span>
-                </p>
-                <div class="hero-buttons">
-                  <a title="Streaming" href="#streaming" class="btn">
-                    <i class="fas fa-play"></i>
-                    <span data-translate="startListening"></span>
-                  </a>
-                  <a title="About" href="#about" class="btn">
-                    <i class="fas fa-info-circle"></i>
-                    <span data-translate="learnMore"></span>
-                  </a>
-                </div>
-              </div>
-              <div class="floating-image">
-                <img
-                  src="./static/img/iamshiuba_web.svg"
-                  alt="IamSHIUBA Artist Logo"
-                  width="500"
-                  height="500"
-                  class="hero-image"
-                />
-              </div>
-            </div>
-          </section>
-
-          <section id="highlight-section">
-            <div id="featured-card">
-              <div id="card-header">
-                <h2 data-translate="highlight"></h2>
-                <p data-translate="hDescription"></p>
-              </div>
-              <div id="highlightContainer">
-                <div class="highlight-loading" style="display: none">
-                  <div class="loading-spinner">
-                    <i class="fas fa-circle-notch fa-spin"></i>
-                  </div>
-                  <p>Carregando destaques...</p>
-                </div>
-
-                <div class="highlight-error" style="display: none">
-                  <div class="error-icon">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div>
-                  <p id="error-message"></p>
-                  <button id="retry-highlights" class="retry-btn">
-                    <i class="fas fa-sync-alt"></i> Tentar novamente
-                  </button>
-                </div>
-
-                <div class="highlight-wrapper" style="display: none">
-                  <div class="video-container">
-                    <iframe
-                      id="highlight-iframe"
-                      src=""
-                      title="Featured Playlist"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="button-container">
-                <button
-                  aria-label="Check Out YouTube Playlist"
-                  type="button"
-                  class="hBtn"
-                  id="playlist-button"
-                >
-                  <i class="fab fa-youtube"></i>
-                  <p data-translate="checkOut"></p>
-                </button>
-              </div>
-            </div>
-          </section>
-
-          <section id="social-proof">
-            <div id="statsContainer">
-              <div class="stats-card">
-                <i class="fas fa-music"></i>
-                <h3
-                  class="counter"
-                  data-target="40"
-                  data-suffix="+"
-                  data-duration="1500"
-                  data-translate-key="tracksCreated"
-                >
-                  0
-                </h3>
-                <p data-translate="tracksCreated"></p>
-              </div>
-              <div class="stats-card">
-                <i class="fas fa-users"></i>
-                <h3
-                  class="counter"
-                  data-target="300"
-                  data-suffix="+"
-                  data-duration="2000"
-                  data-delay="200"
-                >
-                  0
-                </h3>
-                <p data-translate="monthlyListeners"></p>
-              </div>
-              <div class="stats-card">
-                <i class="fas fa-star"></i>
-                <h3
-                  class="counter"
-                  data-target="5.0"
-                  data-decimals="1"
-                  data-duration="1800"
-                  data-delay="400"
-                >
-                  0.0
-                </h3>
-                <p data-translate="averageRating"></p>
-              </div>
-            </div>
-          </section>
+      <section id="social-proof">
+        <div id="statsContainer">
+          <div class="stats-card">
+            <i class="fas fa-music"></i>
+            <h3
+              class="counter"
+              data-target="40"
+              data-suffix="+"
+              data-duration="1500"
+              data-translate-key="tracksCreated"
+            >
+              0
+            </h3>
+            <p data-translate="tracksCreated"></p>
+          </div>
+          <div class="stats-card">
+            <i class="fas fa-users"></i>
+            <h3
+              class="counter"
+              data-target="300"
+              data-suffix="+"
+              data-duration="2000"
+              data-delay="200"
+            >
+              0
+            </h3>
+            <p data-translate="monthlyListeners"></p>
+          </div>
+          <div class="stats-card">
+            <i class="fas fa-star"></i>
+            <h3
+              class="counter"
+              data-target="5.0"
+              data-decimals="1"
+              data-duration="1800"
+              data-delay="400"
+            >
+              0.0
+            </h3>
+            <p data-translate="averageRating"></p>
+          </div>
         </div>
-
-        <script src="./static/js/highlights.js" defer></script>
-
-        <div id="streaming" data-page-content="streaming" class="hidden">
-          <section class="streaming-header">
-            <h1 data-translate="streaming"></h1>
-            <p data-translate="streamingDesc"></p>
-          </section>
-
-          <section class="streaming-content">
-            <div class="streaming-controls">
-              <div class="tabs-container">
-                <button class="tab-button active" data-tab="youtube">
-                  <i class="fab fa-youtube"></i> <span>YouTube</span>
-                </button>
-                <button class="tab-button" data-tab="spotify">
-                  <i class="fab fa-spotify"></i> <span>Spotify</span>
-                </button>
-              </div>
-              <div class="view-controls">
-                <button
-                  id="loadAllBtn"
-                  class="load-all-btn"
-                  aria-label="Load all playlists"
-                  title="Load all playlists at once"
-                >
-                  <i class="fas fa-download"></i>
-                </button>
-                <button
-                  id="viewToggle"
-                  class="view-toggle"
-                  aria-label="Mudar visualização"
-                >
-                  <i class="fas fa-list"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="search-section youtube-section">
-              <form class="mx-auto">
-                <label
-                  for="youtubeSearch"
-                  class="mb-2 text-sm font-medium text-red-900 sr-only dark:text-white"
-                  >Search</label
-                >
-                <div class="relative">
-                  <div
-                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                  >
-                    <i class="fas fa-search text-red-500 dark:text-red-400"></i>
-                  </div>
-                  <input
-                    type="search"
-                    id="youtubeSearch"
-                    placeholder="Search YouTube playlists..."
-                    aria-label="Pesquisar playlists do YouTube"
-                  />
-                </div>
-              </form>
-
-              <div id="playlistContainer" class="streaming-container"></div>
-              <div id="paginationYoutube" class="pagination-container"></div>
-            </div>
-
-            <div class="search-section spotify-section" style="display: none">
-              <form class="mx-auto">
-                <label
-                  for="spotifySearch"
-                  class="mb-2 text-sm font-medium text-green-900 sr-only dark:text-white"
-                  >Search</label
-                >
-                <div class="relative">
-                  <div
-                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                  >
-                    <i
-                      class="fas fa-search text-green-500 dark:text-green-400"
-                    ></i>
-                  </div>
-                  <input
-                    type="search"
-                    id="spotifySearch"
-                    placeholder="Search Spotify playlists..."
-                    aria-label="Pesquisar playlists do Spotify"
-                  />
-                </div>
-              </form>
-
-              <div id="spotifyContainer" class="streaming-container"></div>
-              <div id="paginationSpotify" class="pagination-container"></div>
-            </div>
-
-            <div id="loadingAnimation">
-              <div class="spinner"></div>
-            </div>
-          </section>
-        </div>
-
-        <script src="./static/js/utils/Streaming.js" defer></script>
-
-        <div id="about" data-page-content="about" class="hidden">
-          <section class="about-section">
-            <div class="aboutHeader">
-              <h1 data-translate="aboutTitle"></h1>
-              <div class="columns-2">
-                <p data-translate="aboutMsg"></p>
-                <div class="floating-image">
-                  <img
-                    src="./static/img/iamshiuba_web.svg"
-                    width="350"
-                    height="350"
-                    alt="IamSHIUBA Artist Portrait"
-                    class="about-image"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="skills-section mb-2.5">
-            <div class="skill-card">
-              <i class="fas fa-music mb-3"></i>
-              <h3 data-translate="mscProd"></h3>
-              <div class="skill-bar">
-                <div class="progress" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-card">
-              <i class="fas fa-video mb-3"></i>
-              <h3 data-translate="videoCreation"></h3>
-              <div class="skill-bar">
-                <div class="progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-card">
-              <i class="fas fa-paint-brush mb-3"></i>
-              <h3 data-translate="digitalArt"></h3>
-              <div class="skill-bar">
-                <div class="progress" style="width: 80%"></div>
-              </div>
-            </div>
-          </section>
-          <section class="connect-section">
-            <div class="connect-card">
-              <p
-                class="text-center mb-4 text-xl"
-                data-translate="aboutSubMsg"
-              ></p>
-              <div class="social-buttons text-center grid justify-center">
-                <a href="https://youtube.com/@iamshiuba" class="hBtn">
-                  <i class="fab fa-youtube me-2"></i>
-                  YouTube
-                </a>
-                <a href="https://soundcloud.com/iamshiuba" class="hBtn">
-                  <i class="fab fa-soundcloud me-2"></i>
-                  SoundCloud
-                </a>
-                <a href="https://twitter.com/iamshiuba" class="hBtn">
-                  <i class="fab fa-x-twitter me-2"></i>
-                  Twitter
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div id="terms" data-page-content="terms" class="hidden">
-          <section class="tos-section">
-            <div class="tos-container">
-              <div class="header-content">
-                <h1 data-translate="tos"></h1>
-                <p class="description" data-translate="tosDesc"></p>
-                <p class="date" data-translate="ToSdate"></p>
-              </div>
-
-              <div class="cards-grid">
-                <div class="tos-card">
-                  <div class="card-header">
-                    <i class="fas fa-user-shield"></i>
-                    <h2 data-translate="tosAU"></h2>
-                  </div>
-                  <p data-translate="tosAUdesc"></p>
-                </div>
-
-                <div class="tos-card">
-                  <div class="card-header">
-                    <i class="fas fa-copyright"></i>
-                    <h2 data-translate="tosCO"></h2>
-                  </div>
-                  <p data-translate="tosCOdesc"></p>
-                </div>
-
-                <div class="tos-card">
-                  <div class="card-header">
-                    <i class="fas fa-gavel"></i>
-                    <h2 data-translate="tosEL"></h2>
-                  </div>
-                  <p data-translate="tosELdesc"></p>
-                </div>
-
-                <div class="tos-card">
-                  <div class="card-header">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <h2 data-translate="tosLoL"></h2>
-                  </div>
-                  <p data-translate="tosLoLdesc"></p>
-                </div>
-
-                <div class="tos-card">
-                  <div class="card-header">
-                    <i class="fas fa-tasks"></i>
-                    <h2 data-translate="tosCttT"></h2>
-                  </div>
-                  <p data-translate="tosCttTdesc"></p>
-                </div>
-
-                <div class="tos-card">
-                  <div class="card-header">
-                    <i class="fas fa-envelope"></i>
-                    <h2 data-translate="tosCONTACT"></h2>
-                  </div>
-                  <p data-translate="tosCONTACTdesc"></p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div id="privacy" data-page-content="privacy" class="hidden">
-          <section class="privacy-section">
-            <div class="privacy-container">
-              <div class="header-content">
-                <h1 data-translate="privacy"></h1>
-                <p class="description" data-translate="ppDesc"></p>
-                <p class="date" data-translate="PPdate"></p>
-              </div>
-
-              <div class="cards-grid">
-                <div class="privacy-card">
-                  <div class="card-header">
-                    <i class="fas fa-database"></i>
-                    <h2 data-translate="ppDC"></h2>
-                  </div>
-                  <p data-translate="ppDCdesc"></p>
-                </div>
-
-                <div class="privacy-card">
-                  <div class="card-header">
-                    <i class="fas fa-cookie-bite"></i>
-                    <h2 data-translate="ppCOOKIE"></h2>
-                  </div>
-                  <p data-translate="ppCOOKIEdesc"></p>
-                </div>
-
-                <div class="privacy-card">
-                  <div class="card-header">
-                    <i class="fas fa-shield-alt"></i>
-                    <h2 data-translate="ppDS"></h2>
-                  </div>
-                  <p data-translate="ppDSdesc"></p>
-                </div>
-
-                <div class="privacy-card">
-                  <div class="card-header">
-                    <i class="fas fa-user-lock"></i>
-                    <h2 data-translate="ppCttP"></h2>
-                  </div>
-                  <p data-translate="ppCttPdesc"></p>
-                </div>
-
-                <div class="privacy-card">
-                  <div class="card-header">
-                    <i class="fas fa-envelope"></i>
-                    <h2 data-translate="ppCONTACT"></h2>
-                  </div>
-                  <p data-translate="ppCONTACTdesc"></p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-      <script src="./static/js/utils/Counter.js" defer></script>
+      </section>
     </main>
 
-    <footer>
-      <div id="desktopFooter">
-        <div id="footer-content">
-          <div id="social-links">
-            <h4 data-translate="followMe"></h4>
-            <div id="social-icons">
-              <a
-                href="https://twitter.com/iamshiuba"
-                target="_blank"
-                rel="noopener"
-                aria-label="Twitter"
-                class="fa-brands fa-x-twitter"
-              >
-              </a>
-              <a
-                href="https://soundcloud.com/iamshiuba"
-                target="_blank"
-                rel="noopener"
-                aria-label="SoundCloud"
-                class="fa-brands fa-soundcloud"
-              >
-              </a>
-              <a
-                href="https://youtube.com/@iamshiuba"
-                target="_blank"
-                rel="noopener"
-                aria-label="YouTube"
-                class="fa-brands fa-youtube"
-              >
-              </a>
-              <a
-                href="https://open.spotify.com/intl-pt/artist/0e3a6pkhKTpBipDoUdqh8v"
-                target="_blank"
-                rel="noopener"
-                aria-label="Spotify"
-                class="fa-brands fa-spotify"
-              ></a>
-              <a
-                href="https://music.apple.com/br/artist/iamshiuba/1717511925"
-                target="_blank"
-                rel="noopener"
-                aria-label="Apple Music"
-                class="fa-brands fa-apple text-white"
-              ></a>
-              <a
-                href="https://music.amazon.com.br/artists/B0CNQJGRH3/iamshiuba?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR&ref=dm_sh_ABVKbpCvqbGHjgpx54uGGKRta"
-                target="_blank"
-                rel="noopener"
-                aria-label="Amazon Music"
-                class="fa-brands fa-amazon text-sky-500"
-              ></a>
-              <a
-                href="https://www.deezer.com/en/artist/244339282"
-                target="_blank"
-                rel="noopener"
-                aria-label="Deezer"
-                class="fa-brands fa-deezer text-purple-600"
-              ></a>
-            </div>
-          </div>
-          <div id="theme-container">
-            <h4><span data-translate="theme"></span></h4>
-            <div class="flex justify-start w-20">
-              <button
-                data-theme-toggle
-                data-theme-value="light"
-                title="Light"
-                aria-label="Light"
-                class="theme-button mr-2.5"
-              >
-                <i class="fas fa-sun"></i>
-              </button>
-              <button
-                data-theme-toggle
-                data-theme-value="dark"
-                title="Dark"
-                aria-label="Dark"
-                class="theme-button mr-2.5"
-              >
-                <i class="fas fa-moon"></i>
-              </button>
-              <button
-                data-theme-toggle
-                data-theme-value="black"
-                title="Black"
-                aria-label="Black"
-                class="theme-button mr-2.5"
-              >
-                <i class="fas fa-lightbulb"></i>
-              </button>
-              <button
-                data-theme-toggle
-                data-theme-value="red"
-                title="Red"
-                aria-label="Red"
-                class="theme-button"
-              >
-                <i class="fas fa-heart"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div id="footer-bottom">
-          <div id="quick-links">
-            <h4 data-translate="quickLinks"></h4>
-            <ul>
-              <li>
-                <a
-                  title="About"
-                  href="#about"
-                  data-page-target="about"
-                  data-translate="About"
-                  class="f-link"
-                ></a>
-              </li>
-              <li>
-                <a
-                  title="Terms"
-                  href="#terms"
-                  data-page-target="terms"
-                  data-translate="tos"
-                  class="f-link"
-                ></a>
-              </li>
-              <li>
-                <a
-                  title="Privacy"
-                  href="#privacy"
-                  data-page-target="privacy"
-                  data-translate="privacy"
-                  class="f-link"
-                ></a>
-              </li>
-              <li>
-                <a
-                  rel="noopener"
-                  title="Updates"
-                  href="https://iamshiuba.fly.dev/updates"
-                  data-translate="updates"
-                  target="_blank"
-                  class="f-link"
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <div id="language-container">
-            <h4 data-translate="Translations"></h4>
-            <ul id="language" aria-labelledby="language-label" role="list">
-              <li class="langItem">
-                <a
-                  data-language="en-US"
-                  title="English"
-                  class="fi fi-us"
-                  aria-label="English"
-                  ><p>en-US</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="pt-BR"
-                  title="Português"
-                  class="fi fi-br"
-                  aria-label="Português"
-                  ><p>pt-BR</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="jp-JP"
-                  title="日本語"
-                  class="fi fi-jp"
-                  aria-label="日本語"
-                >
-                  <p>jp-JP</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="ru-RU"
-                  title="Русский"
-                  class="fi fi-ru"
-                  aria-label="Русский"
-                  ><p>ru-RU</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="hi-IN"
-                  title="हिन्दी"
-                  class="fi fi-in"
-                  aria-label="हिन्दी"
-                  ><p>hi-IN</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a data-language="zh-CN" title="中文" class="fi fi-cn"
-                  ><p>zh-CN</p></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="copyright" class="text-center">
-          <hr id="f-divider" />
-          <p>
-            <span data-translate="prdBy"></span> &copy; 2024 -
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            <span data-translate="footer"></span>
-          </p>
-        </div>
-      </div>
-    </footer>
+    <i-footer></i-footer>
 
-    <div id="m-NavContainer">
-      <nav>
-        <div class="menu-grid">
-          <a href="" class="nav-item" aria-label="Início">
-            <i class="fas fa-home"></i>
-          </a>
-
-          <button
-            aria-label="Menu"
-            data-drawer-target="menu-drawer"
-            data-drawer-show="menu-drawer"
-            data-drawer-placement="left"
-            class="nav-item"
-          >
-            <i class="fas fa-compass"></i>
-          </button>
-
-          <button
-            aria-label="Redes sociais"
-            data-drawer-target="social-drawer"
-            data-drawer-show="social-drawer"
-            data-drawer-placement="right"
-            class="nav-item"
-          >
-            <i class="fas fa-share-nodes"></i>
-          </button>
-
-          <button
-            aria-label="Configurações"
-            data-drawer-target="config-drawer"
-            data-drawer-show="config-drawer"
-            data-drawer-placement="right"
-            class="nav-item"
-          >
-            <i class="fas fa-sliders"></i>
-          </button>
-        </div>
-      </nav>
-
-      <div
-        id="menu-drawer"
-        class="fixed top-0 left-0 z-[51] h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-[var(--background-secondary)] w-80"
-        tabindex="-1"
-        aria-labelledby="drawer-label"
-      >
-        <div class="drawer-header">
-          <h1 id="drawer-label">Menu</h1>
-          <button
-            aria-label="Fechar"
-            type="button"
-            data-drawer-hide="menu-drawer"
-            class="drawer-close"
-            aria-controls="menu-drawer"
-          >
-            <i class="fas fa-xmark"></i>
-          </button>
-        </div>
-        <div class="drawer-content">
-          <ul>
-            <li>
-              <a
-                title="Homepage"
-                href="#home"
-                class="drawer-link"
-                data-page-target="home"
-              >
-                <i class="fas fa-home"></i>
-                <span data-translate="Homepage"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                title="Streaming"
-                href="#streaming"
-                class="drawer-link"
-                data-page-target="streaming"
-              >
-                <i class="fas fa-play"></i>
-                <span data-translate="Streaming"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                title="About"
-                href="#about"
-                class="drawer-link"
-                data-page-target="about"
-              >
-                <i class="fas fa-info-circle"></i>
-                <span data-translate="About"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                title="Terms"
-                href="#terms"
-                class="drawer-link"
-                data-page-target="terms"
-              >
-                <i class="fas fa-file-contract"></i>
-                <span data-translate="tos"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                title="Privacy"
-                href="#privacy"
-                class="drawer-link"
-                data-page-target="privacy"
-              >
-                <i class="fas fa-shield-halved"></i>
-                <span data-translate="privacy"></span>
-              </a>
-            </li>
-            <li>
-              <a
-                rel="noopener"
-                title="Updates"
-                href="https://iamshiuba.fly.dev/updates"
-                target="_blank"
-                class="drawer-link"
-              >
-                <i class="fas fa-bell"></i>
-                <span data-translate="updates"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div
-        id="social-drawer"
-        class="fixed top-0 right-0 z-[51] h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-[var(--background-secondary)] w-80"
-        tabindex="-1"
-        aria-labelledby="drawer-label"
-      >
-        <div class="drawer-header">
-          <h1 data-translate="followMe"></h1>
-          <button
-            aria-label="Fechar"
-            type="button"
-            data-drawer-hide="social-drawer"
-            aria-controls="social-drawer"
-            class="drawer-close"
-          >
-            <i class="fas fa-xmark"></i>
-          </button>
-        </div>
-        <div class="drawer-content">
-          <div id="social-icons">
-            <a
-              href="https://twitter.com/iamshiuba"
-              target="_blank"
-              rel="noopener"
-              aria-label="Twitter"
-              class="fa-brands fa-x-twitter"
-            >
-            </a>
-            <a
-              href="https://soundcloud.com/iamshiuba"
-              target="_blank"
-              rel="noopener"
-              aria-label="SoundCloud"
-              class="fa-brands fa-soundcloud"
-            >
-            </a>
-            <a
-              href="https://youtube.com/@iamshiuba"
-              target="_blank"
-              rel="noopener"
-              aria-label="YouTube"
-              class="fa-brands fa-youtube"
-            >
-            </a>
-            <a
-              href="https://open.spotify.com/intl-pt/artist/0e3a6pkhKTpBipDoUdqh8v"
-              target="_blank"
-              rel="noopener"
-              aria-label="Spotify"
-              class="fa-brands fa-spotify"
-            ></a>
-            <a
-              href="https://music.apple.com/br/artist/iamshiuba/1717511925"
-              target="_blank"
-              rel="noopener"
-              aria-label="Apple Music"
-              class="fa-brands fa-apple text-white"
-            ></a>
-            <a
-              href="https://music.amazon.com.br/artists/B0CNQJGRH3/iamshiuba?marketplaceId=A2Q3Y263D00KWC&musicTerritory=BR&ref=dm_sh_ABVKbpCvqbGHjgpx54uGGKRta"
-              target="_blank"
-              rel="noopener"
-              aria-label="Amazon Music"
-              class="fa-brands fa-amazon text-sky-500"
-            ></a>
-            <a
-              href="https://www.deezer.com/en/artist/244339282"
-              target="_blank"
-              rel="noopener"
-              aria-label="Deezer"
-              class="fa-brands fa-deezer text-purple-600"
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <div
-        id="config-drawer"
-        class="fixed top-0 right-0 z-[51] h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-[var(--background-secondary)] w-80"
-        tabindex="-1"
-        aria-labelledby="drawer-label"
-      >
-        <div class="drawer-header">
-          <h1 data-translate="config"></h1>
-          <button
-            aria-label="Fechar"
-            type="button"
-            data-drawer-hide="config-drawer"
-            aria-controls="config-drawer"
-            class="drawer-close"
-          >
-            <i class="fas fa-xmark"></i>
-          </button>
-        </div>
-        <div class="drawer-content">
-          <div id="theme-container">
-            <h5><span data-translate="theme"></span></h5>
-            <div class="flex justify-start w-20">
-              <button
-                data-theme-toggle
-                data-theme-value="light"
-                title="Light"
-                aria-label="Light"
-                class="theme-button mr-2.5"
-              >
-                <i class="fas fa-sun"></i>
-              </button>
-              <button
-                data-theme-toggle
-                data-theme-value="dark"
-                title="Dark"
-                aria-label="Dark"
-                class="theme-button mr-2.5"
-              >
-                <i class="fas fa-moon"></i>
-              </button>
-              <button
-                data-theme-toggle
-                data-theme-value="black"
-                title="Black"
-                aria-label="Black"
-                class="theme-button mr-2.5"
-              >
-                <i class="fas fa-lightbulb"></i>
-              </button>
-              <button
-                data-theme-toggle
-                data-theme-value="red"
-                title="Red"
-                aria-label="Red"
-                class="theme-button"
-              >
-                <i class="fas fa-heart"></i>
-              </button>
-            </div>
-          </div>
-          <div id="language-container">
-            <h5 data-translate="Translations"></h5>
-            <ul id="language" aria-labelledby="language-label" role="list">
-              <li class="langItem">
-                <a
-                  data-language="en-US"
-                  title="English"
-                  class="fi fi-us"
-                  aria-label="English"
-                  ><p>en-US</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="pt-BR"
-                  title="Português"
-                  class="fi fi-br"
-                  aria-label="Português"
-                  ><p>pt-BR</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="jp-JP"
-                  title="日本語"
-                  class="fi fi-jp"
-                  aria-label="日本語"
-                >
-                  <p>jp-JP</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="ru-RU"
-                  title="Русский"
-                  class="fi fi-ru"
-                  aria-label="Русский"
-                  ><p>ru-RU</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a
-                  data-language="hi-IN"
-                  title="हिन्दी"
-                  class="fi fi-in"
-                  aria-label="हिन्दी"
-                  ><p>hi-IN</p></a
-                >
-              </li>
-              <li class="langItem">
-                <a data-language="zh-CN" title="中文" class="fi fi-cn"
-                  ><p>zh-CN</p></a
-                >
-              </li>
-            </ul>
-          </div>
-          <h5 lang="pt-BR">Versão: <b class="text-sm">v3.3.27</b></h5>
-        </div>
-      </div>
-    </div>
+    <i-menu></i-menu>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script src="./static/js/utils/Theme.js"></script>
-    <script src="./static/js/utils/Translations.js"></script>
-    <script type="module" src="./static/js/utils/Pages.js"></script>
+
+    <script src="./static/js/Components.js"></script>
+    <script src="./static/js/Counter.js"></script>
+    <script src="./static/js/highlights.js"></script>
+    <script src="./static/js/Theme.js"></script>
+    <script src="./static/js/Translations.js"></script>
   </body>
+  <script src="./static/js/ActiveLinkManager.js"></script>
 </html>

@@ -8,15 +8,8 @@ class TranslationManager {
     this.loadingIndicator = null;
     this.isLoading = false;
     this.cachedTranslations = {};
-    this.defaultLanguage = "pt-BR";
-    this.supportedLanguages = [
-      "en-US",
-      "pt-BR",
-      "jp-JP",
-      "ru-RU",
-      "hi-IN",
-      "zh-CN",
-    ];
+    this.defaultLanguage = 'pt-BR';
+    this.supportedLanguages = ["en-US", "pt-BR", "jp-JP", "ru-RU", "hi-IN", "zh-CN"];
 
     // Create loading indicator
     this.createLoadingIndicator();
@@ -26,8 +19,8 @@ class TranslationManager {
    * Create a loading indicator element
    */
   createLoadingIndicator() {
-    this.loadingIndicator = document.createElement("div");
-    this.loadingIndicator.className = "translation-loading";
+    this.loadingIndicator = document.createElement('div');
+    this.loadingIndicator.className = 'translation-loading';
     this.loadingIndicator.innerHTML = `
       <div class="loading-spinner">
         <i class="fas fa-globe fa-spin"></i>
@@ -41,7 +34,7 @@ class TranslationManager {
    */
   showLoading() {
     this.isLoading = true;
-    this.loadingIndicator.classList.add("visible");
+    this.loadingIndicator.classList.add('visible');
   }
 
   /**
@@ -49,7 +42,7 @@ class TranslationManager {
    */
   hideLoading() {
     this.isLoading = false;
-    this.loadingIndicator.classList.remove("visible");
+    this.loadingIndicator.classList.remove('visible');
   }
 
   /**
@@ -60,9 +53,7 @@ class TranslationManager {
   async loadTranslations(language) {
     // Validate language code
     if (!this.supportedLanguages.includes(language)) {
-      console.warn(
-        `Unsupported language: ${language}, falling back to ${this.defaultLanguage}`
-      );
+      console.warn(`Unsupported language: ${language}, falling back to ${this.defaultLanguage}`);
       language = this.defaultLanguage;
     }
 
@@ -79,15 +70,13 @@ class TranslationManager {
       const timeoutId = setTimeout(() => controller.abort(), 5000);
 
       const response = await fetch(`./static/translations/${language}.json`, {
-        signal: controller.signal,
+        signal: controller.signal
       });
 
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        throw new Error(
-          `Error loading translations for ${language}: ${response.status}`
-        );
+        throw new Error(`Error loading translations for ${language}: ${response.status}`);
       }
 
       const data = await response.json();
@@ -100,10 +89,8 @@ class TranslationManager {
       console.error(`Translation loading error for ${language}:`, error);
 
       // If timeout or network error, try to get from cache or use default
-      if (error.name === "AbortError" || error.name === "TypeError") {
-        console.warn(
-          "Network issue when loading translations, trying fallback..."
-        );
+      if (error.name === 'AbortError' || error.name === 'TypeError') {
+        console.warn('Network issue when loading translations, trying fallback...');
 
         // Try to get from localStorage cache
         try {
@@ -114,7 +101,7 @@ class TranslationManager {
             return parsedData;
           }
         } catch (e) {
-          console.error("Error reading from cache:", e);
+          console.error('Error reading from cache:', e);
         }
       }
 
@@ -142,7 +129,7 @@ class TranslationManager {
       console.log(`Attempting to set language to: ${language}`);
       const translations = await this.loadTranslations(language);
       if (!translations || Object.keys(translations).length === 0) {
-        throw new Error("No translations available");
+        throw new Error('No translations available');
       }
 
       this.currentLanguage = language;
@@ -154,50 +141,36 @@ class TranslationManager {
         if (translations[key]) {
           element.innerHTML = translations[key];
         } else {
-          console.warn(
-            `Missing translation key: ${key} for language: ${language}`
-          );
+          console.warn(`Missing translation key: ${key} for language: ${language}`);
           element.innerHTML = key; // Fallback to key name
         }
       });
 
       // Apply translations to elements with data-translate-placeholder
-      document
-        .querySelectorAll("[data-translate-placeholder]")
-        .forEach((element) => {
-          const key = element.getAttribute("data-translate-placeholder");
-          if (translations[key]) {
-            element.placeholder = translations[key];
-          }
-        });
-
-      // Update page title - integrate with navigation system if available
-      if (
-        window.pageNavigationManager &&
-        window.pageNavigationManager.titleManager
-      ) {
-        // Use the integrated title management system
-        const currentPageId = this.getCurrentPageId();
-        window.pageNavigationManager.titleManager.onLanguageChange(language);
-        console.log(
-          `Updated page title via TitleManager for page: ${currentPageId}`
-        );
-      } else {
-        // Fallback to original title management
-        const currentPath = window.location.pathname.split("/")[1] || "index";
-        console.log(`Current path for title: ${currentPath}`);
-
-        // Handle special case for idbadmin paths
-        let titleKey = currentPath;
-        if (currentPath === "idbadmin") {
-          titleKey = "idbadmin_dashboard";
+      document.querySelectorAll("[data-translate-placeholder]").forEach((element) => {
+        const key = element.getAttribute("data-translate-placeholder");
+        if (translations[key]) {
+          element.placeholder = translations[key];
         }
+      });
 
-        document.title = `IamSHIUBA - ${
-          translations.title?.[titleKey] || "IamSHIUBA"
-        }`;
-        console.log(`Updated page title using key: ${titleKey}`);
+      function getPageKeyFromLocation() {
+        const path = window.location.pathname;
+        // pega último segmento
+        const last = path.split('/').filter(Boolean).pop() || '';
+        if (!last || last === 'index.html') return 'index';
+        // remove .html
+        const key = last.replace(/\.html$/i, '');
+        return key; // ex.: 'about', 'streaming', 'privacy', 'terms'
       }
+      
+      function updateTitleWithTranslations(translations) {
+        const key = getPageKeyFromLocation();
+        const pageTitle = translations.title?.[key] || 'IamSHIUBA';
+        document.title = `IamSHIUBA - ${pageTitle}`;
+      }
+
+      updateTitleWithTranslations(translations);
 
       // Update localStorage and HTML lang attribute
       localStorage.setItem("selectedLanguage", language);
@@ -205,12 +178,9 @@ class TranslationManager {
 
       // Store translations in localStorage for offline use
       try {
-        localStorage.setItem(
-          `translations_${language}`,
-          JSON.stringify(translations)
-        );
+        localStorage.setItem(`translations_${language}`, JSON.stringify(translations));
       } catch (e) {
-        console.warn("Could not cache translations in localStorage:", e);
+        console.warn('Could not cache translations in localStorage:', e);
       }
 
       // Update active state on language selector elements
@@ -228,11 +198,10 @@ class TranslationManager {
       }, 100);
 
       // Dispatch event for other components to react to language change
-      window.dispatchEvent(
-        new CustomEvent("languageChanged", { detail: { language } })
-      );
+      window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language } }));
+
     } catch (error) {
-      console.error("Error setting language:", error);
+      console.error('Error setting language:', error);
     }
   }
 
@@ -244,7 +213,7 @@ class TranslationManager {
       return;
     }
 
-    console.log("Refreshing translations for dynamic content");
+    console.log('Refreshing translations for dynamic content');
 
     // Re-apply translations to elements with data-translate that might have been added dynamically
     document.querySelectorAll("[data-translate]").forEach((element) => {
@@ -255,14 +224,12 @@ class TranslationManager {
     });
 
     // Re-apply translations to elements with data-translate-placeholder
-    document
-      .querySelectorAll("[data-translate-placeholder]")
-      .forEach((element) => {
-        const key = element.getAttribute("data-translate-placeholder");
-        if (this.translations[key]) {
-          element.placeholder = this.translations[key];
-        }
-      });
+    document.querySelectorAll("[data-translate-placeholder]").forEach((element) => {
+      const key = element.getAttribute("data-translate-placeholder");
+      if (this.translations[key]) {
+        element.placeholder = this.translations[key];
+      }
+    });
   }
 
   /**
@@ -271,38 +238,6 @@ class TranslationManager {
    */
   getCurrentLanguage() {
     return this.currentLanguage;
-  }
-
-  /**
-   * Get current page ID for title management
-   * @returns {string} Current page ID
-   */
-  getCurrentPageId() {
-    // Try to get from navigation manager first
-    if (window.pageNavigationManager) {
-      const currentPage = window.pageNavigationManager.getCurrentPage();
-      if (currentPage) {
-        return currentPage;
-      }
-    }
-
-    // Fallback: try to get from URL hash
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-      return hash;
-    }
-
-    // Final fallback: derive from pathname
-    const currentPath = window.location.pathname.split("/")[1] || "index";
-    return currentPath === "index" ? "home" : currentPath;
-  }
-
-  /**
-   * Get current translations
-   * @returns {Object} Current translations object
-   */
-  getTranslations() {
-    return this.translations;
   }
 
   /**
@@ -345,8 +280,8 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 function setupPeriodicRefresh() {
   // Refresh translations after page has fully loaded
-  window.addEventListener("load", () => {
-    console.log("Window loaded, refreshing translations");
+  window.addEventListener('load', () => {
+    console.log('Window loaded, refreshing translations');
     if (translationManager) {
       setTimeout(() => {
         translationManager.refreshDynamicTranslations();
@@ -355,8 +290,8 @@ function setupPeriodicRefresh() {
   });
 
   // Also refresh translations when navigating with History API
-  window.addEventListener("popstate", () => {
-    console.log("Navigation occurred, refreshing translations");
+  window.addEventListener('popstate', () => {
+    console.log('Navigation occurred, refreshing translations');
     if (translationManager) {
       setTimeout(() => {
         translationManager.refreshDynamicTranslations();
@@ -414,7 +349,7 @@ function setupLanguageClickHandler() {
  * Add CSS for the translation loading indicator
  */
 function addLoadingIndicatorStyles() {
-  const style = document.createElement("style");
+  const style = document.createElement('style');
   style.textContent = `
     .translation-loading {
       position: fixed;
@@ -454,7 +389,7 @@ function addLoadingIndicatorStyles() {
  * @returns {string} - Translated text or key if not found
  */
 function translate(key) {
-  if (!key) return "";
+  if (!key) return '';
 
   if (translationManager && translationManager.translations) {
     // Check if the key exists in the current translations
@@ -472,18 +407,3 @@ function translate(key) {
   console.warn(`Translation manager not available when translating: ${key}`);
   return key;
 }
-
-// Auto-connect with navigation manager when both are available
-document.addEventListener("DOMContentLoaded", () => {
-  // Wait a bit for both systems to initialize
-  setTimeout(() => {
-    if (window.translationManager && window.pageNavigationManager) {
-      window.pageNavigationManager.connectTranslationManager(
-        window.translationManager
-      );
-      console.log(
-        "[Translations] Connected with PageNavigationManager for better title management"
-      );
-    }
-  }, 100);
-});
