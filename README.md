@@ -15,7 +15,7 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v1.1.2: [@STARa1](https://ishiuba-js-a1.vercel.app/)
 - v1.2.7: [@STARb1](https://ishiuba-js-b1.vercel.app/)
 - v1.3.5: [@STARb2](https://ishiuba-js-b2.vercel.app/)
-- v3.3.26: [@STARc2](https://iamshiuba.pages.dev/)
+- v3.3.28: [@STARc3](https://iamshiuba.pages.dev/)
 # Django
 - v1.3.18: [@dj2024v1](https://iamshiubadj1.vercel.app/)
 - v2.0.27: [@dj2024v2](https://iamshiubadj2.vercel.app/)

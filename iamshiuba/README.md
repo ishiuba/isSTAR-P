@@ -4,7 +4,7 @@ Este repositório contém todas as versões do projeto IamSHIUBA, implementado e
 
 ## Visão Geral das Implementações
 
-### 1. Vanilla JavaScript (v0.1.0 - v3.3.26)
+### 1. Vanilla JavaScript (v0.1.0 - v3.3.28)
 
 A implementação original em JavaScript puro, evoluindo de uma simples página HTML para uma aplicação mais estruturada.
 
@@ -15,26 +15,30 @@ A implementação original em JavaScript puro, evoluindo de uma simples página 
 - Implementação progressiva de recursos como internacionalização
 - Organização modular de código com partials e componentes
 
-#### Estrutura do Projeto (versão mais recente - v3.3.26):
+#### Estrutura do Projeto (versão mais recente - v3.3.28):
 ```
 src/
 ├── static/
+│   ├── components/        # Componentes HTML reutilizáveis
 │   ├── css/
+│   │   ├── container/     # Estilos para containers
 │   │   ├── components/    # Componentes CSS reutilizáveis
-│   │   └── container/     # Estilos para containers
+│   │   └── utils/         # Utilitários SCSS
 │   ├── data/              # Dados em formato JSON
 │   ├── img/               # Imagens e recursos gráficos
-│   ├── js/
-│   │   └── utils/         # Utilitários JavaScript
+│   ├── js/                # Logica do app
 │   └── translations/      # Arquivos de tradução
-└── index.html             # Página principal
+├── streaming.html         # Página de streaming
+├── about.html             # Página sobre
+├── articles.html          # Página de artigos
+├── index.html             # Página principal
 ```
 
 #### Como Executar:
 Basta abrir o arquivo `index.html` em um navegador web ou usar um servidor local simples:
 ```bash
 # Usando Python para criar um servidor local
-cd iamshiuba/v3.3.26/
+cd iamshiuba/v3.3.28/
 python -m http.server 8000
 
 # Ou usando Node.js com http-server

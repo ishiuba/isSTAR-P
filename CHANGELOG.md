@@ -176,6 +176,10 @@ Performance e Qualidade:
 - Eliminação completa de duplicação de código
 - Manutenção de 100% compatibilidade com versões anteriores
 
+## v3.3.28 (STARc3)
+- Codigo levemente refatorado
+- pequenas correções e melhorias
+
 ## Observações sobre a Evolução do Projeto
 
 - Evolução de uma simples página HTML para uma aplicação Flask completa
