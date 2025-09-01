@@ -65,7 +65,7 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Melhorias no design e usabilidade (originário da versão v3.2.25)
 - Pequenas correções e melhorias
 
-## v3.3.28 (STARc3)
+### v3.3.28 (STARc3)
 - Codigo levemente refatorado
 - pequenas correções e melhorias
 
