@@ -65,6 +65,10 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Melhorias no design e usabilidade (originário da versão v3.2.25)
 - Pequenas correções e melhorias
 
+## v3.3.28 (STARc3)
+- Codigo levemente refatorado
+- pequenas correções e melhorias
+
 ## Versões Django
 
 ### v1.3.18 (dj2024v1)
@@ -176,9 +180,6 @@ Performance e Qualidade:
 - Eliminação completa de duplicação de código
 - Manutenção de 100% compatibilidade com versões anteriores
 
-## v3.3.28 (STARc3)
-- Codigo levemente refatorado
-- pequenas correções e melhorias
 
 ## Observações sobre a Evolução do Projeto
 
