@@ -1,3 +1,4 @@
+// this class is used to create the navigation bar
 class iNav extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -45,6 +46,8 @@ class iNav extends HTMLElement {
     }
 }
 customElements.define('i-nav', iNav);
+
+// this class is used to create the footer
 
 class iFooter extends HTMLElement {
     connectedCallback() {
@@ -255,9 +258,7 @@ class iFooter extends HTMLElement {
         <hr id="f-divider" />
         <p>
           <span data-translate="prdBy"></span> &copy; 2024 -
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
+          ${getCurrentYear()}
           <span data-translate="footer"></span>
         </p>
       </div>
@@ -268,6 +269,7 @@ class iFooter extends HTMLElement {
 }
 customElements.define('i-footer', iFooter);
 
+// this class is used to create the mobile navigation bar
 class iMNav extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -593,7 +595,7 @@ class iMNav extends HTMLElement {
             </li>
           </ul>
         </div>
-        <h5 lang="pt-BR">Versão: <b class="text-sm">v3.3.27</b></h5>
+        <h5 lang="pt-BR">Versão: <b class="text-sm">v3.3.28</b></h5>
       </div>
     </div>
   </div>
@@ -601,3 +603,10 @@ class iMNav extends HTMLElement {
     }
 }
 customElements.define('i-menu', iMNav);
+
+// this function is used to get the current year
+function getCurrentYear() {
+    const date = new Date();
+    return date.getFullYear();
+}
+    
