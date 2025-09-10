@@ -4,7 +4,7 @@ Este repositório contém todas as versões do projeto IamSHIUBA, implementado e
 
 ## Visão Geral das Implementações
 
-### 1. Vanilla JavaScript (v0.1.0 - v3.3.28)
+### 1. Vanilla JavaScript (v0.1.0 - v4.1.1)
 
 A implementação original em JavaScript puro, evoluindo de uma simples página HTML para uma aplicação mais estruturada.
 
@@ -15,7 +15,7 @@ A implementação original em JavaScript puro, evoluindo de uma simples página 
 - Implementação progressiva de recursos como internacionalização
 - Organização modular de código com partials e componentes
 
-#### Estrutura do Projeto (versão mais recente - v3.3.28):
+#### Estrutura do Projeto (versão mais recente - v4.1.1):
 ```
 src/
 ├── static/
@@ -38,14 +38,14 @@ src/
 Basta abrir o arquivo `index.html` em um navegador web ou usar um servidor local simples:
 ```bash
 # Usando Python para criar um servidor local
-cd iamshiuba/v3.3.28/
+cd iamshiuba/v4.1.1/
 python -m http.server 8000
 
 # Ou usando Node.js com http-server
 npx http-server ./
 ```
 
-### 2. Django (v1.3.18 - v2.0.27)
+### 2. Django (v1.0.0 - v2.0.0)
 
 Migração para um framework backend robusto, com Django oferecendo um sistema completo para desenvolvimento web.
 
@@ -57,9 +57,9 @@ Migração para um framework backend robusto, com Django oferecendo um sistema c
 - Sistema de migrações para gerenciamento de banco de dados
 - Integração com django_bootstrap5
 
-#### Estrutura do Projeto (versão mais recente - v2.0.27):
+#### Estrutura do Projeto (versão mais recente - v2.0.0):
 ```
-v2.0.27/
+v2.0.0/
 ├── layout/                # Componentes de layout
 ├── mywebsite/             # Configuração principal do Django
 ├── project/               # Aplicação principal
@@ -91,7 +91,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 3. Flask (v2.1.28 - v3.2.31)
+### 3. Flask (v1.0.0 - v2.3.18)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
@@ -105,9 +105,9 @@ A implementação atual, usando Flask como um framework mais leve e flexível, m
 - Suporte a múltiplos idiomas
 - Testes automatizados
 
-#### Estrutura do Projeto (versão mais recente - v3.2.31):
+#### Estrutura do Projeto (versão mais recente - v2.3.18):
 ```
-v3.2.31/
+v2.3.18/
 ├── blueprints/          # Rotas organizadas em blueprints
 │   ├── __init__.py      # Inicialização dos blueprints
 │   ├── main_routes.py   # Rotas da aplicação principal

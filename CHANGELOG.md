@@ -11,41 +11,41 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Páginas: index.html, videos.html, about.html
 - Layout responsivo básico
 
-### v0.1.2 (PreAlpha2025)
+### v0.2.2 (PreAlpha2025)
 - Estrutura de diretórios melhorada
 - Organização em pastas: css, js, templates
 - Separação de componentes em partials
 - Estrutura CSS com containers e partials
 - Melhorias na navegação
 
-### v0.2.7 (Alpha)
+### v1.0.0 (Alpha)
 - Adição de pasta de imagens
 - Novos idiomas (Português e Japonês)
 - Navegação de páginas usando carousel
 
-### v0.2.11 (Alpha2025)
+### v1.1.4 (Alpha2025)
 - Substituição do Framework Bootstrap 5 pelo TailwindCSS 4 + Flowbite Library
 - Componente de navegação, Botão seletor de idiomas e Icones de redes sociais aprimorados
 
-### v1.0.11 (Beta)
+### v2.0.0 (Beta)
 - Melhorias na organização de arquivos
 - Adição de botão de alternância de tema
 - Seção de destaques na página inicial
 - Botões para colapsar cabeçalho e rodapé
 - Pequenas melhorias na estrutura de arquivos estáticos
 
-### v1.0.12 (Beta2025)
+### v2.1.3 (Beta2025)
 - Melhorias no design e usabilidade
 - Pequenas correções e melhorias
 
-### v1.1.2 (STARa1)
+### v2.1.6 (STARa1)
 - Pequenas correções e melhorias
 
-### v1.2.7 (STARb1)
+### v2.1.15 (STARb1)
 - Adição da página de Notícias
 - Pequenas correções e melhorias
 
-### v1.3.5 (STARb2)
+### v3.0.0 (STARb2)
 - Página de Notícias substituída por página de Artigos
 - Remoção da página de Streaming
 - Adição de Termos de Serviço e Política de Privacidade
@@ -53,7 +53,7 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Paleta de cores atualizada
 - Pequenas correções e melhorias
 
-### v3.1.4 (STARc1)
+### v4.0.0 (STARc1)
 - Bootstrap 5 substituído pelo TailwindCSS 4
 - Melhorias significativas no design do website
 - Adição de página de Streaming
@@ -61,21 +61,21 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Adição de menu mobile para dispositivos móveis
 - Pequenas correções e melhorias
 
-### v3.3.26 (STARc2)
+### v4.1.0 (STARc2)
 - Melhorias no design e usabilidade (originário da versão v3.2.25)
 - Pequenas correções e melhorias
 
-### v3.3.28 (STARc3)
+### v4.1.1 (STARc3)
 - Codigo levemente refatorado
 - pequenas correções e melhorias
 
 ## Versões Django
 
-### v1.3.18 (dj2024v1)
+### v1.0.0 (dj2024v1)
 - Primeira implementação com Django
 - Pequnas correções e melhorias (originário da versão STARb2)
 
-### v2.0.27 (dj2024v2)
+### v2.0.0 (dj2024v2)
 - Evolução da versão v1.3.18
 - Novos idiomas (Russo e Hindi)
 - Adição de tema personalizado (Ano Novo 2025)
@@ -83,41 +83,41 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 
 ## Versões Flask
 
-### v2.1.28 (F202501)
+### v1.0.0 (F202501)
 - Primeira implementação com Flask
 - Pequenas correções e melhorias (originário da versão STARdj2)
 
-### v3.0.5 (F202502)
+### v2.0.0 (F202502)
 - Versão atualizada da v2.1.28
 - Redesign de 3ª geração
 - Novo idioma (Chinês)
 - Pequenas correções e melhorias
 
-### v3.0.6 (F202502-latest)
+### v2.0.1 (F202502-latest)
 - Patch da v3.0.5
 - Correções e melhorias incrementais
 
-### v3.1.7 (F202503)
+### v2.1.2 (F202503)
 - Melhorias no design e usabilidade (originário da versão STARc1)
 - Pequenas correções e melhorias
 
-### v3.2.12 (F202504)
+### v2.2.0 (F202504)
 - Adição de componentes Flowbite
 - Implementação de PWA (App Instalável)
 - Novo uso de temas (Claro, Escuro e Vermelho)
 - Pequenas correções e melhorias
 
-### v3.2.19 (F202505)
+### v2.3.0 (F202505)
 - Novo tema (Preto)
 - Seção de versões substituída por uma página de Atualizações
 - Correções e melhorias incrementais
 
 
-### v3.2.25 (F202506)
+### v2.3.10 (F202506)
 - Melhor integração com APIs externas (YouTube e Spotify)
 - Correções e melhorias incrementais
 
-### v3.2.29 (F20250716)
+### v2.3.17 (F20250716)
 Tema e Navbar
 - Atualização das cores do tema.
 - Ajuste na estrutura da navbar.
@@ -134,7 +134,7 @@ Estilos e SCSS
 Limpeza de Código
 - Remoção de arquivos de template desnecessários.
 
-### v3.2.30 (F20250729)
+### v2.3.18 (F20250729)
 
 Navbar e ícones sociais:
 - Adição de novas classes utilitárias CSS.
@@ -151,7 +151,7 @@ Tema e cores:
 - Refatoração de estilos do tema.
 - Remoção de comentários desnecessários em templates.
 
-## 3.2.31 (F20250819)
+### v2.3.18 (F20250819)
 
 #### Refatoração Completa da Arquitetura
 Estrutura Modular:
