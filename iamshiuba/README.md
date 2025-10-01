@@ -45,53 +45,73 @@ python -m http.server 8000
 npx http-server ./
 ```
 
-### 2. Django (v1.0.0 - v2.0.0)
+### 2. Django (v1.0.0 - v3.0.3)
 
 Migração para um framework backend robusto, com Django oferecendo um sistema completo para desenvolvimento web.
 
 #### Características Principais:
 - Framework MVC completo com Django
 - Sistema de templates e herança de templates
-- Aplicações modulares (home, videos, about, news, partials)
 - Configuração de admin Django para gerenciamento de conteúdo
 - Sistema de migrações para gerenciamento de banco de dados
-- Integração com django_bootstrap5
+- Integração com django_{`compressor`, `rest_framework`}
 
-#### Estrutura do Projeto (versão mais recente - v2.0.0):
+#### Estrutura do Projeto (versão mais recente - v3.0.3):
 ```
-v2.0.0/
-├── layout/                # Componentes de layout
-├── mywebsite/             # Configuração principal do Django
-├── project/               # Aplicação principal
-│   ├── migrations/        # Migrações de banco de dados
-│   └── templates/         # Templates HTML
-├── static/                # Arquivos estáticos
-│   ├── css/               # Estilos CSS
-│   ├── img/               # Imagens
-│   ├── js/                # JavaScript
-│   ├── playlists/         # Dados de playlists
-│   └── translations/      # Arquivos de tradução
-├── staticfiles/           # Arquivos estáticos coletados
-└── manage.py              # Script de gerenciamento Django
+v3.0.3/
+├── api/                          # Aplicação Django principal da API
+│   ├── migrations/               # Migrações do banco de dados
+│   ├── models.py                 # Modelos de dados (atualmente vazio)
+│   ├── views.py                  # Views da API REST
+│   ├── urls.py                   # URLs da API
+│   ├── spotify_service.py        # Serviço para integração com Spotify
+│   ├── youtube_service.py        # Serviço para integração com YouTube
+│   ├── updates_service.py        # Serviço para gerenciar updates
+│   └── exceptions.py             # Exceções customizadas
+├── project/                      # Configurações principais do Django
+│   ├── settings.py               # Configurações do projeto
+│   ├── urls.py                   # URLs principais
+│   ├── views.py                  # Views para páginas HTML
+│   ├── context_processors.py     # Processadores de contexto
+│   └── wsgi.py/asgi.py           # Configurações WSGI/ASGI
+├── templates/                    # Templates HTML
+│   ├── _base.html                # Template base
+│   ├── pages/                    # Páginas principais
+│   └── partials/                 # Componentes reutilizáveis
+├── static/                       # Arquivos estáticos
+│   ├── css/                      # Arquivos CSS
+│   ├── img/                      # Arquivos de imagem
+│   ├── js/                       # Arquivos JavaScript
+│   └── playlists/                # Arquivos de playlists
+├── staticfiles/                  # Arquivos estáticos coletados
+└── requirements.txt              # Dependências Python
 ```
 
 #### Como Executar:
 ```bash
-# Configurar ambiente virtual
+# 1. Clonar e instalar dependências
 python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
-
-# Instalar dependências
+source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 
-# Aplicar migrações
+# 2. Instalar dependências Node.js
+npm install
+
+# 3. Configurar variáveis de ambiente
+cp .env.example .env
+# Editar .env com suas credenciais
+
+# 4. Executar migrações
 python manage.py migrate
 
-# Iniciar servidor de desenvolvimento
+# 5. Build do CSS (em outro terminal)
+npm run dev
+
+# 6. Executar servidor
 python manage.py runserver
 ```
 
-### 3. Flask (v1.0.0 - v2.3.18)
+### 3. Flask (v1.0.0 - v2.3.19)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
@@ -185,6 +205,7 @@ python wsgi.py
 - Django 5.x
 - Dependências listadas em `requirements.txt`
 - Banco de dados SQLite (padrão) ou outro compatível
+- Node.js (para TailwindCSS, Flowbite e outras dependências)
 
 ### Para Flask
 - Python 3.x
@@ -195,7 +216,7 @@ python wsgi.py
 
 ## Desenvolvimento
 
-### Configuração do Ambiente de Desenvolvimento Flask (Atual)
+### Configuração do Ambiente de Desenvolvimento Django (Atual)
 
 1. Clone o repositório:
    ```bash
@@ -231,10 +252,10 @@ python wsgi.py
 
 6. Execute o servidor de desenvolvimento:
    ```bash
-   python wsgi.py
+   python manage.py runserver
    ```
 
-7. Acesse `http://localhost:5000` no navegador
+7. Acesse `http://localhost:8000` no navegador
 
 ### Testes
 
@@ -252,6 +273,13 @@ python manage.py test
 - [Documentação do Django](https://docs.djangoproject.com/)
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [Flowbite](https://flowbite.com/docs/getting-started/introduction/)
+- [JSONBin](https://jsonbin.io/api-reference)
+- [YouTube Data API](https://developers.google.com/youtube/v3)
+- [Spotify Web API](https://developer.spotify.com/documentation/web-api)
+- [Django Compressor](https://django-compressor.readthedocs.io/en/stable/)
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+- [Decouple](https://github.com/henriquebastos/python-decouple)
+- [WhiteNoise](https://whitenoise.readthedocs.io/en/stable/)
 
 ## Contribuição
 

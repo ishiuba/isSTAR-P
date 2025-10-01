@@ -21,6 +21,7 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 # Django
 - v1.0.0: [@dj-1.0.0](https://iamshiubadj1.vercel.app/)
 - v2.0.0: [@dj-2.0.0](https://iamshiubadj2.vercel.app/)
+- v3.0.3: [@dj-3.0.3](https://iamshiubadj3.vercel.app/)
 # Flask
 - v1.0.0: [@fl-1.0.0](https://iamshiuba-202501.vercel.app/)
 - v2.0.0: [@fl-2.0.0](https://iamshiuba-202502.vercel.app/)

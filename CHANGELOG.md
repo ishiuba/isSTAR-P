@@ -81,6 +81,11 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Adição de tema personalizado (Ano Novo 2025)
 - Pequenas correções e melhorias
 
+### v3.0.3 (dj20250919)
+- Melhorias no design e usabilidade (Tem tudo do F20250729, só que é Django)
+- Pequenas correções e melhorias
+
+
 ## Versões Flask
 
 ### v1.0.0 (F202501)
@@ -151,7 +156,7 @@ Tema e cores:
 - Refatoração de estilos do tema.
 - Remoção de comentários desnecessários em templates.
 
-### v2.3.18 (F20250819)
+### v2.3.19 (F20250819)
 
 #### Refatoração Completa da Arquitetura
 Estrutura Modular:
@@ -183,8 +188,8 @@ Performance e Qualidade:
 
 ## Observações sobre a Evolução do Projeto
 
-- Evolução de uma simples página HTML para uma aplicação Flask completa
-- Transição por diferentes frameworks: Vanilla JS → Django → Flask
+- Evolução de uma simples página HTML para uma aplicação Django completa
+- Transição por diferentes frameworks: Vanilla JS → Django → Flask → Django
 - Melhoria constante na organização de arquivos e estrutura de diretórios
 - Adição progressiva de recursos de segurança e desempenho
 - Implementação de internacionalização e suporte a múltiplos idiomas
