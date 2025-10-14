@@ -4,48 +4,48 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 
 ## Versões Vanilla JavaScript
 
-### v0.1.0 (PreAlpha)
+### v0.1.0 (PreAlpha JS)
 - Implementação inicial com HTML, CSS e JavaScript básicos
 - Estrutura simples com Bootstrap 5.3.3
 - Navegação básica com navbar
 - Páginas: index.html, videos.html, about.html
 - Layout responsivo básico
 
-### v0.2.2 (PreAlpha2025)
+### v0.2.2 (PreAlpha2025 JS)
 - Estrutura de diretórios melhorada
 - Organização em pastas: css, js, templates
 - Separação de componentes em partials
 - Estrutura CSS com containers e partials
 - Melhorias na navegação
 
-### v1.0.0 (Alpha)
+### v1.0.0 (Alpha JS)
 - Adição de pasta de imagens
 - Novos idiomas (Português e Japonês)
 - Navegação de páginas usando carousel
 
-### v1.1.4 (Alpha2025)
+### v1.1.4 (Alpha2025 JS)
 - Substituição do Framework Bootstrap 5 pelo TailwindCSS 4 + Flowbite Library
 - Componente de navegação, Botão seletor de idiomas e Icones de redes sociais aprimorados
 
-### v2.0.0 (Beta)
+### v2.0.0 (Beta JS)
 - Melhorias na organização de arquivos
 - Adição de botão de alternância de tema
 - Seção de destaques na página inicial
 - Botões para colapsar cabeçalho e rodapé
 - Pequenas melhorias na estrutura de arquivos estáticos
 
-### v2.1.3 (Beta2025)
+### v2.1.3 (Beta2025 JS)
 - Melhorias no design e usabilidade
 - Pequenas correções e melhorias
 
-### v2.1.6 (STARa1)
+### v2.1.6 (jsa1)
 - Pequenas correções e melhorias
 
-### v2.1.15 (STARb1)
+### v2.1.15 (jsb1)
 - Adição da página de Notícias
 - Pequenas correções e melhorias
 
-### v3.0.0 (STARb2)
+### v3.0.0 (jsb2)
 - Página de Notícias substituída por página de Artigos
 - Remoção da página de Streaming
 - Adição de Termos de Serviço e Política de Privacidade
@@ -53,7 +53,7 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Paleta de cores atualizada
 - Pequenas correções e melhorias
 
-### v4.0.0 (STARc1)
+### v4.0.0 (jsc1)
 - Bootstrap 5 substituído pelo TailwindCSS 4
 - Melhorias significativas no design do website
 - Adição de página de Streaming
@@ -61,11 +61,11 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Adição de menu mobile para dispositivos móveis
 - Pequenas correções e melhorias
 
-### v4.1.0 (STARc2)
+### v4.1.0 (jsc2)
 - Melhorias no design e usabilidade (originário da versão v3.2.25)
 - Pequenas correções e melhorias
 
-### v4.1.1 (STARc3)
+### v4.1.1 (jsc3)
 - Codigo levemente refatorado
 - pequenas correções e melhorias
 
@@ -103,7 +103,7 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Correções e melhorias incrementais
 
 ### v2.1.2 (F202503)
-- Melhorias no design e usabilidade (originário da versão STARc1)
+- Melhorias no design e usabilidade (originário da versão jsc1)
 - Pequenas correções e melhorias
 
 ### v2.2.0 (F202504)

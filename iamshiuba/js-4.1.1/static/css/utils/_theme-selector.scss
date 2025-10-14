@@ -1,0 +1,92 @@
+/* Estilos para o container de seleção de tema */
+[data-theme-selector] {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing) * 5);
+}
+
+/* Estilo base para botões de tema */
+.theme-button,
+[data-theme-switch] {
+    position: relative;
+    display: flex;
+    --tw-scale-x: 80%;
+    --tw-scale-y: 80%;
+    --tw-scale-z: 80%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+}
+
+/* Botão ativo */
+.theme-button.active,
+[data-theme-switch].active {
+    --tw-scale-x: 100%;
+    --tw-scale-y: 100%;
+    --tw-scale-z: 100%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+}
+
+/* Hover effect */
+.theme-button:hover,
+[data-theme-switch]:hover {
+    opacity: 0.9;
+}
+
+/* Estilos específicos para cada tema */
+[data-theme-value="light"] {
+    @apply text-yellow-500;
+}
+
+[data-theme-value="dark"] {
+    @apply text-blue-500;
+}
+
+[data-theme-value="red"] {
+    @apply text-red-600;
+}
+
+/* Versão mais compacta para cabeçalhos */
+.header [data-theme-switch],
+.header .theme-button {
+    @apply md:w-10 md:h-10 md:text-lg;
+}
+
+/* Animação ao trocar de tema */
+@keyframes theme-transition {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.theme-transition {
+    @apply animate-[theme-transition_0.3s_ease];
+}
+
+/* Tooltip básico (opcional) */
+[data-theme-switch]::after {
+    content: attr(title);
+
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-black px-2 py-1 text-xs text-white opacity-0 hidden transition-all duration-200 ease-in-out;
+}
+
+[data-theme-switch]:hover::after {
+    @apply opacity-100 visible;
+}

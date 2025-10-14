@@ -1,0 +1,51 @@
+{
+  "name": "IamSHIUBA",
+  "short_name": "iSHIUBA",
+  "description": "Explore the music and videos of IamSHIUBA, a talented artist.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#ff0000",
+  "icons": [
+    {
+      "src": "/static/img/icons/72x.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/96x.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/128x.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/144x.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/152x.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/192x.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/384x.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/icons/512x.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+.updates-section {
+  @apply py-8 px-4;
+
+  .updates-container {
+    @apply max-w-screen-xl mx-auto;
+
+    .header-content {
+      @apply mb-8 text-center;
+
+      .description {
+        @apply text-xl mt-3 text-[var(--text-primary)];
+      }
+    }
+
+    .updates-grid {
+      @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+
+      .update-card {
+        @apply p-6 rounded-lg shadow-lg bg-[var(--background-secondary)];
+
+        .card-header {
+          @apply flex items-center mb-4;
+
+          i {
+            @apply text-2xl mr-3 text-[var(--text-secondary)];
+          }
+
+          h2 {
+            @apply text-xl font-bold text-[var(--text-primary)];
+          }
+        }
+
+        .version-badge {
+          @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+          @apply bg-[var(--background-primary)] text-[var(--text-primary)];
+          @apply mt-2;
+        }
+
+        .update-content {
+          @apply mt-4 text-[var(--text-primary)];
+
+          .update-actions {
+            @apply mt-4;
+
+            a {
+              @apply hover:font-bold;
+            }
+
+          }
+
+          update-text {
+            @apply mb-4;
+          }
+
+          ul,
+          ol {
+            @apply pl-5 mb-4;
+          }
+
+          li {
+            @apply mb-1;
+          }
+
+          a {
+            @apply text-[var(--is-red-60)] hover:underline;
+          }
+
+
+        }
+      }
+    }
+  }
+}

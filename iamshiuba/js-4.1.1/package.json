@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "",
+    "tailwindcss": "",
+    "flowbite": "",
+    "sass": ""
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i static/css/global.css -o ./static/css/output.css",
+    "dev": "npx tailwindcss -i static/css/global.css -o ./static/css/output.css --watch"
+  }
+}
