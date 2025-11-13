@@ -298,4 +298,3 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para d
 ## Contato
 
 - GitHub: [@ishiuba](https://github.com/ishiuba)
-- Telegram: [@contactishiubagithub](t.me/contactishiubagithub)
