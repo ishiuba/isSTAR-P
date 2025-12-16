@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Atualizações</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #1a1a1a;
+        color: #e0e0e0;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: #4caf50;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .acoes-topo {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+      }
+
+      .btn {
+        background: #4caf50;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: #45a049;
+        transform: translateY(-2px);
+      }
+
+      .btn-secundario {
+        background: #2196f3;
+      }
+
+      .btn-secundario:hover {
+        background: #0b7dda;
+      }
+
+      .btn-perigo {
+        background: #f44336;
+      }
+
+      .btn-perigo:hover {
+        background: #da190b;
+      }
+
+      .formulario {
+        background: #2d2d2d;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .formulario h2 {
+        color: #4caf50;
+        margin-bottom: 20px;
+      }
+
+      .campo {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #b0b0b0;
+        font-weight: 500;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        background: #1a1a1a;
+        border: 1px solid #444;
+        border-radius: 4px;
+        color: #e0e0e0;
+        font-size: 14px;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #4caf50;
+      }
+
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+        font-family: inherit;
+      }
+
+      .tabela-container {
+        background: #2d2d2d;
+        padding: 25px;
+        border-radius: 8px;
+        overflow-x: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        background: #1a1a1a;
+        color: #4caf50;
+        padding: 12px;
+        text-align: left;
+        font-weight: 600;
+        border-bottom: 2px solid #4caf50;
+      }
+
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #444;
+      }
+
+      tr:hover {
+        background: #333;
+      }
+
+      .acoes {
+        display: flex;
+        gap: 8px;
+      }
+
+      .btn-pequeno {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+
+      .mensagem {
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: none;
+      }
+
+      .mensagem.sucesso {
+        background: #4caf50;
+        color: white;
+      }
+
+      .mensagem.erro {
+        background: #f44336;
+        color: white;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .badge-js {
+        background: #f0db4f;
+        color: #000;
+      }
+      .badge-fl {
+        background: #61dafb;
+        color: #000;
+      }
+      .badge-dj {
+        background: #092e20;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🛠️ Gerenciador de Atualizações</h1>
+
+      <div class="acoes-topo">
+        <button class="btn btn-secundario" onclick="sincronizar()">
+          🔄 Sincronizar com JSONBin
+        </button>
+        <button class="btn btn-secundario" onclick="carregarAtualizacoes()">
+          ♻️ Recarregar Tabela
+        </button>
+      </div>
+
+      <div id="mensagem" class="mensagem"></div>
+
+      <div class="formulario">
+        <h2 id="tituloFormulario">➕ Adicionar Nova Atualização</h2>
+        <form id="formAtualizacao" onsubmit="salvarAtualizacao(event)">
+          <input type="hidden" id="idAtualizacao" />
+
+          <div class="campo">
+            <label for="versao">Versão *</label>
+            <input
+              type="text"
+              id="versao"
+              placeholder="Ex: fl-2.3.18 ou dj-3.0.3"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="titulo">Título *</label>
+            <input
+              type="text"
+              id="titulo"
+              placeholder="Ex: Nova versão com melhorias"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="conteudo">Conteúdo *</label>
+            <textarea
+              id="conteudo"
+              placeholder="Descrição detalhada da atualização..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="campo">
+            <label for="linkPreview">Link de Preview (opcional)</label>
+            <input
+              type="url"
+              id="linkPreview"
+              placeholder="https://exemplo.com/preview"
+            />
+          </div>
+
+          <div class="acoes">
+            <button type="submit" class="btn">💾 Salvar</button>
+            <button
+              type="button"
+              class="btn btn-secundario"
+              onclick="limparFormulario()"
+            >
+              🔄 Limpar
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="tabela-container">
+        <h2 style="color: #4caf50; margin-bottom: 20px">
+          📋 Atualizações Cadastradas
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Versão</th>
+              <th>Prefixo</th>
+              <th>Título</th>
+              <th>Conteúdo</th>
+              <th>Link Preview</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaAtualizacoes">
+            <tr>
+              <td colspan="7" style="text-align: center; color: #888">
+                Carregando...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

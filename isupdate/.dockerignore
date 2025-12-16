@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+README.md
+COMO_USAR.md
+DEPLOY_VERCEL.md
+testarFallback.js
+*.db
+*.db-journal
+.vscode
+.idea
+
