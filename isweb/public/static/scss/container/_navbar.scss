@@ -1,0 +1,152 @@
+#navContainer {
+    @apply hidden md:grid grid-cols-2 bg-(--background-secondary) text-(--text-secondary) md:max-h-[10%] lg:max-h-[8%];
+
+    #navBrand {
+        @apply m-3;
+    }
+
+    #desktopMenu {
+        @apply hidden md:block place-self-center container;
+
+        ul {
+            @apply font-medium text-(--text-secondary) p-2 flex items-center justify-end gap-2.5;
+
+            li a {
+                @apply px-4 py-2 hover:text-(--text-primary) transition duration-300 ease-in-out rounded-lg;
+            }
+        }
+    }
+}
+
+#m-NavContainer {
+    @apply md:hidden;
+
+    nav {
+        @apply fixed bottom-0 left-0 right-0 z-50 md:hidden;
+    }
+
+    .menu-grid {
+        @apply grid h-full grid-cols-4 bg-(--background-primary) border-t border-(--border-color)/20 backdrop-blur-sm;
+    }
+
+    .nav-item {
+        @apply inline-flex flex-col items-center justify-center px-5 py-3 text-(--text-secondary);
+
+        i {
+            @apply w-6 h-6;
+        }
+
+        &:active {
+            @apply scale-90;
+        }
+    }
+
+    .drawer {
+        @apply fixed top-0 z-50 h-screen p-4 w-80;
+
+        &[data-drawer-placement="left"] {
+            @apply left-0 -translate-x-full;
+        }
+
+        &[data-drawer-placement="right"] {
+            @apply right-0 translate-x-full;
+        }
+
+        @apply bg-(--background-secondary) transition-transform;
+    }
+
+    .drawer-header {
+        @apply flex items-center justify-between pb-4 mb-4 border-b border-(--border-color)/20;
+
+        h1 {
+            @apply font-bold text-2xl;
+        }
+
+        .drawer-close {
+            @apply text-(--text-secondary) rounded-lg p-1.5 text-xl;
+        }
+    }
+}
+
+.drawer-content {
+    @apply py-4 text-(--text-secondary);
+
+    &>div {
+        @apply m-5 bg-(--background-primary) rounded-xl w-auto h-auto shadow-lg;
+
+        & h5,
+        &>div,
+        & ul {
+            @apply p-5;
+        }
+    }
+
+    & h5 {
+        @apply mb-2.5 mt-2.5 text-2xl font-bold;
+    }
+
+    ul {
+        @apply space-y-2 font-medium;
+
+        a {
+            @apply flex items-center p-2.5;
+
+            i {
+                @apply w-5 h-5 me-3;
+            }
+        }
+    }
+}
+
+#social-drawer {
+    #social-icons {
+        @apply flex gap-5 justify-center;
+
+        a {
+            @apply text-4xl transition-colors;
+        }
+    }
+}
+
+#config-drawer {
+    scrollbar-width: thin;
+
+    #theme-container {
+        @apply mb-6;
+
+        button {
+            @apply text-4xl md:text-3xl;
+        }
+    }
+
+    #language-container {
+        @apply mt-12 mb-12;
+
+        #language {
+
+            & .langItem {
+                @apply grid items-center justify-start;
+
+                & .fi {
+                    @apply text-3xl md:text-2xl transition-all ease-in-out duration-400 cursor-pointer saturate-0 hover:saturate-100;
+
+                    &.active {
+                        @apply text-4xl md:text-3xl saturate-100 text-(--accent-color) font-bold;
+                    }
+
+                    & p {
+                        @apply text-sm md:text-base fixed left-5/4 w-20;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+#social-drawer {
+    #social-icons {
+        @apply flex gap-5 text-4xl md:text-3xl flex-wrap;
+
+    }
+}

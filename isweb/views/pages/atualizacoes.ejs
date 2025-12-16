@@ -1,0 +1,32 @@
+<script>
+  document.title = titulo + ` - Atualizações`;
+</script>
+
+
+<div class="secao_atualizacoes">
+  <div class="atualizacoes_container">
+    <div class="atualizacoes_cabecalho">
+      <h1 data-translate="updatesTitle">Atualizações</h1>
+      <div class="atualizacoes_descricao" data-translate="updatesDescription">
+        Aqui você pode ver as atualizações recentes do site.
+      </div>
+    </div>
+
+    <div id="mensagem" class="mensagem" style="display: none;"></div>
+
+    <div id="tabelaAtualizacoes">
+      <div class="atualizacoes_card">
+        <div class="atualizacoes_card_cabecalho">
+          <i class="fas fa-spinner fa-spin"></i>
+          <h2>Carregando...</h2>
+        </div>
+        <div class="atualizacoes_conteudo">
+          <p>Buscando atualizações...</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/static/js/utils/AtualizacoesTabela.js"></script>

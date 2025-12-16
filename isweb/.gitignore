@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+CACHE/
+*_pycache__/
+.vscode/
+.vercel/
+.idea/
+.vercel
+.env*.local
