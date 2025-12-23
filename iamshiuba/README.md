@@ -45,7 +45,25 @@ python -m http.server 8000
 npx http-server ./
 ```
 
-### 2. Django (v1.0.0 - v3.0.3)
+### 2. ExpressJS (v1.0.0 - v3.0.0)
+
+A transição para um backend com Node.js e Express, permitindo uma melhor organização do código e funcionalidades adicionais.
+
+#### Características Principais:
+- Backend com Node.js e Express
+- Estrutura MVC básica
+- Rotas organizadas para diferentes funcionalidades
+- Integração com APIs externas (Spotify, YouTube)
+- Uso de EJS para templates dinâmicos
+
+#### Estrutura do Projeto (versão mais recente - v3.0.0):
+```v3.0.6/
+├── isweb/                   # Aplicação Express principal
+├── isstreaming/             # Aplicação de streaming
+├── isupdate/                # Aplicação de versões do site
+```
+
+### 3. Django (v1.0.0 - v3.0.3)
 
 Migração para um framework backend robusto, com Django oferecendo um sistema completo para desenvolvimento web.
 
@@ -111,7 +129,7 @@ npm run dev
 python manage.py runserver
 ```
 
-### 3. Flask (v1.0.0 - v2.3.19)
+### 4. Flask (v1.0.0 - v2.3.19)
 
 A implementação atual, usando Flask como um framework mais leve e flexível, mantendo as funcionalidades principais.
 
@@ -183,22 +201,27 @@ python wsgi.py
 
 ## Comparação entre as Implementações
 
-| Característica | JavaScript Vanilla | Django | Flask |
-|----------------|-------------------|--------|-------|
-| **Complexidade** | Baixa a Média | Alta | Média |
-| **Escalabilidade** | Limitada | Excelente | Boa |
-| **Velocidade de Desenvolvimento** | Rápida para projetos simples | Média (mais boilerplate) | Rápida e flexível |
-| **Gerenciamento de Banco de Dados** | Manual/Inexistente | ORM integrado | Flexível (SQLAlchemy) |
-| **Admin Backend** | Não | Sim, integrado | Não (precisa implementar) |
-| **Segurança** | Básica | Robusta | Configurável |
-| **Tamanho do Projeto** | Leve | Pesado | Leve a Médio |
-| **Curva de Aprendizado** | Baixa | Alta | Média |
+| Característica | JavaScript Vanilla | Django | Flask | ExpressJS |
+|----------------|-------------------|--------|-------|-----------|
+| **Complexidade** | Baixa a Média | Alta | Média | Média |
+| **Escalabilidade** | Limitada | Excelente | Boa | Boa |
+| **Velocidade de Desenvolvimento** | Rápida para projetos simples | Média (mais boilerplate) | Rápida e flexível | Rápida e flexível |
+| **Gerenciamento de Banco de Dados** | Manual/Inexistente | ORM integrado | Flexível (SQLAlchemy) | Flexível (varia conforme ORM) |
+| **Admin Backend** | Não | Sim, integrado | Não (precisa implementar) | Não (precisa implementar) |
+| **Segurança** | Básica | Robusta | Configurável | Configurável |
+| **Tamanho do Projeto** | Leve | Pesado | Leve a Médio | Leve a Médio |
+| **Curva de Aprendizado** | Baixa | Alta | Média | Média |
 
 ## Requisitos Técnicos
 
 ### Para JavaScript Vanilla
 - Navegador web moderno
 - Servidor web básico (opcional)
+
+### Para ExpressJS
+- Node.js v14.x ou superior
+- npm v6.x ou superior
+- Dependências listadas em `package.json`
 
 ### Para Django
 - Python 3.x
@@ -280,6 +303,7 @@ python manage.py test
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 - [Decouple](https://github.com/henriquebastos/python-decouple)
 - [WhiteNoise](https://whitenoise.readthedocs.io/en/stable/)
+- [ExpressJS](https://expressjs.com/)
 
 ## Contribuição
 

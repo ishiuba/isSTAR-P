@@ -1,0 +1,105 @@
+<script>
+  document.title = titulo + ` - Página Inicial`;
+</script>
+
+<div class="p_inicial">
+  <section class="secao_cabecalho">
+    <div class="cabecalho_pacote">
+      <div class="conteudo_cabecalho">
+        <h1 chave_de_traducao="p_inicial_h1">E ai?</h1>
+        <p>
+          <span chave_de_traducao="p_inicial_bemvindo"
+            >Bem-vindo(a) ao meu site, ele está em constante desenvolvimento e
+            estou sempre buscando melhorias!</span
+          >
+          <br />
+          <span chave_de_traducao="p_inicial_chamada_para_acao"
+            >Por enquanto, há apenas algumas coisas para conferir: alguns vídeos
+            e músicas na página Streaming, uma página sobre e você pode visitar
+            minhas redes sociais no rodapé do site.</span
+          >
+        </p>
+        <div class="cabecalho_botao">
+          <a href="/streaming" class="btn">
+            <i class="fas fa-play"></i>
+            <span chave_de_traducao="p_inicial_cpa_streaming"
+              >Comece a Ouvir</span
+            >
+          </a>
+          <a href="/sobre" class="btn">
+            <i class="fas fa-info-circle"></i>
+            <span chave_de_traducao="p_inicial_cpa_sobre">Saiba Mais</span>
+          </a>
+        </div>
+      </div>
+      <div class="img_flutuante">
+        <img
+          src="/static/img/iamshiuba_web.svg"
+          alt="IamSHIUBA Artist Logo"
+          width="500"
+          height="500"
+          class="cabecalho_logo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="secao_destaques">
+    <div class="destaques_corpo">
+      <div class="destaques_corpo_cabecalho">
+        <h2 chave_de_traducao="p_inicial_destaques_h2">Destaques</h2>
+        <p chave_de_traducao="p_inicial_destaques_descricao">
+          Uma lista de vídeos do YouTube para assistir aqui ou no meu Canal
+          Oficial do Artista.
+        </p>
+      </div>
+      <div class="destaques_conteudo">
+        <div class="destaques_pacote">
+          <div class="destaques_iframe_container">
+            <iframe
+              class="destaques_iframe"
+              src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q"
+              title="Featured Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="destaques_cpa">
+        <button
+          aria-label="Check Out YouTube Playlist"
+          type="button"
+          class="dBtn"
+          onclick="window.open('https://www.youtube.com/playlist?list=OLAK5uy_laLvEldekJ_qsP5DMbG-PYcEW3oQEYu_Q')"
+        >
+          <i class="fab fa-youtube"></i>
+          <span chave_de_traducao="p_inicial_cpa_destaques">Confira</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao_estatisticas">
+    <div class="estatisticas_container">
+      <div class="estatisticas_estatistica">
+        <i class="fas fa-music"></i>
+        <h3 class="contador"><%= spotify_estatisticas.totalTracks %></h3>
+        <p chave_de_traducao="p_inicial_estats_muscri">Faixas Criadas</p>
+      </div>
+      <div class="estatisticas_estatistica">
+        <i class="fab fa-youtube"></i>
+        <h3 class="contador"><%= yt_estatisticas.viewCount %></h3>
+        <p chave_de_traducao="p_inicial_estats_vistotal">
+          Visualizações Totais
+        </p>
+      </div>
+      <div class="estatisticas_estatistica">
+        <i class="fas fa-users"></i>
+        <h3 class="contador"><%= yt_estatisticas.subscriberCount %></h3>
+        <p chave_de_traducao="p_inicial_estats_inscritos">Inscritos</p>
+      </div>
+    </div>
+  </section>
+</div>

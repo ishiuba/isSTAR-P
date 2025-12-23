@@ -1,0 +1,49 @@
+main {
+    @apply bg-(--background-primary) text-(--text-primary) pt-10 pb-10 px-2.5 outline-none;
+
+    h1 {
+        @apply font-bold text-5xl text-(--text-secondary);
+    }
+
+    form {
+        @apply my-5;
+    }
+
+    .btn {
+        @apply text-left bg-(--background-secondary) text-(--text-secondary);
+    }
+
+    .dBtn {
+        @apply bg-(--background-primary) text-(--text-primary) text-center inline-flex items-center w-full justify-center;
+
+        i {
+            @apply mr-2;
+        }
+
+        p {
+            @apply text-lg font-medium;
+        }
+    }
+
+    .sBtn {
+        @apply bg-(--background-primary) text-(--text-primary) text-center;
+    }
+
+    .btn,
+    .sBtn,
+    .dBtn {
+        @apply hover:contrast-95 px-5 py-2.5 rounded text-lg transition-all duration-500 ease-in-out cursor-pointer;
+    }
+
+    .cabecalho_botao,
+    .sigame_cpa {
+        @apply mt-10 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4;
+    }
+
+    .habilidades_habilidade,
+    .estatisticas_estatistica {
+        & .fas {
+            @apply text-(--accent-color) text-5xl;
+        }
+    }
+}

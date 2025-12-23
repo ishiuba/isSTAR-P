@@ -69,6 +69,27 @@ Este documento fornece um registro detalhado das mudanças em todas as versões 
 - Codigo levemente refatorado
 - pequenas correções e melhorias
 
+## Versões ExpressJS
+
+### v1.0.0 (isweb)
+- Primeiro uso do EJS - IamSHIUBA Portfolio
+- Implementação de rotas dinâmicas
+- Adição de layout, pages e partials
+- Refatoração de templates
+- Atualização de estilos CSS para compatibilidade
+- Remoção de arquivos HTML desnecessários
+
+### v2.0.0 (isstreaming)
+- Segundo uso do EJS - IamSHIUBA Streaming
+- Pequenas alterações no layout e estilos para melhorar a experiência do usuário:
+- Separação de serviços por rota/pagina ao invés de misturar tudo em uma única página.
+
+### v3.0.0 (isupdate)
+- Terceiro uso do EJS - IamSHIUBA Update
+- CRUD básico de atualizações como fallback.
+- REST API para CRUD de atualizações em JSONbin.
+- Pequenas correções e melhorias.
+
 ## Versões Django
 
 ### v1.0.0 (dj2024v1)
@@ -189,7 +210,7 @@ Performance e Qualidade:
 ## Observações sobre a Evolução do Projeto
 
 - Evolução de uma simples página HTML para uma aplicação Django completa
-- Transição por diferentes frameworks: Vanilla JS → Django → Flask → Django
+- Transição por diferentes frameworks: Vanilla JS → Django → Flask → Django → ExpressJS
 - Melhoria constante na organização de arquivos e estrutura de diretórios
 - Adição progressiva de recursos de segurança e desempenho
 - Implementação de internacionalização e suporte a múltiplos idiomas

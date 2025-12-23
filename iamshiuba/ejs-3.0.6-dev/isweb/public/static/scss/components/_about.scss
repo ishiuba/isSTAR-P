@@ -1,0 +1,49 @@
+.p_sobre {
+    .secao_sobre {
+        @apply flex flex-row animate-[fade-in_1s_ease-in-out] justify-center mb-15;
+
+        .cabecalho_sobre {
+            @apply flex flex-col md:max-w-[80%] mx-auto;
+
+            .img_flutuante {
+                @apply animate-[float_6s_ease-in-out_infinite] flex justify-end mt-7.5 lg:mt-0;
+
+                img {
+                    @apply w-full md:w-1/2;
+                }
+            }
+
+            p {
+                @apply text-lg mt-4 text-start text-wrap;
+            }
+        }
+    }
+
+    .secao_habilidades {
+        @apply flex flex-wrap gap-4 justify-center mb-15;
+
+        .habilidades_habilidade {
+            @apply bg-(--background-secondary) px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center shadow-lg lg:max-w-70 md:max-w-50 w-full;
+
+            h3 {
+                @apply text-2xl font-semibold mb-2.5;
+            }
+
+            .barra_de_habilidade {
+                @apply bg-(--background-primary) h-2 rounded-full overflow-hidden;
+
+                .progresso {
+                    @apply h-full bg-(--accent-color) rounded-full animate-[slideRight_1s_ease-in-out];
+                }
+            }
+        }
+    }
+
+    .secao_sigame {
+        @apply grid justify-items-center mb-15;
+
+        .sigame_container {
+            @apply bg-(--background-secondary) px-2.5 py-5 rounded-lg transition-all duration-500 ease-in-out text-center flex flex-col items-center md:max-w-4/5 w-full;
+        }
+    }
+}

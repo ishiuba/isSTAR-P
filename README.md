@@ -11,6 +11,10 @@ This is a public repository for the **iamshiuba** web project. It contains all v
 - v3.0.3: [@dj-3.0.3](https://iswebdj.vercel.app/)
 ### Flask
 - v2.3.18: [@fl-2.3.18](https://iswebfl.vercel.app/)
+### ExpressJS
+- v1.0.0: [@ejs-1.0.0](https://iswebejs.vercel.app/)
+- v2.0.0: [@ejs-2.0.0](https://iamshiubastreaming.vercel.app/)
+- v3.0.0: [@ejs-3.0.0](https://isupdate.vercel.app/)
 
 ## Contact
 
@@ -29,6 +33,8 @@ Just kidding, I want to make sure the project's update didn't mess anything. So 
 2025-09-10: Alterei novamente a forma como versiono o projeto, adotando o formato `technology-version-major.minor.patch` para facilitar a identificação das implementações. Versões conflitantes terão o prefixo da tecnologia utilizada. Ex: `js-1.0.0`, `dj-1.0.0`, `fl-1.0.0`.
 
 2025-11-13: Limitei o numero de prévias por tecnologia para reduzir custos. A partir de agora, apenas a versão mais recente de cada tecnologia será mantida. Ex: `isweb+technology.vercel.app`
+
+2025-12-23: Não planejo mais atualizar este repositório. Novas versões do iamshiuba web não serão mais publicadas aqui. Obrigado por acompanhar até aqui!
 
 ---
 
